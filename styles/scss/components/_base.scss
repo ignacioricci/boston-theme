@@ -1,0 +1,72 @@
+	
+	body {
+
+		font-family:'Alegreya', Georgia, Times, serif;
+		@include base_font_size;
+		color:#555;
+		background:image-url('test.jpg', false, false) fixed 0 0;
+		background-size:auto 100%;
+
+	}
+
+	strong {
+		font-weight:bold;
+	}
+
+	a {
+		color:$maincolor;
+		text-decoration:none;
+
+		&:hover {
+			text-decoration:underline;
+			background:tint($maincolor, 95);
+		}
+
+	}
+
+	.btn {
+		cursor:pointer;
+		font-size:1em;
+		@include inline-block;
+		@include border-radius(3px);
+		padding:10px 20px;
+		border:1px solid #CCC;
+	}
+
+	#content {
+		width:70%;
+		background:#FFF;
+		margin-left:30%;
+		//background:image-url('baseline.gif', false, false) repeat 0 0;
+	}
+
+	.personItem {
+
+		overflow:hidden;
+
+		.personAvatar,
+		.personInfo {
+			float:left;
+		}
+
+		.personAvatar {
+				
+			width:80px;
+			height:80px;
+			@include border-radius(40px);
+			overflow:hidden;
+			margin-right:2em;
+
+			img {
+				display:block;
+				width:100%;
+				height:100%;
+			}
+
+		}
+
+		.personInfo {
+			width:60%;
+		}
+
+	}

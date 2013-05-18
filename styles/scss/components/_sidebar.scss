@@ -1,0 +1,110 @@
+	
+	#sidebar {
+		
+		position:fixed;
+		top:0;
+		left:0;
+		width:30%;
+		height:86%;
+		padding:7% 0;
+		background:rgba(0,0,0,0.7);
+		text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
+		font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+		#sidebarHolder {
+			
+			padding:0 12%;
+
+			#logo {
+				
+				position:absolute;
+				top:0;
+				left:0;
+				width:60px;
+				height:60px;
+				@include border-radius(0 3px 3px 0);
+				overflow:hidden;
+
+				img {
+					display:block;
+					width:100%;
+					height:100%;
+				}
+
+			}
+
+			#blogInfo {
+				
+				h1 {
+					color:#FFF;
+					font-weight:bold;
+					font-size:2em;
+					padding:40px 0 20px;
+					padding-bottom:15px;
+				}
+
+				p {
+					line-height:160%;
+					color:rgba(255,255,255,0.8);
+					font-weight:300;
+				}
+
+
+			}
+
+			#sections {
+
+				padding-top:3em;
+
+				li {
+					margin-bottom:15px;
+				}
+				
+				a {
+
+					@include inline-block;
+					@include border-radius(25px);
+					padding:5px 15px;
+					border:1px solid rgba(255,255,255,0.3);
+					color:#FFF;
+					
+					&:hover {
+						background:#000;
+						text-decoration:none;
+					}
+
+				}
+
+			}
+
+			#search {
+
+				position:absolute;
+				width:74%;
+				left:12%;
+				bottom:10%;
+				z-index:2;
+				
+				input {
+					width:100%;
+					background:rgba(0,0,0,0.4);
+					@include border-radius(20px);
+					border:2px solid rgba(255,255,255,0.2);
+					padding:10px 0;
+					text-indent:20px;
+					color:#666;
+
+					&:focus {
+						background:#FFF;
+						color:#000;
+						outline:0;
+						border-color:#000;
+					}
+
+				}
+
+			}
+
+		}
+
+	}

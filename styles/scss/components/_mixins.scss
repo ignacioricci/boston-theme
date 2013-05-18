@@ -1,0 +1,36 @@
+	
+	$base_font_size : 16;
+	$base_em_unit : 1 / $base_font_size;
+
+	@mixin base_font_size(){	
+		font-size:#{$base_font_size * $base_em_unit}em;
+		line-height:#{($base_font_size * $base_em_unit) * 2}em;
+	}
+
+	@mixin em_size($property, $size, $multiple:false){
+		@if ($property == font-size) {
+			font-size:#{$base_em_unit * $size}em;
+		} @elseif ($property == line-height) {
+			line-height:#{$base_em_unit * $size}em;
+		} @elseif ($property == width){
+			width:#{$base_em_unit * $size}em;
+		} @elseif ($property == padding-bottom){
+			padding-bottom:#{$base_em_unit * $size}em;
+		} @elseif ($property == padding-top){
+			padding-top:#{$base_em_unit * $size}em;
+		} @elseif ($property == margin and $multiple == true){
+			margin:#{$base_em_unit * nth($size, 1)}em #{$base_em_unit * nth($size, 2)}em #{$base_em_unit * nth($size, 3)}em #{$base_em_unit * nth($size, 4)}em;
+		}
+	}
+
+	@mixin caps(){
+		font-family:'Alegreya SC', Georgia, Times, serif;
+	}
+
+	@mixin hidetext(){
+		display:block;
+		font-size:0;
+		text-indent:-9999em;
+	}
+
+	$maincolor: #2980b9;

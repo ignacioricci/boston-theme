@@ -1,0 +1,66 @@
+	
+	#comments {
+		
+		background:#222;
+		padding:6% 12%;
+
+		h3 {
+			font-size:2em;
+			color:#FFF;
+			border-bottom:1px solid #444;
+			padding-bottom:0.5em;
+			margin-bottom:1em;
+		}
+
+		#commentList {
+
+			padding-bottom:4em;
+			
+			.comment {
+
+				.commentText {
+					clear:both;
+					color:#DDD;
+				}
+
+			}
+
+		}
+
+		#respond {
+
+			color:#999;
+
+			p {
+
+				padding-bottom:1.25em;
+
+				label {
+					display:block;
+				}
+				
+				input, textarea {
+					
+					width:70%;
+					padding:10px;
+					background:#444;
+					border:1px solid #000;
+					@include border-radius(3px);
+					
+					&:focus {
+						color:#000;
+						background:#FFF;
+						outline:0;
+					}
+
+				}
+
+				textarea {
+					height:120px;
+				}
+
+			}
+
+		}
+
+	}
