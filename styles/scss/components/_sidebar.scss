@@ -12,15 +12,15 @@
 
 		#sidebarHolder {
 			
-			height:90%;
-			padding:5% 10%;
+			height:94%;
+			padding:3% 8%;
 			position:relative;
 
 			#logo {
 				
 				position:absolute;
 				top:30px;
-				left:10%;
+				left:8%;
 				width:80px;
 				height:80px;
 				@include border-radius(3px);
@@ -85,6 +85,22 @@
 						border-color:#000;
 					}
 
+				}
+
+			}
+
+			#copyright {
+
+				position:absolute;
+				bottom:0;
+				line-height:150%;
+
+				@extend .sans-serif;
+				font-size:0.813em;
+				color:#EEE;
+
+				a {
+					color:#EEE;
 				}
 
 			}

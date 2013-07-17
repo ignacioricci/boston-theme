@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /* line 50, ../scss/components/_mixins.scss */
-.sans-serif, .btn {
+.sans-serif, .btn, #sidebar #sidebarHolder #copyright {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 /* line 54, ../scss/components/_mixins.scss */
@@ -290,14 +290,14 @@ a {
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px 3px inset; }
   /* line 13, ../scss/components/_sidebar.scss */
   #sidebar #sidebarHolder {
-    height: 90%;
-    padding: 5% 10%;
+    height: 94%;
+    padding: 3% 8%;
     position: relative; }
     /* line 19, ../scss/components/_sidebar.scss */
     #sidebar #sidebarHolder #logo {
       position: absolute;
       top: 30px;
-      left: 10%;
+      left: 8%;
       width: 80px;
       height: 80px;
       -webkit-border-radius: 3px;
@@ -352,3 +352,13 @@ a {
         color: #000;
         outline: 0;
         border-color: #000; }
+    /* line 92, ../scss/components/_sidebar.scss */
+    #sidebar #sidebarHolder #copyright {
+      position: absolute;
+      bottom: 0;
+      line-height: 150%;
+      font-size: 0.813em;
+      color: #EEE; }
+      /* line 102, ../scss/components/_sidebar.scss */
+      #sidebar #sidebarHolder #copyright a {
+        color: #EEE; }

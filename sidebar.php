@@ -17,5 +17,6 @@
 			<input type="text" placeholder="Search">
 		</div>
 	-->
+		<div id="copyright">Proudly powered by <a href="#">WordPress</a>. <br /> <a href="#">Baseline theme</a> by <a href="#">Ignacio Ricci</a></div>
 	</div>
 </aside>
