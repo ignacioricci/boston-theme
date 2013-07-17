@@ -54,60 +54,54 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+/* line 50, ../scss/components/_mixins.scss */
+.sans-serif, .btn {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+/* line 54, ../scss/components/_mixins.scss */
+.clear, .post .postOptions {
+  overflow: hidden; }
+
 /* line 2, ../scss/components/_base.scss */
 body {
   font-family: 'Alegreya', Georgia, Times, serif;
   font-size: 1em;
   line-height: 2em;
-  color: #555;
+  color: #444;
   background: url('../../images/test.jpg') fixed 0 0;
   background-size: auto 100%; }
 
 /* line 12, ../scss/components/_base.scss */
+em {
+  font-style: italic; }
+
+/* line 16, ../scss/components/_base.scss */
 strong {
   font-weight: bold; }
 
-/* line 16, ../scss/components/_base.scss */
+/* line 20, ../scss/components/_base.scss */
 a {
   color: #2980b9;
   text-decoration: none; }
-  /* line 20, ../scss/components/_base.scss */
+  /* line 24, ../scss/components/_base.scss */
   a:hover {
     text-decoration: underline;
     background: #f4f8fb; }
 
-/* line 27, ../scss/components/_base.scss */
-.btn {
-  cursor: pointer;
-  font-size: 1em;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  padding: 10px 20px;
-  border: 1px solid #CCC; }
-
-/* line 36, ../scss/components/_base.scss */
+/* line 31, ../scss/components/_base.scss */
 #content {
-  width: 70%;
+  width: 74%;
   background: #FFF;
-  margin-left: 30%; }
+  margin-left: 26%; }
 
-/* line 43, ../scss/components/_base.scss */
+/* line 38, ../scss/components/_base.scss */
 .personItem {
   overflow: hidden; }
-  /* line 48, ../scss/components/_base.scss */
+  /* line 43, ../scss/components/_base.scss */
   .personItem .personAvatar,
   .personItem .personInfo {
     float: left; }
-  /* line 52, ../scss/components/_base.scss */
+  /* line 47, ../scss/components/_base.scss */
   .personItem .personAvatar {
     width: 80px;
     height: 80px;
@@ -118,126 +112,167 @@ a {
     border-radius: 40px;
     overflow: hidden;
     margin-right: 2em; }
-    /* line 60, ../scss/components/_base.scss */
+    /* line 55, ../scss/components/_base.scss */
     .personItem .personAvatar img {
       display: block;
       width: 100%;
       height: 100%; }
-  /* line 68, ../scss/components/_base.scss */
+  /* line 63, ../scss/components/_base.scss */
   .personItem .personInfo {
-    width: 60%; }
+    width: 85%; }
+
+/* line 2, ../scss/components/_buttons.scss */
+.btn {
+  cursor: pointer;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 3px 20px;
+  font-size: 0.875em;
+  font-weight: bold; }
+  /* line 12, ../scss/components/_buttons.scss */
+  .btn:hover {
+    text-decoration: none; }
+
+/* line 20, ../scss/components/_buttons.scss */
+.btn-tw,
+.btn-fb,
+.btn-gp {
+  color: #FFF;
+  padding-left: 35px; }
+
+/* line 27, ../scss/components/_buttons.scss */
+.btn-tw {
+  background: #56a6e0; }
+  /* line 29, ../scss/components/_buttons.scss */
+  .btn-tw:hover {
+    background: #2482c5; }
+
+/* line 27, ../scss/components/_buttons.scss */
+.btn-fb {
+  background: blue; }
+  /* line 29, ../scss/components/_buttons.scss */
+  .btn-fb:hover {
+    background: #0000b3; }
+
+/* line 27, ../scss/components/_buttons.scss */
+.btn-gp {
+  background: red; }
+  /* line 29, ../scss/components/_buttons.scss */
+  .btn-gp:hover {
+    background: #b30000; }
 
 /* line 3, ../scss/components/_post.scss */
 .post {
   padding-bottom: 7.5em;
-  padding: 0 9% 0 11%; }
-  /* line 10, ../scss/components/_post.scss */
+  padding: 0 12%;
+  max-width: 900px; }
+  /* line 11, ../scss/components/_post.scss */
   .post .postTitle h2 {
     font-weight: bold;
     color: #000;
     padding-top: 2em;
     font-size: 3.25em;
     line-height: 1.25em; }
-  /* line 18, ../scss/components/_post.scss */
+  /* line 19, ../scss/components/_post.scss */
   .post .postTitle p {
     padding: 1em 0 3em;
     font-family: 'Alegreya SC', Georgia, Times, serif; }
-  /* line 27, ../scss/components/_post.scss */
+  /* line 28, ../scss/components/_post.scss */
   .post .postEntry p {
     font-size: 1.375em;
     padding-bottom: 2.5em; }
-  /* line 32, ../scss/components/_post.scss */
+  /* line 33, ../scss/components/_post.scss */
   .post .postEntry img {
     display: block;
     width: 100%;
     height: auto; }
-  /* line 40, ../scss/components/_post.scss */
+  /* line 41, ../scss/components/_post.scss */
   .post .postAuthor {
-    padding: 2em 0;
-    border-top: 2px solid #EEE; }
-    /* line 45, ../scss/components/_post.scss */
+    padding: 2em 0 1.333em;
+    border-top: 2px solid #EEE;
+    border-bottom: 2px solid #EEE; }
+    /* line 47, ../scss/components/_post.scss */
     .post .postAuthor .authorInfo {
       width: 60%; }
-      /* line 49, ../scss/components/_post.scss */
+      /* line 51, ../scss/components/_post.scss */
       .post .postAuthor .authorInfo p {
         line-height: 1.375em; }
-      /* line 53, ../scss/components/_post.scss */
+      /* line 55, ../scss/components/_post.scss */
       .post .postAuthor .authorInfo strong {
         font-weight: normal;
         display: block;
         font-family: 'Alegreya SC', Georgia, Times, serif;
         padding-bottom: 0.3em; }
-      /* line 60, ../scss/components/_post.scss */
+      /* line 62, ../scss/components/_post.scss */
       .post .postAuthor .authorInfo span {
         font-size: 0.875em; }
-  /* line 68, ../scss/components/_post.scss */
+  /* line 70, ../scss/components/_post.scss */
   .post .postOptions {
-    position: fixed;
-    top: 4%;
-    right: 2%; }
-    /* line 74, ../scss/components/_post.scss */
+    padding: 2.5em 0 3em; }
+    /* line 75, ../scss/components/_post.scss */
+    .post .postOptions strong, .post .postOptions ul, .post .postOptions li {
+      float: left; }
+    /* line 79, ../scss/components/_post.scss */
     .post .postOptions strong {
-      cursor: pointer;
-      display: block;
-      font-size: 0;
-      text-indent: -9999em;
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-      opacity: 0.2;
-      width: 42px;
-      height: 30px;
-      background: url('../../images/share.gif') no-repeat 0 0; }
-      /* line 83, ../scss/components/_post.scss */
-      .post .postOptions strong:hover {
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-        opacity: 1; }
-    /* line 89, ../scss/components/_post.scss */
-    .post .postOptions ul {
-      display: none; }
+      padding: 2px 15px 0 0; }
+    /* line 83, ../scss/components/_post.scss */
+    .post .postOptions li {
+      margin-left: 5px; }
 
 /* line 2, ../scss/components/_comments.scss */
 #comments {
-  background: #222;
+  background: #FAFAFA;
+  border-top: 1px solid #EEE;
   padding: 6% 12%; }
-  /* line 7, ../scss/components/_comments.scss */
+  /* line 8, ../scss/components/_comments.scss */
   #comments h3 {
     font-size: 2em;
-    color: #FFF;
-    border-bottom: 1px solid #444;
+    color: #222;
+    border-bottom: 1px solid #DDD;
     padding-bottom: 0.5em;
     margin-bottom: 1em; }
-  /* line 15, ../scss/components/_comments.scss */
+  /* line 16, ../scss/components/_comments.scss */
   #comments #commentList {
-    padding-bottom: 4em; }
-    /* line 21, ../scss/components/_comments.scss */
+    padding-bottom: 4em;
+    max-width: 900px; }
+    /* line 23, ../scss/components/_comments.scss */
     #comments #commentList .comment .commentText {
-      clear: both;
-      color: #DDD; }
-  /* line 30, ../scss/components/_comments.scss */
+      clear: both; }
+  /* line 31, ../scss/components/_comments.scss */
   #comments #respond {
-    color: #999; }
-    /* line 34, ../scss/components/_comments.scss */
+    color: #666; }
+    /* line 35, ../scss/components/_comments.scss */
     #comments #respond p {
       padding-bottom: 1.25em; }
-      /* line 38, ../scss/components/_comments.scss */
+      /* line 39, ../scss/components/_comments.scss */
       #comments #respond p label {
         display: block; }
-      /* line 42, ../scss/components/_comments.scss */
+      /* line 43, ../scss/components/_comments.scss */
       #comments #respond p input, #comments #respond p textarea {
         width: 70%;
         padding: 10px;
-        background: #444;
-        border: 1px solid #000;
+        background: #FFF;
+        border: 1px solid #CCC;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
         border-radius: 3px; }
-        /* line 50, ../scss/components/_comments.scss */
+        /* line 51, ../scss/components/_comments.scss */
         #comments #respond p input:focus, #comments #respond p textarea:focus {
           color: #000;
           background: #FFF;
           outline: 0; }
-      /* line 58, ../scss/components/_comments.scss */
+      /* line 59, ../scss/components/_comments.scss */
       #comments #respond p textarea {
         height: 120px; }
 
@@ -246,12 +281,14 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 30%;
-  height: 86%;
-  padding: 7% 0;
+  width: 26%;
+  height: 90%;
+  padding: 5% 0;
   background: rgba(0, 0, 0, 0.7);
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px 3px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px 3px inset; }
   /* line 14, ../scss/components/_sidebar.scss */
   #sidebar #sidebarHolder {
     padding: 0 12%; }
@@ -293,32 +330,18 @@ a {
         margin-bottom: 15px; }
       /* line 63, ../scss/components/_sidebar.scss */
       #sidebar #sidebarHolder #sections a {
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: middle;
-        *vertical-align: auto;
-        zoom: 1;
-        *display: inline;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-        border-radius: 25px;
-        padding: 5px 15px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: #FFF; }
-        /* line 71, ../scss/components/_sidebar.scss */
-        #sidebar #sidebarHolder #sections a:hover {
-          background: #000;
-          text-decoration: none; }
-    /* line 80, ../scss/components/_sidebar.scss */
+        display: block; }
+      /* line 70, ../scss/components/_sidebar.scss */
+      #sidebar #sidebarHolder #sections .current_page_item a {
+        background: #FFF; }
+    /* line 78, ../scss/components/_sidebar.scss */
     #sidebar #sidebarHolder #search {
       position: absolute;
       width: 74%;
       left: 12%;
       bottom: 10%;
       z-index: 2; }
-      /* line 88, ../scss/components/_sidebar.scss */
+      /* line 86, ../scss/components/_sidebar.scss */
       #sidebar #sidebarHolder #search input {
         width: 100%;
         background: rgba(0, 0, 0, 0.4);
@@ -331,7 +354,7 @@ a {
         padding: 10px 0;
         text-indent: 20px;
         color: #666; }
-        /* line 97, ../scss/components/_sidebar.scss */
+        /* line 95, ../scss/components/_sidebar.scss */
         #sidebar #sidebarHolder #search input:focus {
           background: #FFF;
           color: #000;

@@ -1,0 +1,33 @@
+	
+	.btn {
+
+		cursor:pointer;
+		@include inline-block;
+		@include border-radius(2px);
+		@extend .sans-serif;
+		padding:3px 20px;
+		font-size:0.875em;
+		font-weight:bold;
+
+		&:hover {
+			text-decoration:none;
+		}
+
+	}
+
+	.btn-tw,
+	.btn-fb,
+	.btn-gp {
+		color:#FFF;
+		padding-left:35px;
+	}
+
+	$social_btns: (tw $tw), (fb $fb), (gp $gp);
+	@each $sb in $social_btns {
+		.btn-#{nth($sb, 1)} {
+			background:nth($sb, 2);
+			&:hover {
+				background:darken(nth($sb, 2), 15);
+			}
+		}	
+	}

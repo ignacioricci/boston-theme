@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Ignacio Ricci ~ Web/UI Designer</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya:400,400italic,700,700italic">-->
-	<link rel="stylesheet" type="text/css" href="styles/css/baseline.css">
-	<link rel="shortcut icon" href="favicon.ico">
-</head>
-<body>
+<?php get_header(); ?>
 
-	<aside id="sidebar">
-		<div id="sidebarHolder">
-			<div id="logo">
-				<img src="images/avatar.jpeg">
-			</div>
-			<div id="blogInfo">
-				<h1>My Blog</h1>
-				<p>A blog about nothing. Yeah, nothing</p>
-			</div>
-			<div id="sections">
-				<ul>
-					<li><a href="#">Sarlanga</a></li>
-					<li><a href="#">Sarlanga</a></li>
-					<li><a href="#">Sarlanga</a></li>
-					<li><a href="#">Sarlanga</a></li>
-				</ul>
-			</div>
-			<div id="search">
-				<input type="text" placeholder="Search">
-			</div>
-		</div>
-	</aside>
+	<?php get_sidebar(); ?>
 
 	<div id="content">
 		<article class="post">
@@ -48,19 +17,19 @@
 			</div>
 			<div class="personItem postAuthor">
 				<div class="personAvatar">
-					<img src="images/avatar2.jpg">
+					<?php echo get_avatar(get_the_author_meta('user_email'), 80); ?>
 				</div>
 				<div class="personInfo">
-					<p><strong>Ignacio Ricci</strong></p>
+					<p><strong>Written by Ignacio Ricci</strong></p>
 					<p><span>Pixel Tamer &amp; Co-founder at Vulsai (<a href="#">http://www.vulsai.com</a>) - Learning &amp; turning Japanese</span></p>
 				</div>
 			</div>
 			<div class="postOptions">
-				<strong>Share</strong>
+				<strong>Share this post</strong>
 				<ul>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Google+</a></li>
+					<li><a class="btn btn-tw" href="#">Twitter</a></li>
+					<li><a class="btn btn-fb" href="#">Facebook</a></li>
+					<li><a class="btn btn-gp" href="#">Google+</a></li>
 				</ul>
 			</div>
 		</article>
@@ -104,5 +73,4 @@
 		</div>
 	</div>
 
-</body>
-</html>
+<?php get_footer(); ?>

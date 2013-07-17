@@ -3,7 +3,8 @@
 	.post {
 
 		@include em_size(padding-bottom, 120);
-		padding:0 9% 0 11%;
+		padding:0 12%;
+		max-width:900px;
 
 		.postTitle {
 
@@ -39,8 +40,9 @@
 
 		.postAuthor {
 			
-			padding:2em 0;
+			padding:2em 0 1.333em;
 			border-top:2px solid #EEE;
+			border-bottom:2px solid #EEE;
 
 			.authorInfo {
 
@@ -67,29 +69,20 @@
 
 		.postOptions {
 
-			position:fixed;
-			top:4%;
-			right:2%;
-		
+			padding:2.5em 0 3em;
+			@extend .clear;
+
+			strong, ul, li {
+				float:left;
+			}
+
 			strong {
-				
-				cursor:pointer;
-				@include hidetext;
-				@include opacity(0.2);
-				width:42px;
-				height:30px;
-				background:image-url('share.gif', false, false) no-repeat 0 0;
-				
-				&:hover {
-					@include opacity(1);
-				}
-
+				padding:2px 15px 0 0;
 			}
 
-			ul {
-				display:none;
+			li {
+				margin-left:5px;
 			}
-
 
 		}
 

@@ -4,12 +4,12 @@
 		position:fixed;
 		top:0;
 		left:0;
-		width:30%;
-		height:86%;
-		padding:7% 0;
+		width:26%;
+		height:90%;
+		padding:5% 0;
 		background:rgba(0,0,0,0.7);
 		text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
-		font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+		@include box-shadow(rgba(0,0,0,0.3) 0 0 3px 3px inset);
 
 		#sidebarHolder {
 			
@@ -59,18 +59,16 @@
 				li {
 					margin-bottom:15px;
 				}
-				
-				a {
 
-					@include inline-block;
-					@include border-radius(25px);
-					padding:5px 15px;
-					border:1px solid rgba(255,255,255,0.3);
-					color:#FFF;
-					
-					&:hover {
-						background:#000;
-						text-decoration:none;
+				a {
+					display:block;
+				}
+
+				.current_page_item {
+
+
+					a {
+						background:#FFF;
 					}
 
 				}
