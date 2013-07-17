@@ -283,28 +283,28 @@ a {
   left: 0;
   width: 26%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px 3px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px 3px inset;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px 3px inset; }
   /* line 13, ../scss/components/_sidebar.scss */
   #sidebar #sidebarHolder {
     height: 90%;
-    padding: 5% 12%;
+    padding: 5% 10%;
     position: relative; }
     /* line 19, ../scss/components/_sidebar.scss */
     #sidebar #sidebarHolder #logo {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 60px;
-      height: 60px;
-      -webkit-border-radius: 0 3px 3px 0;
-      -moz-border-radius: 0 3px 3px 0;
-      -ms-border-radius: 0 3px 3px 0;
-      -o-border-radius: 0 3px 3px 0;
-      border-radius: 0 3px 3px 0;
+      top: 30px;
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
       overflow: hidden; }
       /* line 29, ../scss/components/_sidebar.scss */
       #sidebar #sidebarHolder #logo img {
@@ -313,25 +313,25 @@ a {
         height: 100%; }
     /* line 37, ../scss/components/_sidebar.scss */
     #sidebar #sidebarHolder #blogInfo {
-      position: absolute;
-      left: 12%;
-      bottom: 20px; }
-      /* line 43, ../scss/components/_sidebar.scss */
-      #sidebar #sidebarHolder #blogInfo h1 {
+      padding-top: 140px; }
+      /* line 41, ../scss/components/_sidebar.scss */
+      #sidebar #sidebarHolder #blogInfo h1 a {
         color: #FFF;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 2.125em;
         padding-bottom: 15px; }
-      /* line 50, ../scss/components/_sidebar.scss */
+      /* line 48, ../scss/components/_sidebar.scss */
       #sidebar #sidebarHolder #blogInfo p {
         line-height: 160%;
-        font-size: 1.125em;
-        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.25em;
+        color: rgba(255, 255, 255, 0.9);
         font-weight: 300;
         padding-bottom: 0.5em; }
-    /* line 63, ../scss/components/_sidebar.scss */
+    /* line 61, ../scss/components/_sidebar.scss */
     #sidebar #sidebarHolder #sections a {
-      color: #FFF; }
+      color: #FFF;
+      padding-left: 20px;
+      border-left: 2px solid #FFF; }
     /* line 71, ../scss/components/_sidebar.scss */
     #sidebar #sidebarHolder #search input {
       width: 100%;

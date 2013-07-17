@@ -6,24 +6,24 @@
 		left:0;
 		width:26%;
 		height:100%;
-		background:rgba(0,0,0,0.35);
-		text-shadow:-1px -1px 1px rgba(0,0,0,0.5);
+		background:rgba(0,0,0,0.4);
+		text-shadow:-1px -1px 1px rgba(0,0,0,0.6);
 		@include box-shadow(rgba(0,0,0,0.1) 0 0 3px 3px inset);
 
 		#sidebarHolder {
 			
 			height:90%;
-			padding:5% 12%;
+			padding:5% 10%;
 			position:relative;
 
 			#logo {
 				
 				position:absolute;
-				top:0;
-				left:0;
-				width:60px;
-				height:60px;
-				@include border-radius(0 3px 3px 0);
+				top:30px;
+				left:10%;
+				width:80px;
+				height:80px;
+				@include border-radius(3px);
 				overflow:hidden;
 
 				img {
@@ -36,21 +36,19 @@
 
 			#blogInfo {
 
-				position:absolute;
-				left:12%;
-				bottom:20px;
+				padding-top:140px;
 				
-				h1 {
+				h1 a {
 					color:#FFF;
 					font-weight:bold;
-					font-size:2em;
+					font-size:2.125em;
 					padding-bottom:15px;
 				}
 
 				p {
 					line-height:160%;
-					font-size:1.125em;
-					color:rgba(255,255,255,0.8);
+					font-size:1.25em;
+					color:rgba(255,255,255,0.9);
 					font-weight:300;
 					padding-bottom:0.5em;
 				}
@@ -62,6 +60,8 @@
 
 				a {
 					color:#FFF;
+					padding-left:20px;
+					border-left:2px solid #FFF;
 				}
 
 			}
