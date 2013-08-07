@@ -1,4 +1,17 @@
 	
+	.hero {
+		
+		height:26em;
+		overflow:hidden;
+
+		img {
+			display:block;
+			width:100%;
+			height:auto;
+			margin-top:-8%;
+		}
+
+	}	
 
 	.post {
 
@@ -11,8 +24,8 @@
 			h2 {
 				font-weight:bold;
 				color:#000;
-				@include em_size(padding-top, 32);
-				@include em_size(font-size, 52);
+				@include em_size(padding-top, 20);
+				@include em_size(font-size, 48);
 				@include em_size(line-height, 20);
 			}
 

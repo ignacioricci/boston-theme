@@ -1,14 +1,16 @@
 <?php get_header(); ?>
 
-	<?php get_sidebar(); ?>
-
-	<div id="content">
+	<section id="content">
+		<div class="hero">
+			<img src="<?php bloginfo('template_directory'); ?>/images/examples/hero.jpg" alt="" />
+		</div>
 		<article class="post">
 			<div class="postTitle">
 				<h2>Eleven Things I Learned from a Skunk</h2>
 				<p>Written on 18 May 2013, at 15:00hs under <a href="#">Category Name</a></p>
 			</div>
 			<div class="postEntry">
+				<a href="#" data-postid="<?php the_ID(); ?>" class="like <?php like_status($post->ID); ?>"><span class="likeCount"><?php like_count($post->ID); ?></span> likes</a>
 				<p>1. Due to their odor seeming to be everywhere at once, a skunk is a master at misdirection for certain excitable personalities, but its last line of defense (spraying) is also one of the most effective on earth. After letting the two of them into the back yard, the dog who first noticed the skunk and who was therefore chasing around the yard as if she’d been set free inside a nuclear accelerator was not actually the dog that was in danger of being sprayed or “skunked.” She’d been hoodwinked into thinking the skunk was over there and over there and over there all at the same time. </p>
 				<p>The second, slower, <a href="#">lumbering dog</a>, big and black and just barely aware that there was reason for such a racket in the first place, accidentally surprised and cornered skunk where it had taken refuge near the minivan.</p>
 				<p>While I expended my energy and attention calling and cajoling the first dog — “Sadie… knock it off… get back in here…” — the second dog had sprinted back to the house in a panic, already past me and now inside, visiting her new odor upon every room and occupant, attempting to remove said odor by rubbing against all available surfaces: carpet, bed, blanket, stair, door, spouse.</p>
@@ -71,6 +73,8 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

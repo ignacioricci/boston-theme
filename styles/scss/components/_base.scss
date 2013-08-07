@@ -3,8 +3,8 @@
 
 		font-family:'Alegreya', Georgia, Times, serif;
 		@include base_font_size;
-		color:#444;
-		background:image-url('test.jpg', false, false) fixed 0 0;
+		color:#333;
+		background:#FFF;
 		background-size:auto 100%;
 
 	}
@@ -18,7 +18,7 @@
 	}
 
 	a {
-		color:$maincolor;
+		color:darken($maincolor, 8);
 		text-decoration:none;
 
 		&:hover {
@@ -30,8 +30,9 @@
 
 	#content {
 		width:74%;
-		background:#FFF;
 		margin-left:26%;
+		position:relative;
+		z-index:2;
 		//background:image-url('baseline.gif', false, false) repeat 0 0;
 	}
 
