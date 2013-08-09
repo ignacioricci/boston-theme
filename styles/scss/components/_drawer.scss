@@ -4,8 +4,29 @@
 		left:auto;
 		right:-22%;
 		background:#222;
+		z-index:4;
 		@include transition-property(right);
 		@include transition-duration(0.5s);
+
+		#closeDrawer {
+
+			height:15px;
+			padding:15px 10%;
+			@extend .clear;
+
+			a {
+				@extend .sprite;
+				float:right;
+				height:15px;
+				background-position:0 -20px;
+				@include opacity(0.5);
+
+				&:hover {
+					@include opacity(1);
+				}
+			}
+
+		}
 
 		.drawerBox {
 			

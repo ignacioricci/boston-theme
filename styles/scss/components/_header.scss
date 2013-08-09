@@ -1,24 +1,73 @@
 	
 	#header {
 		
-		position:fixed;
+		height:80px;
+		width:100%;
+		position:absolute;
 		top:0;
 		left:0;
-		z-index:10;
-		line-height:100%;
-		
-		#brand {
+		z-index:3;
 
+		#headerHolder {
+			position:fixed;
+			top:0;
+			left:0;
+			width:22%;
 			background:#FFF;
+			border-bottom:1px solid #EEE;
+		}	
+		
+		#brand {		
+			
+			padding:15px 10%;
+			height:50px;
+			overflow:hidden;
 
-			#logo {
-
+			a {
+				line-height:100%;
 			}
 
-			#search {
+			img {
+				display:block;
+				max-height:50px;
+				width:auto;
+			}
 
-				
+			span {
+				color:#000;
+				font-size:1.5em;
+				font-weight:700;
+			}
 
+		}
+
+		#toggleMenu {
+
+			@extend .sans-serif;
+			@extend .clear;
+			line-height:100%;
+			font-size:0.938em;
+			position:absolute;
+			top:20px;
+			right:30px;
+			text-transform:uppercase;
+			
+			strong, span {
+				float:left;
+			}
+
+			strong {
+				color:#888;
+				padding-right:10px;
+			}
+			
+			span {
+				margin-top:3px;
+				@extend .sprite;
+			}
+
+			a:hover strong {
+				color:#333;
 			}
 
 		}

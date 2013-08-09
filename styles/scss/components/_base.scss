@@ -13,7 +13,7 @@
 	}
 
 	strong {
-		font-weight:bold;
+		font-weight:600;
 	}
 
 	a {
@@ -69,6 +69,36 @@
 
 		.personInfo {
 			width:85%;
+		}
+
+	}
+	
+	.postActions {
+
+		a {
+			color:#999;
+			display:block;
+			padding:5px 10px;
+			text-transform:uppercase;
+			letter-spacing:0.1em;
+			background:rgba(0,0,0,0.04);
+			@include border-radius(3px);
+
+			&:hover {
+				color:#FFF;
+				text-decoration:none;
+				background:#999;
+			}
+
+		}
+
+		.pa-like {
+
+			a:hover, .just-voted  {
+				color:#FFF;
+				background:#e74c3c;
+			}
+
 		}
 
 	}

@@ -1,27 +1,34 @@
 <?php get_header(); ?>
+
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
 	<section id="content">
+		<?php if(is_single() && has_post_thumbnail()){ ?>
 		<div class="hero">
-			<img src="<?php bloginfo('template_directory'); ?>/images/examples/hero.jpg" alt="" />
+			<?php the_post_thumbnail('post'); ?>
 		</div>
+		<?php } ?>
 		<article class="post">
 			<div class="postTitle">
-				<h2>Eleven Things I Learned from a Skunk</h2>
-				<p>Written on 18 May 2013, at 15:00hs under <a href="#">Category Name</a></p>
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<p>Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <a href="#">Category Name</a></p>
+				<?php the_tags('<p><strong>Tagged with:</strong> ', ', ', '</p>'); ?>
 			</div>
+			<?php if(!is_single() && has_post_thumbnail()){ ?>
+			<div class="postImage">
+				<?php the_post_thumbnail('post'); ?>
+			</div>
+			<?php } ?>
 			<div class="postEntry">
-				<a href="#" data-postid="<?php the_ID(); ?>" class="like <?php like_status($post->ID); ?>"><span class="likeCount"><?php like_count($post->ID); ?></span> likes</a>
-				<p>1. Due to their odor seeming to be everywhere at once, a skunk is a master at misdirection for certain excitable personalities, but its last line of defense (spraying) is also one of the most effective on earth. After letting the two of them into the back yard, the dog who first noticed the skunk and who was therefore chasing around the yard as if she’d been set free inside a nuclear accelerator was not actually the dog that was in danger of being sprayed or “skunked.” She’d been hoodwinked into thinking the skunk was over there and over there and over there all at the same time. </p>
-				<p>The second, slower, <a href="#">lumbering dog</a>, big and black and just barely aware that there was reason for such a racket in the first place, accidentally surprised and cornered skunk where it had taken refuge near the minivan.</p>
-				<p>While I expended my energy and attention calling and cajoling the first dog — “Sadie… knock it off… get back in here…” — the second dog had sprinted back to the house in a panic, already past me and now inside, visiting her new odor upon every room and occupant, attempting to remove said odor by rubbing against all available surfaces: carpet, bed, blanket, stair, door, spouse.</p>
-				<p><strong>2. Skunk odor is one of the top ten most-toxic odors known to humankind, behind… well, behind nothing I know. It reminds me of nothing humanly imaginable.</strong> Like spoiled and burning all-season radials. But worse. And how do you spoil all-season radials anyway? And you have to concentrate that smell in ways indescribable,as if skunks are using odor technology at least twenty-five years into the future.</p>
-				<p>You know the Pepe Le Pew cartoons where Pepe walks into a scene and all the people run away, screaming in terror? I never really understood exactly why they did that until my dog was skunked. Then I understood perfectly well. Running? Screaming? Terror? This is an under-reaction. </p>
+				<?php the_content(); ?>
 			</div>
 		</article>
 	</section>
 
 	<?php get_sidebar('main'); ?>
-	
+
+	<?php if(is_single()){ ?>
+
 	<section id="comments">		
 		<div id="commentList">
 			<h3>3 Comments</h3>
@@ -60,6 +67,10 @@
 			</form>
 		</div>
 	</section>
+
+	<?php } ?>
+
+	<?php endwhile; endif; ?>
 
 	<?php get_sidebar('aux'); ?>
 

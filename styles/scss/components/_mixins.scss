@@ -37,22 +37,22 @@
 		}
 	}
 
-	@mixin caps(){
-		font-family:'Alegreya SC', Georgia, Times, serif;
-	}
-
-	@mixin hidetext(){
-		display:block;
-		font-size:0;
-		text-indent:-9999em;
-	}
-
 	.sans-serif {
 		font-family:'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+		font-weight:400;
 	}
 
 	.clear {
 		overflow:hidden;
+	}
+
+	.sprite {
+		display:block;
+		font-size:0;
+		text-indent:-9999em;
+		width:15px;
+		height:10px;
+		background:image-url('sprite.png', false, false) no-repeat 0 0;
 	}
 
 	$maincolor:#3498db;

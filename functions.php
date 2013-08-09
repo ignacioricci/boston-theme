@@ -9,6 +9,11 @@
 	// Post Like
 	include_once(TEMPLATEPATH . '/ssi/post-like.php');
 
+	// Enable post thumbnails
+    add_theme_support('post-thumbnails');
+	add_image_size('hero', 1200, 800, true);
+	add_image_size('post', 800, 9999);
+
 	// Drawer widgets
  	if (function_exists('register_sidebar')){
 		register_sidebar(array(
@@ -28,5 +33,23 @@
         return $socialnetw;
 	}
 	add_filter('user_contactmethods','add_social_netw', 10 , 1);
+
+	// Enable custom header	 
+    add_theme_support('post-thumbnails');
+	$himgoptions = array(
+		'default-image' => get_template_directory_uri() . '/images/logo.gif',
+		'random-default' => false,
+		'width' => '',
+		'height' => 50,
+		'flex-height' => false,
+		'flex-width' => false,
+		'default-text-color' => '',
+		'header-text' => false,
+		'uploads' => true,
+		'wp-head-callback' => '',
+		'admin-head-callback' => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support('custom-header', $himgoptions);
 
 ?>

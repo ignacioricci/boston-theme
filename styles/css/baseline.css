@@ -54,13 +54,23 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 50, ../scss/components/_mixins.scss */
-.sans-serif, .btn, .aside {
-  font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif; }
+/* line 40, ../scss/components/_mixins.scss */
+.sans-serif, .btn, #header #toggleMenu, .aside {
+  font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400; }
 
-/* line 54, ../scss/components/_mixins.scss */
-.clear, #sidebar #blogAuthor {
+/* line 45, ../scss/components/_mixins.scss */
+.clear, #header #toggleMenu, #sidebar #blogAuthor, #drawer #closeDrawer {
   overflow: hidden; }
+
+/* line 49, ../scss/components/_mixins.scss */
+.sprite, #header #toggleMenu span, #drawer #closeDrawer a {
+  display: block;
+  font-size: 0;
+  text-indent: -9999em;
+  width: 15px;
+  height: 10px;
+  background: url('../../images/sprite.png') no-repeat 0 0; }
 
 /* line 2, ../scss/components/_base.scss */
 body {
@@ -76,7 +86,7 @@ em {
 
 /* line 15, ../scss/components/_base.scss */
 strong {
-  font-weight: bold; }
+  font-weight: 600; }
 
 /* line 19, ../scss/components/_base.scss */
 a {
@@ -132,6 +142,29 @@ a {
   .personItem .personInfo {
     width: 85%; }
 
+/* line 78, ../scss/components/_base.scss */
+.postActions a {
+  color: #999;
+  display: block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(0, 0, 0, 0.04);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+  /* line 87, ../scss/components/_base.scss */
+  .postActions a:hover {
+    color: #FFF;
+    text-decoration: none;
+    background: #999; }
+/* line 97, ../scss/components/_base.scss */
+.postActions .pa-like a:hover, .postActions .pa-like .just-voted {
+  color: #FFF;
+  background: #e74c3c; }
+
 /* line 2, ../scss/components/_buttons.scss */
 .btn {
   cursor: pointer;
@@ -183,14 +216,59 @@ a {
 
 /* line 2, ../scss/components/_header.scss */
 #header {
-  position: fixed;
+  height: 80px;
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
-  line-height: 100%; }
-  /* line 10, ../scss/components/_header.scss */
+  z-index: 3; }
+  /* line 11, ../scss/components/_header.scss */
+  #header #headerHolder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22%;
+    background: #FFF;
+    border-bottom: 1px solid #EEE; }
+  /* line 20, ../scss/components/_header.scss */
   #header #brand {
-    background: #FFF; }
+    padding: 15px 10%;
+    height: 50px;
+    overflow: hidden; }
+    /* line 26, ../scss/components/_header.scss */
+    #header #brand a {
+      line-height: 100%; }
+    /* line 30, ../scss/components/_header.scss */
+    #header #brand img {
+      display: block;
+      max-height: 50px;
+      width: auto; }
+    /* line 36, ../scss/components/_header.scss */
+    #header #brand span {
+      color: #000;
+      font-size: 1.5em;
+      font-weight: 700; }
+  /* line 44, ../scss/components/_header.scss */
+  #header #toggleMenu {
+    line-height: 100%;
+    font-size: 0.938em;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    text-transform: uppercase; }
+    /* line 55, ../scss/components/_header.scss */
+    #header #toggleMenu strong, #header #toggleMenu span {
+      float: left; }
+    /* line 59, ../scss/components/_header.scss */
+    #header #toggleMenu strong {
+      color: #888;
+      padding-right: 10px; }
+    /* line 64, ../scss/components/_header.scss */
+    #header #toggleMenu span {
+      margin-top: 3px; }
+    /* line 69, ../scss/components/_header.scss */
+    #header #toggleMenu a:hover strong {
+      color: #333; }
 
 /* line 2, ../scss/components/_post.scss */
 .hero {
@@ -206,28 +284,36 @@ a {
 /* line 16, ../scss/components/_post.scss */
 .post {
   padding-bottom: 7.5em;
-  padding: 0 12%;
-  max-width: 900px; }
-  /* line 24, ../scss/components/_post.scss */
-  .post .postTitle h2 {
-    font-weight: bold;
-    color: #000;
-    padding-top: 1.25em;
-    font-size: 3em;
-    line-height: 1.25em; }
-  /* line 32, ../scss/components/_post.scss */
-  .post .postTitle p {
-    padding: 1em 0 3em;
-    font-family: 'Alegreya SC', Georgia, Times, serif; }
-  /* line 41, ../scss/components/_post.scss */
+  padding: 0 14% 4% 12%;
+  max-width: 900px;
+  border-bottom: 1px solid #DDD; }
+  /* line 23, ../scss/components/_post.scss */
+  .post .postTitle {
+    padding-bottom: 1.5625em; }
+    /* line 27, ../scss/components/_post.scss */
+    .post .postTitle h2 {
+      font-weight: bold;
+      color: #000;
+      padding-top: 1.25em;
+      padding-bottom: 0.3125em;
+      font-size: 3em;
+      line-height: 1.25em; }
+      /* line 36, ../scss/components/_post.scss */
+      .post .postTitle h2 a {
+        color: #000; }
+    /* line 42, ../scss/components/_post.scss */
+    .post .postTitle p {
+      font-variant: small-caps; }
+  /* line 50, ../scss/components/_post.scss */
+  .post .postImage img, .post .postEntry img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px; }
+  /* line 61, ../scss/components/_post.scss */
   .post .postEntry p {
     font-size: 1.375em;
     padding-bottom: 2.5em; }
-  /* line 46, ../scss/components/_post.scss */
-  .post .postEntry img {
-    display: block;
-    width: 100%;
-    height: auto; }
 
 /* line 2, ../scss/components/_comments.scss */
 #comments {
@@ -288,29 +374,26 @@ a {
   .aside .asideHolder {
     height: 100%;
     overflow: auto; }
-  /* line 17, ../scss/components/_aside.scss */
-  .aside .asideBox {
-    padding: 0 10%; }
-    /* line 21, ../scss/components/_aside.scss */
-    .aside .asideBox:first-child {
-      padding-top: 20px; }
-    /* line 25, ../scss/components/_aside.scss */
-    .aside .asideBox:last-child {
-      padding-bottom: 20px; }
+    /* line 17, ../scss/components/_aside.scss */
+    .aside .asideHolder .asideBox {
+      padding: 0 10%; }
 
 /* line 2, ../scss/components/_sidebar.scss */
 #sidebar {
   border-right: 1px solid rgba(0, 0, 0, 0.07); }
   /* line 6, ../scss/components/_sidebar.scss */
+  #sidebar #blogMainPage {
+    padding-top: 80px; }
+  /* line 10, ../scss/components/_sidebar.scss */
   #sidebar #blogAuthor {
     font-size: 0.813em;
-    padding: 20px 0;
+    padding: 20px 10%;
     border-top: 1px solid #EEE; }
-    /* line 14, ../scss/components/_sidebar.scss */
+    /* line 18, ../scss/components/_sidebar.scss */
     #sidebar #blogAuthor #ba-avatar,
     #sidebar #blogAuthor #ba-info {
       float: left; }
-    /* line 18, ../scss/components/_sidebar.scss */
+    /* line 22, ../scss/components/_sidebar.scss */
     #sidebar #blogAuthor #ba-avatar {
       width: 75px;
       height: 75px;
@@ -320,55 +403,38 @@ a {
       -o-border-radius: 75px;
       border-radius: 75px;
       overflow: hidden; }
-      /* line 25, ../scss/components/_sidebar.scss */
+      /* line 29, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-avatar img {
         display: block; }
-    /* line 31, ../scss/components/_sidebar.scss */
+    /* line 35, ../scss/components/_sidebar.scss */
     #sidebar #blogAuthor #ba-info {
       width: 50%;
       line-height: 100%;
       padding: 2px 0 0 20px; }
-      /* line 37, ../scss/components/_sidebar.scss */
+      /* line 41, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-info * {
         display: block;
         padding-top: 5px; }
-      /* line 42, ../scss/components/_sidebar.scss */
+      /* line 46, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-info strong {
         color: #2386c8; }
-      /* line 46, ../scss/components/_sidebar.scss */
+      /* line 50, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-info span {
         color: #888; }
-  /* line 54, ../scss/components/_sidebar.scss */
-  #sidebar #postActions {
+  /* line 58, ../scss/components/_sidebar.scss */
+  #sidebar .postActions {
     font-size: 0.875em;
     text-align: center; }
-    /* line 59, ../scss/components/_sidebar.scss */
-    #sidebar #postActions li {
-      margin: 5px 0; }
     /* line 63, ../scss/components/_sidebar.scss */
-    #sidebar #postActions a {
-      color: #999;
-      display: block;
-      padding: 5px 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      background: rgba(0, 0, 0, 0.04);
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px; }
-    /* line 74, ../scss/components/_sidebar.scss */
-    #sidebar #postActions #pa-like a:hover {
-      color: #FFF;
-      text-decoration: none;
-      background: #e74c3c; }
+    #sidebar .postActions li {
+      margin: 5px 0; }
 
 /* line 2, ../scss/components/_drawer.scss */
 #drawer {
   left: auto;
   right: -22%;
   background: #222;
+  z-index: 4;
   -webkit-transition-property: right;
   -moz-transition-property: right;
   -o-transition-property: right;
@@ -377,11 +443,26 @@ a {
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s; }
-  /* line 10, ../scss/components/_drawer.scss */
+  /* line 11, ../scss/components/_drawer.scss */
+  #drawer #closeDrawer {
+    height: 15px;
+    padding: 15px 10%; }
+    /* line 17, ../scss/components/_drawer.scss */
+    #drawer #closeDrawer a {
+      float: right;
+      height: 15px;
+      background-position: 0 -20px;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+      opacity: 0.5; }
+      /* line 24, ../scss/components/_drawer.scss */
+      #drawer #closeDrawer a:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1; }
+  /* line 31, ../scss/components/_drawer.scss */
   #drawer .drawerBox {
     font-size: 0.875em;
     color: #666; }
-    /* line 15, ../scss/components/_drawer.scss */
+    /* line 36, ../scss/components/_drawer.scss */
     #drawer .drawerBox h3 {
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -389,39 +470,39 @@ a {
       color: #CCC;
       margin-bottom: 15px;
       border-bottom: 1px solid #333; }
-    /* line 24, ../scss/components/_drawer.scss */
+    /* line 45, ../scss/components/_drawer.scss */
     #drawer .drawerBox a {
       color: #666; }
-    /* line 28, ../scss/components/_drawer.scss */
+    /* line 49, ../scss/components/_drawer.scss */
     #drawer .drawerBox ul {
       margin-bottom: 10px; }
-      /* line 32, ../scss/components/_drawer.scss */
+      /* line 53, ../scss/components/_drawer.scss */
       #drawer .drawerBox ul li {
         list-style: inside circle;
         line-height: 120%;
         padding-bottom: 5px; }
-    /* line 40, ../scss/components/_drawer.scss */
+    /* line 61, ../scss/components/_drawer.scss */
     #drawer .drawerBox .tagcloud {
       line-height: 120%; }
-    /* line 44, ../scss/components/_drawer.scss */
+    /* line 65, ../scss/components/_drawer.scss */
     #drawer .drawerBox #recentcomments li a:first-child {
       font-weight: 600; }
-    /* line 48, ../scss/components/_drawer.scss */
+    /* line 69, ../scss/components/_drawer.scss */
     #drawer .drawerBox table {
       width: 100%; }
-      /* line 52, ../scss/components/_drawer.scss */
+      /* line 73, ../scss/components/_drawer.scss */
       #drawer .drawerBox table th, #drawer .drawerBox table td {
         text-align: center; }
-      /* line 56, ../scss/components/_drawer.scss */
+      /* line 77, ../scss/components/_drawer.scss */
       #drawer .drawerBox table a {
         color: #FFF;
         display: block;
         font-weight: bold;
         height: 100%; }
-        /* line 63, ../scss/components/_drawer.scss */
+        /* line 84, ../scss/components/_drawer.scss */
         #drawer .drawerBox table a:hover {
           background: #333; }
-  /* line 73, ../scss/components/_drawer.scss */
+  /* line 94, ../scss/components/_drawer.scss */
   #drawer.open {
     right: 0; }
 

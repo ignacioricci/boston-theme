@@ -10,20 +10,14 @@
 		@extend .sans-serif;
 
 		.asideHolder {
+
 			height:100%;
 			overflow:auto;
-		}
+	
+			.asideBox {
 
-		.asideBox {
+				padding:0 10%;
 
-			padding:0 10%;
-			
-			&:first-child {
-				padding-top:20px;
-			}
-
-			&:last-child {
-				padding-bottom:20px;
 			}
 
 		}

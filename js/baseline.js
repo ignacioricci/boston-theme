@@ -1,14 +1,10 @@
 jQuery(function(){
-
-	jQuery('.like').click(function(e){
-		
+	jQuery('.like').click(function(e){	
 		e.preventDefault();
 		var heart = jQuery(this);
 		var post_id = heart.data('postid');
 		var votes = parseInt(jQuery(heart).children('.likeCount').text());
-
 		if(jQuery(heart).hasClass('not-voted')){
-
 			jQuery(heart).addClass('voting');
 			setTimeout(function(){
 				jQuery.ajax({
@@ -25,9 +21,10 @@ jQuery(function(){
 					}
 				});
 			}, 2000);
-
 		}
-
 	});
-
+	jQuery('#toggleMenu a, #closeDrawer a').click(function(){
+		jQuery('#central').toggleClass('mixed');
+		jQuery('#drawer').toggleClass('open');
+	});
 });

@@ -2,12 +2,16 @@
 	#sidebar {
 
 		border-right:1px solid rgba(0,0,0,0.07);
+			
+		#blogMainPage {
+			padding-top:80px;
+		}
 
 		#blogAuthor {
 
 			font-size:0.813em;
 			@extend .clear;
-			padding:20px 0;
+			padding:20px 10%;
 			border-top:1px solid #EEE;
 
 			#ba-avatar,
@@ -51,30 +55,13 @@
 
 		}
 
-		#postActions {
+		.postActions {
 
 			font-size:0.875em;
 			text-align:center;
 
 			li {
 				margin:5px 0;
-			}
-
-			a {
-				color:#999;
-				display:block;
-				padding:5px 10px;
-				text-transform:uppercase;
-				letter-spacing:0.1em;
-				background:rgba(0,0,0,0.04);
-				@include border-radius(3px);
-
-			}
-
-			#pa-like a:hover {
-				color:#FFF;
-				text-decoration:none;
-				background:#e74c3c;
 			}
 
 		}
