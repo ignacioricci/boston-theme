@@ -1,0 +1,77 @@
+	
+	#drawer {
+		
+		left:auto;
+		right:-22%;
+		background:#222;
+		@include transition-property(right);
+		@include transition-duration(0.5s);
+
+		.drawerBox {
+			
+			font-size:0.875em;
+			color:#666;
+
+			h3 {
+				text-transform:uppercase;
+				letter-spacing:0.1em;
+				font-weight:600;
+				color:#CCC;
+				margin-bottom:15px;
+				border-bottom:1px solid #333;
+			}
+
+			a {
+				color:#666;
+			}
+			
+			ul {
+
+				margin-bottom:10px;
+				
+				li {
+					list-style:inside circle; 
+					line-height:120%;
+					padding-bottom:5px;
+				}
+
+			}
+
+			.tagcloud {
+				line-height:120%;
+			}
+
+			#recentcomments li a:first-child {
+				font-weight:600;
+			}
+
+			table {
+
+				width:100%;
+
+				th, td {
+					text-align:center;
+				}
+
+				a {
+					
+					color:#FFF;
+					display:block;
+					font-weight:bold;
+					height:100%;
+
+					&:hover {
+						background:#333;
+					}
+
+				}
+
+			}
+
+		}
+
+		&.open {
+			right:0;
+		}
+
+	}

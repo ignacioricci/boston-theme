@@ -55,11 +55,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /* line 50, ../scss/components/_mixins.scss */
-.sans-serif, .btn, #sidebar {
+.sans-serif, .btn, .aside {
   font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 /* line 54, ../scss/components/_mixins.scss */
-.clear, .post .postOptions, #sidebar #blogAuthor {
+.clear, #sidebar #blogAuthor {
   overflow: hidden; }
 
 /* line 2, ../scss/components/_base.scss */
@@ -68,41 +68,51 @@ body {
   font-size: 1em;
   line-height: 2em;
   color: #333;
-  background: #FFF;
-  background-size: auto 100%; }
+  background: #222; }
 
-/* line 12, ../scss/components/_base.scss */
+/* line 11, ../scss/components/_base.scss */
 em {
   font-style: italic; }
 
-/* line 16, ../scss/components/_base.scss */
+/* line 15, ../scss/components/_base.scss */
 strong {
   font-weight: bold; }
 
-/* line 20, ../scss/components/_base.scss */
+/* line 19, ../scss/components/_base.scss */
 a {
-  color: #79a200;
+  color: #2383c4;
   text-decoration: none; }
-  /* line 24, ../scss/components/_base.scss */
+  /* line 23, ../scss/components/_base.scss */
   a:hover {
     text-decoration: underline;
-    background: #f9fcf2; }
+    background: #f4f9fd; }
 
-/* line 31, ../scss/components/_base.scss */
-#content {
-  width: 74%;
-  margin-left: 26%;
-  position: relative;
-  z-index: 2; }
+/* line 30, ../scss/components/_base.scss */
+#central {
+  background: #FFF;
+  width: 78%;
+  padding-left: 22%;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+  /* line 38, ../scss/components/_base.scss */
+  #central.mixed {
+    width: 56%;
+    margin-right: 22%; }
 
-/* line 39, ../scss/components/_base.scss */
+/* line 45, ../scss/components/_base.scss */
 .personItem {
   overflow: hidden; }
-  /* line 44, ../scss/components/_base.scss */
+  /* line 50, ../scss/components/_base.scss */
   .personItem .personAvatar,
   .personItem .personInfo {
     float: left; }
-  /* line 48, ../scss/components/_base.scss */
+  /* line 54, ../scss/components/_base.scss */
   .personItem .personAvatar {
     width: 80px;
     height: 80px;
@@ -113,12 +123,12 @@ a {
     border-radius: 40px;
     overflow: hidden;
     margin-right: 2em; }
-    /* line 56, ../scss/components/_base.scss */
+    /* line 62, ../scss/components/_base.scss */
     .personItem .personAvatar img {
       display: block;
       width: 100%;
       height: 100%; }
-  /* line 64, ../scss/components/_base.scss */
+  /* line 70, ../scss/components/_base.scss */
   .personItem .personInfo {
     width: 85%; }
 
@@ -173,8 +183,12 @@ a {
 
 /* line 2, ../scss/components/_header.scss */
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   line-height: 100%; }
-  /* line 6, ../scss/components/_header.scss */
+  /* line 10, ../scss/components/_header.scss */
   #header #brand {
     background: #FFF; }
 
@@ -214,38 +228,6 @@ a {
     display: block;
     width: 100%;
     height: auto; }
-  /* line 54, ../scss/components/_post.scss */
-  .post .postAuthor {
-    padding: 2em 0 1.333em;
-    border-top: 2px solid #EEE;
-    border-bottom: 2px solid #EEE; }
-    /* line 60, ../scss/components/_post.scss */
-    .post .postAuthor .authorInfo {
-      width: 60%; }
-      /* line 64, ../scss/components/_post.scss */
-      .post .postAuthor .authorInfo p {
-        line-height: 1.375em; }
-      /* line 68, ../scss/components/_post.scss */
-      .post .postAuthor .authorInfo strong {
-        font-weight: normal;
-        display: block;
-        font-family: 'Alegreya SC', Georgia, Times, serif;
-        padding-bottom: 0.3em; }
-      /* line 75, ../scss/components/_post.scss */
-      .post .postAuthor .authorInfo span {
-        font-size: 0.875em; }
-  /* line 83, ../scss/components/_post.scss */
-  .post .postOptions {
-    padding: 2.5em 0 3em; }
-    /* line 88, ../scss/components/_post.scss */
-    .post .postOptions strong, .post .postOptions ul, .post .postOptions li {
-      float: left; }
-    /* line 92, ../scss/components/_post.scss */
-    .post .postOptions strong {
-      padding: 2px 15px 0 0; }
-    /* line 96, ../scss/components/_post.scss */
-    .post .postOptions li {
-      margin-left: 5px; }
 
 /* line 2, ../scss/components/_comments.scss */
 #comments {
@@ -294,29 +276,41 @@ a {
       #comments #respond p textarea {
         height: 120px; }
 
-/* line 2, ../scss/components/_sidebar.scss */
-#sidebar {
+/* line 2, ../scss/components/_aside.scss */
+.aside {
   position: fixed;
   top: 0;
-  left: 1px;
-  width: 26%;
+  left: 0;
+  width: 22%;
   height: 100%;
-  z-index: 1; }
-  /* line 12, ../scss/components/_sidebar.scss */
-  #sidebar #sidebarHolder {
+  z-index: 2; }
+  /* line 12, ../scss/components/_aside.scss */
+  .aside .asideHolder {
     height: 100%;
-    padding: 0 10%;
-    border-right: 1px solid rgba(0, 0, 0, 0.07); }
-  /* line 18, ../scss/components/_sidebar.scss */
+    overflow: auto; }
+  /* line 17, ../scss/components/_aside.scss */
+  .aside .asideBox {
+    padding: 0 10%; }
+    /* line 21, ../scss/components/_aside.scss */
+    .aside .asideBox:first-child {
+      padding-top: 20px; }
+    /* line 25, ../scss/components/_aside.scss */
+    .aside .asideBox:last-child {
+      padding-bottom: 20px; }
+
+/* line 2, ../scss/components/_sidebar.scss */
+#sidebar {
+  border-right: 1px solid rgba(0, 0, 0, 0.07); }
+  /* line 6, ../scss/components/_sidebar.scss */
   #sidebar #blogAuthor {
     font-size: 0.813em;
     padding: 20px 0;
     border-top: 1px solid #EEE; }
-    /* line 26, ../scss/components/_sidebar.scss */
+    /* line 14, ../scss/components/_sidebar.scss */
     #sidebar #blogAuthor #ba-avatar,
     #sidebar #blogAuthor #ba-info {
       float: left; }
-    /* line 30, ../scss/components/_sidebar.scss */
+    /* line 18, ../scss/components/_sidebar.scss */
     #sidebar #blogAuthor #ba-avatar {
       width: 75px;
       height: 75px;
@@ -326,56 +320,129 @@ a {
       -o-border-radius: 75px;
       border-radius: 75px;
       overflow: hidden; }
-      /* line 37, ../scss/components/_sidebar.scss */
+      /* line 25, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-avatar img {
         display: block; }
-    /* line 43, ../scss/components/_sidebar.scss */
+    /* line 31, ../scss/components/_sidebar.scss */
     #sidebar #blogAuthor #ba-info {
       width: 50%;
       line-height: 100%;
       padding: 2px 0 0 20px; }
-      /* line 49, ../scss/components/_sidebar.scss */
+      /* line 37, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-info * {
         display: block;
         padding-top: 5px; }
-      /* line 54, ../scss/components/_sidebar.scss */
+      /* line 42, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-info strong {
-        color: #7da700; }
-      /* line 58, ../scss/components/_sidebar.scss */
+        color: #2386c8; }
+      /* line 46, ../scss/components/_sidebar.scss */
       #sidebar #blogAuthor #ba-info span {
         color: #888; }
-  /* line 66, ../scss/components/_sidebar.scss */
+  /* line 54, ../scss/components/_sidebar.scss */
   #sidebar #postActions {
     font-size: 0.875em;
     text-align: center; }
-    /* line 71, ../scss/components/_sidebar.scss */
+    /* line 59, ../scss/components/_sidebar.scss */
     #sidebar #postActions li {
       margin: 5px 0; }
-    /* line 75, ../scss/components/_sidebar.scss */
+    /* line 63, ../scss/components/_sidebar.scss */
     #sidebar #postActions a {
       color: #999;
       display: block;
       padding: 5px 10px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      background: rgba(0, 0, 0, 0.03);
+      background: rgba(0, 0, 0, 0.04);
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px; }
-    /* line 86, ../scss/components/_sidebar.scss */
+    /* line 74, ../scss/components/_sidebar.scss */
     #sidebar #postActions #pa-like a:hover {
       color: #FFF;
       text-decoration: none;
       background: #e74c3c; }
 
+/* line 2, ../scss/components/_drawer.scss */
+#drawer {
+  left: auto;
+  right: -22%;
+  background: #222;
+  -webkit-transition-property: right;
+  -moz-transition-property: right;
+  -o-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+  /* line 10, ../scss/components/_drawer.scss */
+  #drawer .drawerBox {
+    font-size: 0.875em;
+    color: #666; }
+    /* line 15, ../scss/components/_drawer.scss */
+    #drawer .drawerBox h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: #CCC;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #333; }
+    /* line 24, ../scss/components/_drawer.scss */
+    #drawer .drawerBox a {
+      color: #666; }
+    /* line 28, ../scss/components/_drawer.scss */
+    #drawer .drawerBox ul {
+      margin-bottom: 10px; }
+      /* line 32, ../scss/components/_drawer.scss */
+      #drawer .drawerBox ul li {
+        list-style: inside circle;
+        line-height: 120%;
+        padding-bottom: 5px; }
+    /* line 40, ../scss/components/_drawer.scss */
+    #drawer .drawerBox .tagcloud {
+      line-height: 120%; }
+    /* line 44, ../scss/components/_drawer.scss */
+    #drawer .drawerBox #recentcomments li a:first-child {
+      font-weight: 600; }
+    /* line 48, ../scss/components/_drawer.scss */
+    #drawer .drawerBox table {
+      width: 100%; }
+      /* line 52, ../scss/components/_drawer.scss */
+      #drawer .drawerBox table th, #drawer .drawerBox table td {
+        text-align: center; }
+      /* line 56, ../scss/components/_drawer.scss */
+      #drawer .drawerBox table a {
+        color: #FFF;
+        display: block;
+        font-weight: bold;
+        height: 100%; }
+        /* line 63, ../scss/components/_drawer.scss */
+        #drawer .drawerBox table a:hover {
+          background: #333; }
+  /* line 73, ../scss/components/_drawer.scss */
+  #drawer.open {
+    right: 0; }
+
+/* line 2, ../scss/components/_footer.scss */
+#footer {
+  background: #EEE; }
+
 @media screen and (max-width: 1000px) {
   /* line 4, ../scss/components/_responsive.scss */
   #sidebar {
-    display: none; }
-
-  /* line 8, ../scss/components/_responsive.scss */
-  #content {
+    position: static;
     width: auto;
+    height: auto; }
+
+  /* line 10, ../scss/components/_responsive.scss */
+  #drawer {
+    right: -30%;
+    width: 30%; }
+
+  /* line 15, ../scss/components/_responsive.scss */
+  #central, #central.mixed {
+    width: auto;
+    padding: 0;
     margin: 0; } }

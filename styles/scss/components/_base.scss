@@ -4,8 +4,7 @@
 		font-family:'Alegreya', Georgia, Times, serif;
 		@include base_font_size;
 		color:#333;
-		background:#FFF;
-		background-size:auto 100%;
+		background:#222;
 
 	}
 
@@ -28,12 +27,19 @@
 
 	}
 
-	#content {
-		width:74%;
-		margin-left:26%;
-		position:relative;
-		z-index:2;
-		//background:image-url('baseline.gif', false, false) repeat 0 0;
+	#central {
+
+		background:#FFF;
+		width:78%;
+		padding-left:22%;
+		@include transition-property(width);
+		@include transition-duration(0.5s);
+
+		&.mixed {
+			width:56%;
+			margin-right:22%;
+		}
+
 	}
 
 	.personItem {

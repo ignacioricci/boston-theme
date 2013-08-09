@@ -1,6 +1,10 @@
 	
 	#header {
-
+		
+		position:fixed;
+		top:0;
+		left:0;
+		z-index:10;
 		line-height:100%;
 		
 		#brand {

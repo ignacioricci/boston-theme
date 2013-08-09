@@ -9,3 +9,14 @@
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
+
+	<header id="header">
+		<div id="brand">
+			<div id="logo">
+				<img src="<?php bloginfo('template_directory'); ?>/images/examples/logo.png" alt="" />
+			</div>
+			<div id="toggleMenu"><a href="#">Menu</a></div>
+		</div>
+	</header>
+
+	<section id="central">

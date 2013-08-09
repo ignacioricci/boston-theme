@@ -1,12 +1,20 @@
 	
 	@media screen and (max-width:1000px){
-
+		
 		#sidebar {
-			display:none;
+			position:static;
+			width:auto;
+			height:auto;
 		}
 
-		#content {
+		#drawer {
+			right:-30%;
+			width:30%;
+		}
+		
+		#central, #central.mixed {
 			width:auto;
+			padding:0;
 			margin:0;
 		}
 

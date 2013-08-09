@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+	
 	<section id="content">
 		<div class="hero">
 			<img src="<?php bloginfo('template_directory'); ?>/images/examples/hero.jpg" alt="" />
@@ -17,64 +17,50 @@
 				<p><strong>2. Skunk odor is one of the top ten most-toxic odors known to humankind, behind… well, behind nothing I know. It reminds me of nothing humanly imaginable.</strong> Like spoiled and burning all-season radials. But worse. And how do you spoil all-season radials anyway? And you have to concentrate that smell in ways indescribable,as if skunks are using odor technology at least twenty-five years into the future.</p>
 				<p>You know the Pepe Le Pew cartoons where Pepe walks into a scene and all the people run away, screaming in terror? I never really understood exactly why they did that until my dog was skunked. Then I understood perfectly well. Running? Screaming? Terror? This is an under-reaction. </p>
 			</div>
-			<div class="personItem postAuthor">
-				<div class="personAvatar">
-					<?php echo get_avatar(get_the_author_meta('user_email'), 80); ?>
-				</div>
-				<div class="personInfo">
-					<p><strong>Written by Ignacio Ricci</strong></p>
-					<p><span>Pixel Tamer &amp; Co-founder at Vulsai (<a href="#">http://www.vulsai.com</a>) - Learning &amp; turning Japanese</span></p>
-				</div>
-			</div>
-			<div class="postOptions">
-				<strong>Share this post</strong>
-				<ul>
-					<li><a class="btn btn-tw" href="#">Twitter</a></li>
-					<li><a class="btn btn-fb" href="#">Facebook</a></li>
-					<li><a class="btn btn-gp" href="#">Google+</a></li>
-				</ul>
-			</div>
 		</article>
-		<div id="comments">		
-			<div id="commentList">
-				<h3>3 Comments</h3>
-				<ol>
-					<li class="comment personItem">
-						<div class="personAvatar">
-							<img src="images/avatar2.jpg">
-						</div>
-						<div class="personInfo">
-							<p><strong>Ignacio Ricci</strong></p>
-						</div>
-						<div class="commentText">
-							<p>Morbi in ipsum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum congue nunc at semper. Phasellus dignissim faucibus ligula, a porta elit egestas non. Curabitur erat mi, luctus ac pellentesque a, lacinia nec dolor. Duis suscipit leo justo, sed malesuada neque. Phasellus vitae nulla lobortis enim pretium tempor eget quis odio.</p>
-						</div>
-					</li>
-				</ol>
-			</div>
-			<div id="respond">		
-				<h3>Leave a comment</h3>
-				<form action="" method="">
-					<p>
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name">
-					</p>
-					<p>
-						<label for="email">E-mail</label>
-						<input type="text" name="email" id="email">
-					</p>
-					<p>
-						<label for="comments">Comment</label>
-						<textarea name="comments" id="comments"></textarea>
-					</p>
-					<p>
-						<button class="btn" type="submit">Send</button>
-					</p>
-				</form>
-			</div>
+	</section>
+
+	<?php get_sidebar('main'); ?>
+	
+	<section id="comments">		
+		<div id="commentList">
+			<h3>3 Comments</h3>
+			<ol>
+				<li class="comment personItem">
+					<div class="personAvatar">
+						<img src="images/avatar2.jpg">
+					</div>
+					<div class="personInfo">
+						<p><strong>Ignacio Ricci</strong></p>
+					</div>
+					<div class="commentText">
+						<p>Morbi in ipsum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum congue nunc at semper. Phasellus dignissim faucibus ligula, a porta elit egestas non. Curabitur erat mi, luctus ac pellentesque a, lacinia nec dolor. Duis suscipit leo justo, sed malesuada neque. Phasellus vitae nulla lobortis enim pretium tempor eget quis odio.</p>
+					</div>
+				</li>
+			</ol>
+		</div>
+		<div id="respond">		
+			<h3>Leave a comment</h3>
+			<form action="" method="">
+				<p>
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name">
+				</p>
+				<p>
+					<label for="email">E-mail</label>
+					<input type="text" name="email" id="email">
+				</p>
+				<p>
+					<label for="comments">Comment</label>
+					<textarea name="comments" id="comments"></textarea>
+				</p>
+				<p>
+					<button class="btn" type="submit">Send</button>
+				</p>
+			</form>
 		</div>
 	</section>
 
-	<?php get_sidebar(); ?>
+	<?php get_sidebar('aux'); ?>
 
 <?php get_footer(); ?>
