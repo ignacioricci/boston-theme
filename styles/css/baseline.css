@@ -524,6 +524,33 @@ a {
 
   /* line 15, ../scss/components/_responsive.scss */
   #central, #central.mixed {
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 0;
+    -moz-transition-duration: 0;
+    -o-transition-duration: 0;
+    transition-duration: 0;
     width: auto;
     padding: 0;
-    margin: 0; } }
+    margin: 0; }
+
+  /* line 26, ../scss/components/_responsive.scss */
+  #header #headerHolder {
+    position: absolute;
+    width: auto;
+    border: 0;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    -ms-border-radius: 0 0 5px 0;
+    -o-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0; }
+    /* line 33, ../scss/components/_responsive.scss */
+    #header #headerHolder #brand {
+      padding: 15px; } }
+@media screen and (max-width: 500px) {
+  /* line 45, ../scss/components/_responsive.scss */
+  .hero {
+    height: 12em;
+    overflow: hidden; } }
