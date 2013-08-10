@@ -23,7 +23,8 @@ jQuery(function(){
 			}, 2000);
 		}
 	});
-	jQuery('#toggleMenu a, #closeDrawer a').click(function(){
+	jQuery('#toggleMenu a, #closeDrawer a').click(function(e){
+		e.preventDefault();
 		jQuery('#central').toggleClass('mixed');
 		jQuery('#drawer').toggleClass('open');
 	});

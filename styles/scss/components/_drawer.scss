@@ -2,11 +2,20 @@
 	#drawer {
 		
 		left:auto;
-		right:-22%;
+		right:-23%;
 		background:#222;
 		z-index:4;
 		@include transition-property(right);
 		@include transition-duration(0.5s);
+
+		a {
+			color:#666;
+			border:0;
+			&:hover {
+				color:#FFF;
+				background:none;
+			}
+		}
 
 		#closeDrawer {
 
@@ -36,16 +45,11 @@
 			h3 {
 				text-transform:uppercase;
 				letter-spacing:0.1em;
-				font-weight:600;
 				color:#CCC;
 				margin-bottom:15px;
 				border-bottom:1px solid #333;
 			}
 
-			a {
-				color:#666;
-			}
-			
 			ul {
 
 				margin-bottom:10px;
@@ -63,6 +67,11 @@
 			}
 
 			#recentcomments li a:first-child {
+				font-weight:600;
+			}
+
+			caption {
+				text-align:center;
 				font-weight:600;
 			}
 

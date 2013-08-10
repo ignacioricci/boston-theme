@@ -1,6 +1,6 @@
 		
 		<footer id="footer">
-			<div id="copyright">Proudly powered by <a href="#">WordPress</a>. <br /> <a href="#">Baseline theme</a> by <a href="#">Ignacio Ricci</a></div>
+			<p>Proudly powered by <a href="#">WordPress</a>. <span><a href="#">Baseline theme</a> by <a href="#">Ignacio Ricci</p></a></div>
 		</footer>
 
 	</section>

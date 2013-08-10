@@ -11,16 +11,21 @@
 <body>
 
 	<header id="header">
-		<div id="headerHolder">
-			<div id="brand">
-				<?php if(get_header_image()){ ?>
-				<h1><a href="<?php bloginfo('home'); ?>/"><img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" /></a></h1>
-				<?php } else { ?>
-				<h1><a href="<?php bloginfo('home'); ?>/"><span><?php bloginfo('name'); ?></span></a></h1>
-				<?php } ?>
+		<aside class="aside" id="sidebar">
+			<div class="asideHolder">
+				<div class="asideBox" id="blogBrand">
+					<?php if(get_header_image()){ ?>
+					<p><a href="<?php bloginfo('home'); ?>/"><img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" /></a></p>
+					<?php } ?>
+					<h1><a href="<?php bloginfo('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+					<p><?php bloginfo('description'); ?></p>
+				</div>
+				<div class="asideBox" id="blogPages">
+					<?php wp_nav_menu(array('theme_location' =>  'mainmenu', 'container' => '', 'depth' => '1')); ?>
+				</div>
 			</div>
-		</div>
-		<div id="toggleMenu"><a href="#"><strong>Menu</strong> <span></span></a></div>
+		</aside>
+		<div id="toggleMenu"<?php if(is_single() && has_post_thumbnail()){ echo ' class="alt"'; } ?>><a href="#"><strong>Menu</strong> <span></span></a></div>
 	</header>
 
 	<section id="central">

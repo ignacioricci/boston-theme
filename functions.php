@@ -9,6 +9,9 @@
 	// Post Like
 	include_once(TEMPLATEPATH . '/ssi/post-like.php');
 
+	// Custom Menu
+    register_nav_menus(array('mainmenu'=>__('Main Menu'),));
+
 	// Enable post thumbnails
     add_theme_support('post-thumbnails');
 	add_image_size('hero', 1200, 800, true);

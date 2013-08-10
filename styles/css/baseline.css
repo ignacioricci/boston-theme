@@ -55,15 +55,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /* line 40, ../scss/components/_mixins.scss */
-.sans-serif, .btn, #header #toggleMenu, .aside {
-  font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 400; }
+.serif, .post .postTitle h2, .post .postEntry {
+  font-family: 'Alegreya', Georgia, Times, serif; }
 
-/* line 45, ../scss/components/_mixins.scss */
-.clear, #header #toggleMenu, #sidebar #blogAuthor, #drawer #closeDrawer {
+/* line 44, ../scss/components/_mixins.scss */
+.clear, #header #toggleMenu, .post, .post .postAuthor, #drawer #closeDrawer {
   overflow: hidden; }
 
-/* line 49, ../scss/components/_mixins.scss */
+/* line 48, ../scss/components/_mixins.scss */
 .sprite, #header #toggleMenu span, #drawer #closeDrawer a {
   display: block;
   font-size: 0;
@@ -74,10 +73,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 2, ../scss/components/_base.scss */
 body {
-  font-family: 'Alegreya', Georgia, Times, serif;
+  font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, serif;
   font-size: 1em;
   line-height: 2em;
-  color: #333;
+  color: #222;
   background: #222; }
 
 /* line 11, ../scss/components/_base.scss */
@@ -90,18 +89,18 @@ strong {
 
 /* line 19, ../scss/components/_base.scss */
 a {
-  color: #2383c4;
-  text-decoration: none; }
-  /* line 23, ../scss/components/_base.scss */
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #acd533; }
+  /* line 24, ../scss/components/_base.scss */
   a:hover {
-    text-decoration: underline;
-    background: #f4f9fd; }
+    background: #eff7d8; }
 
 /* line 30, ../scss/components/_base.scss */
 #central {
   background: #FFF;
-  width: 78%;
-  padding-left: 22%;
+  width: 77%;
+  padding-left: 23%;
   -webkit-transition-property: width;
   -moz-transition-property: width;
   -o-transition-property: width;
@@ -112,8 +111,8 @@ a {
   transition-duration: 0.5s; }
   /* line 38, ../scss/components/_base.scss */
   #central.mixed {
-    width: 56%;
-    margin-right: 22%; }
+    width: 55%;
+    margin-right: 23%; }
 
 /* line 45, ../scss/components/_base.scss */
 .personItem {
@@ -141,29 +140,6 @@ a {
   /* line 70, ../scss/components/_base.scss */
   .personItem .personInfo {
     width: 85%; }
-
-/* line 78, ../scss/components/_base.scss */
-.postActions a {
-  color: #999;
-  display: block;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: rgba(0, 0, 0, 0.04);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px; }
-  /* line 87, ../scss/components/_base.scss */
-  .postActions a:hover {
-    color: #FFF;
-    text-decoration: none;
-    background: #999; }
-/* line 97, ../scss/components/_base.scss */
-.postActions .pa-like a:hover, .postActions .pa-like .just-voted {
-  color: #FFF;
-  background: #e74c3c; }
 
 /* line 2, ../scss/components/_buttons.scss */
 .btn {
@@ -216,39 +192,52 @@ a {
 
 /* line 2, ../scss/components/_header.scss */
 #header {
-  height: 80px;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3; }
-  /* line 11, ../scss/components/_header.scss */
-  #header #headerHolder {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 22%;
-    background: #FFF;
-    border-bottom: 1px solid #EEE; }
-  /* line 20, ../scss/components/_header.scss */
-  #header #brand {
-    padding: 15px 10%;
-    height: 50px;
-    overflow: hidden; }
-    /* line 26, ../scss/components/_header.scss */
-    #header #brand a {
-      line-height: 100%; }
-    /* line 30, ../scss/components/_header.scss */
-    #header #brand img {
-      display: block;
-      max-height: 50px;
-      width: auto; }
-    /* line 36, ../scss/components/_header.scss */
-    #header #brand span {
-      color: #000;
-      font-size: 1.5em;
-      font-weight: 700; }
-  /* line 44, ../scss/components/_header.scss */
+  /* line 10, ../scss/components/_header.scss */
+  #header #sidebar {
+    border-right: 1px solid rgba(0, 0, 0, 0.07); }
+    /* line 14, ../scss/components/_header.scss */
+    #header #sidebar #blogBrand {
+      padding: 20px 10%;
+      overflow: hidden; }
+      /* line 19, ../scss/components/_header.scss */
+      #header #sidebar #blogBrand h1 {
+        font-size: 1.5em;
+        font-weight: 600;
+        padding-top: 20px; }
+      /* line 25, ../scss/components/_header.scss */
+      #header #sidebar #blogBrand a {
+        border: 0; }
+        /* line 27, ../scss/components/_header.scss */
+        #header #sidebar #blogBrand a:hover {
+          background: none; }
+      /* line 32, ../scss/components/_header.scss */
+      #header #sidebar #blogBrand p {
+        line-height: 140%;
+        padding-top: 5px;
+        color: #666; }
+        /* line 38, ../scss/components/_header.scss */
+        #header #sidebar #blogBrand p a {
+          display: block; }
+        /* line 42, ../scss/components/_header.scss */
+        #header #sidebar #blogBrand p img {
+          display: block;
+          width: auto;
+          height: 80px; }
+    /* line 54, ../scss/components/_header.scss */
+    #header #sidebar #blogPages a {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+      opacity: 0.5; }
+      /* line 56, ../scss/components/_header.scss */
+      #header #sidebar #blogPages a:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+        background: none; }
+  /* line 66, ../scss/components/_header.scss */
   #header #toggleMenu {
     line-height: 100%;
     font-size: 0.938em;
@@ -256,17 +245,17 @@ a {
     top: 20px;
     right: 30px;
     text-transform: uppercase; }
-    /* line 55, ../scss/components/_header.scss */
+    /* line 77, ../scss/components/_header.scss */
     #header #toggleMenu strong, #header #toggleMenu span {
       float: left; }
-    /* line 59, ../scss/components/_header.scss */
+    /* line 81, ../scss/components/_header.scss */
     #header #toggleMenu strong {
       color: #888;
       padding-right: 10px; }
-    /* line 64, ../scss/components/_header.scss */
+    /* line 86, ../scss/components/_header.scss */
     #header #toggleMenu span {
       margin-top: 3px; }
-    /* line 69, ../scss/components/_header.scss */
+    /* line 91, ../scss/components/_header.scss */
     #header #toggleMenu a:hover strong {
       color: #333; }
 
@@ -287,33 +276,101 @@ a {
   padding: 0 14% 4% 12%;
   max-width: 900px;
   border-bottom: 1px solid #DDD; }
-  /* line 23, ../scss/components/_post.scss */
+  /* line 24, ../scss/components/_post.scss */
+  .post h2, .post strong {
+    font-weight: 700; }
+  /* line 32, ../scss/components/_post.scss */
   .post .postTitle {
     padding-bottom: 1.5625em; }
-    /* line 27, ../scss/components/_post.scss */
+    /* line 36, ../scss/components/_post.scss */
     .post .postTitle h2 {
-      font-weight: bold;
       color: #000;
       padding-top: 1.25em;
-      padding-bottom: 0.3125em;
+      padding-bottom: 0.625em;
       font-size: 3em;
       line-height: 1.25em; }
-      /* line 36, ../scss/components/_post.scss */
+      /* line 44, ../scss/components/_post.scss */
       .post .postTitle h2 a {
-        color: #000; }
-    /* line 42, ../scss/components/_post.scss */
+        border: 0; }
+    /* line 50, ../scss/components/_post.scss */
     .post .postTitle p {
-      font-variant: small-caps; }
-  /* line 50, ../scss/components/_post.scss */
+      font-size: 0.938em; }
+  /* line 58, ../scss/components/_post.scss */
   .post .postImage img, .post .postEntry img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-bottom: 30px; }
-  /* line 61, ../scss/components/_post.scss */
+  /* line 69, ../scss/components/_post.scss */
   .post .postEntry p {
     font-size: 1.375em;
     padding-bottom: 2.5em; }
+  /* line 76, ../scss/components/_post.scss */
+  .post .postAuthor, .post .postActions {
+    float: left;
+    width: 50%; }
+  /* line 81, ../scss/components/_post.scss */
+  .post .postAuthor {
+    font-size: 0.813em;
+    border-top: 1px solid #EEE; }
+    /* line 88, ../scss/components/_post.scss */
+    .post .postAuthor .pa-avatar,
+    .post .postAuthor .pa-info {
+      float: left; }
+    /* line 92, ../scss/components/_post.scss */
+    .post .postAuthor .pa-avatar {
+      width: 75px;
+      height: 75px;
+      -webkit-border-radius: 75px;
+      -moz-border-radius: 75px;
+      -ms-border-radius: 75px;
+      -o-border-radius: 75px;
+      border-radius: 75px;
+      overflow: hidden; }
+      /* line 99, ../scss/components/_post.scss */
+      .post .postAuthor .pa-avatar img {
+        display: block; }
+    /* line 105, ../scss/components/_post.scss */
+    .post .postAuthor .pa-info {
+      width: 50%;
+      line-height: 100%;
+      padding: 2px 0 0 20px; }
+      /* line 111, ../scss/components/_post.scss */
+      .post .postAuthor .pa-info * {
+        display: block;
+        padding-top: 5px; }
+      /* line 116, ../scss/components/_post.scss */
+      .post .postAuthor .pa-info span {
+        color: #888; }
+  /* line 124, ../scss/components/_post.scss */
+  .post .postActions {
+    font-size: 0.813em;
+    font-weight: 600; }
+    /* line 129, ../scss/components/_post.scss */
+    .post .postActions li {
+      float: left; }
+    /* line 133, ../scss/components/_post.scss */
+    .post .postActions a {
+      color: #999;
+      display: block;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: rgba(0, 0, 0, 0.04);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px; }
+      /* line 142, ../scss/components/_post.scss */
+      .post .postActions a:hover {
+        color: #FFF;
+        text-decoration: none;
+        background: #999; }
+    /* line 152, ../scss/components/_post.scss */
+    .post .postActions .pa-like a:hover, .post .postActions .pa-like .just-voted {
+      color: #FFF;
+      background: #e74c3c; }
 
 /* line 2, ../scss/components/_comments.scss */
 #comments {
@@ -367,72 +424,21 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 22%;
+  width: 23%;
   height: 100%;
   z-index: 2; }
-  /* line 12, ../scss/components/_aside.scss */
+  /* line 11, ../scss/components/_aside.scss */
   .aside .asideHolder {
     height: 100%;
     overflow: auto; }
-    /* line 17, ../scss/components/_aside.scss */
+    /* line 16, ../scss/components/_aside.scss */
     .aside .asideHolder .asideBox {
       padding: 0 10%; }
-
-/* line 2, ../scss/components/_sidebar.scss */
-#sidebar {
-  border-right: 1px solid rgba(0, 0, 0, 0.07); }
-  /* line 6, ../scss/components/_sidebar.scss */
-  #sidebar #blogMainPage {
-    padding-top: 80px; }
-  /* line 10, ../scss/components/_sidebar.scss */
-  #sidebar #blogAuthor {
-    font-size: 0.813em;
-    padding: 20px 10%;
-    border-top: 1px solid #EEE; }
-    /* line 18, ../scss/components/_sidebar.scss */
-    #sidebar #blogAuthor #ba-avatar,
-    #sidebar #blogAuthor #ba-info {
-      float: left; }
-    /* line 22, ../scss/components/_sidebar.scss */
-    #sidebar #blogAuthor #ba-avatar {
-      width: 75px;
-      height: 75px;
-      -webkit-border-radius: 75px;
-      -moz-border-radius: 75px;
-      -ms-border-radius: 75px;
-      -o-border-radius: 75px;
-      border-radius: 75px;
-      overflow: hidden; }
-      /* line 29, ../scss/components/_sidebar.scss */
-      #sidebar #blogAuthor #ba-avatar img {
-        display: block; }
-    /* line 35, ../scss/components/_sidebar.scss */
-    #sidebar #blogAuthor #ba-info {
-      width: 50%;
-      line-height: 100%;
-      padding: 2px 0 0 20px; }
-      /* line 41, ../scss/components/_sidebar.scss */
-      #sidebar #blogAuthor #ba-info * {
-        display: block;
-        padding-top: 5px; }
-      /* line 46, ../scss/components/_sidebar.scss */
-      #sidebar #blogAuthor #ba-info strong {
-        color: #2386c8; }
-      /* line 50, ../scss/components/_sidebar.scss */
-      #sidebar #blogAuthor #ba-info span {
-        color: #888; }
-  /* line 58, ../scss/components/_sidebar.scss */
-  #sidebar .postActions {
-    font-size: 0.875em;
-    text-align: center; }
-    /* line 63, ../scss/components/_sidebar.scss */
-    #sidebar .postActions li {
-      margin: 5px 0; }
 
 /* line 2, ../scss/components/_drawer.scss */
 #drawer {
   left: auto;
-  right: -22%;
+  right: -23%;
   background: #222;
   z-index: 4;
   -webkit-transition-property: right;
@@ -444,71 +450,93 @@ a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s; }
   /* line 11, ../scss/components/_drawer.scss */
+  #drawer a {
+    color: #666;
+    border: 0; }
+    /* line 14, ../scss/components/_drawer.scss */
+    #drawer a:hover {
+      color: #FFF;
+      background: none; }
+  /* line 20, ../scss/components/_drawer.scss */
   #drawer #closeDrawer {
     height: 15px;
     padding: 15px 10%; }
-    /* line 17, ../scss/components/_drawer.scss */
+    /* line 26, ../scss/components/_drawer.scss */
     #drawer #closeDrawer a {
       float: right;
       height: 15px;
       background-position: 0 -20px;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
       opacity: 0.5; }
-      /* line 24, ../scss/components/_drawer.scss */
+      /* line 33, ../scss/components/_drawer.scss */
       #drawer #closeDrawer a:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1; }
-  /* line 31, ../scss/components/_drawer.scss */
+  /* line 40, ../scss/components/_drawer.scss */
   #drawer .drawerBox {
     font-size: 0.875em;
     color: #666; }
-    /* line 36, ../scss/components/_drawer.scss */
+    /* line 45, ../scss/components/_drawer.scss */
     #drawer .drawerBox h3 {
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      font-weight: 600;
       color: #CCC;
       margin-bottom: 15px;
       border-bottom: 1px solid #333; }
-    /* line 45, ../scss/components/_drawer.scss */
-    #drawer .drawerBox a {
-      color: #666; }
-    /* line 49, ../scss/components/_drawer.scss */
+    /* line 53, ../scss/components/_drawer.scss */
     #drawer .drawerBox ul {
       margin-bottom: 10px; }
-      /* line 53, ../scss/components/_drawer.scss */
+      /* line 57, ../scss/components/_drawer.scss */
       #drawer .drawerBox ul li {
         list-style: inside circle;
         line-height: 120%;
         padding-bottom: 5px; }
-    /* line 61, ../scss/components/_drawer.scss */
+    /* line 65, ../scss/components/_drawer.scss */
     #drawer .drawerBox .tagcloud {
       line-height: 120%; }
-    /* line 65, ../scss/components/_drawer.scss */
+    /* line 69, ../scss/components/_drawer.scss */
     #drawer .drawerBox #recentcomments li a:first-child {
       font-weight: 600; }
-    /* line 69, ../scss/components/_drawer.scss */
+    /* line 73, ../scss/components/_drawer.scss */
+    #drawer .drawerBox caption {
+      text-align: center;
+      font-weight: 600; }
+    /* line 78, ../scss/components/_drawer.scss */
     #drawer .drawerBox table {
       width: 100%; }
-      /* line 73, ../scss/components/_drawer.scss */
+      /* line 82, ../scss/components/_drawer.scss */
       #drawer .drawerBox table th, #drawer .drawerBox table td {
         text-align: center; }
-      /* line 77, ../scss/components/_drawer.scss */
+      /* line 86, ../scss/components/_drawer.scss */
       #drawer .drawerBox table a {
         color: #FFF;
         display: block;
         font-weight: bold;
         height: 100%; }
-        /* line 84, ../scss/components/_drawer.scss */
+        /* line 93, ../scss/components/_drawer.scss */
         #drawer .drawerBox table a:hover {
           background: #333; }
-  /* line 94, ../scss/components/_drawer.scss */
+  /* line 103, ../scss/components/_drawer.scss */
   #drawer.open {
     right: 0; }
 
-/* line 2, ../scss/components/_footer.scss */
-#footer {
-  background: #EEE; }
+/* line 4, ../scss/components/_footer.scss */
+#footer p {
+  line-height: 160%;
+  font-size: 0.75em;
+  color: #666;
+  padding: 20px 12%; }
+/* line 11, ../scss/components/_footer.scss */
+#footer a {
+  color: #666; }
+/* line 15, ../scss/components/_footer.scss */
+#footer span {
+  color: #888; }
+  /* line 17, ../scss/components/_footer.scss */
+  #footer span a {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    border-color: #CCC; }
 
 @media screen and (max-width: 1000px) {
   /* line 4, ../scss/components/_responsive.scss */

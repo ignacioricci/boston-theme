@@ -1,6 +1,23 @@
 	
 	#footer {
-		
-		background:#EEE;
+
+		p {
+			line-height:160%;
+			font-size:0.75em;
+			color:#666;
+			padding:20px 12%;
+		}
+
+		a {
+			color:#666;
+		}
+
+		span {
+			color:#888;
+			a {
+				@include opacity(0.7);
+				border-color:#CCC;
+			}
+		}
 
 	}

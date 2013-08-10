@@ -19,6 +19,15 @@
 		padding:0 14% 4% 12%;
 		max-width:900px;
 		border-bottom:1px solid #DDD;
+		@extend .clear;
+
+		h2, strong {
+			font-weight:700;
+		}
+
+		.postTitle h2, .postEntry {
+			@extend .serif;
+		}
 
 		.postTitle {
 
@@ -26,21 +35,20 @@
 
 			h2 {
 
-				font-weight:bold;
 				color:#000;
 				@include em_size(padding-top, 20);
-				@include em_size(padding-bottom, 5);
+				@include em_size(padding-bottom, 10);
 				@include em_size(font-size, 48);
 				@include em_size(line-height, 20);
 
 				a {
-					color:#000;
+					border:0;
 				}
 
 			}
 
 			p {
-				font-variant:small-caps;
+				font-size:0.938em;
 			}
 
 		}
@@ -61,6 +69,91 @@
 			p {
 				@include em_size(font-size, 22);
 				@include em_size(padding-bottom, 40);
+			}
+
+		}
+
+		.postAuthor, .postActions {
+			float:left;
+			width:50%;
+		}
+
+		.postAuthor {
+
+			font-size:0.813em;
+			@extend .clear;
+			border-top:1px solid #EEE;
+
+			.pa-avatar,
+			.pa-info {
+				float:left;
+			}
+
+			.pa-avatar {
+
+				width:75px;
+				height:75px;
+				@include border-radius(75px);
+				overflow:hidden;
+				
+				img {
+					display:block;
+				}
+
+			}
+
+			.pa-info {
+
+				width:50%;
+				line-height:100%;
+				padding:2px 0 0 20px;
+				
+				* {
+					display:block;
+					padding-top:5px;
+				}
+
+				span {
+					color:#888;
+				}
+
+			}
+
+		}
+
+		.postActions {
+
+			font-size:0.813em;
+			font-weight:600;
+			
+			li {
+				float:left;
+			}
+
+			a {
+				color:#999;
+				display:block;
+				padding:5px 10px;
+				text-transform:uppercase;
+				letter-spacing:0.1em;
+				background:rgba(0,0,0,0.04);
+				@include border-radius(3px);
+
+				&:hover {
+					color:#FFF;
+					text-decoration:none;
+					background:#999;
+				}
+
+			}
+
+			.pa-like {
+
+				a:hover, .just-voted  {
+					color:#FFF;
+					background:#e74c3c;
+				}
+
 			}
 
 		}

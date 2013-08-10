@@ -37,9 +37,8 @@
 		}
 	}
 
-	.sans-serif {
-		font-family:'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
-		font-weight:400;
+	.serif {
+		font-family:'Alegreya', Georgia, Times, serif;
 	}
 
 	.clear {
@@ -55,7 +54,7 @@
 		background:image-url('sprite.png', false, false) no-repeat 0 0;
 	}
 
-	$maincolor:#3498db;
+	$maincolor:#98CB00;
 	$tw: #56A6E0;
 	$fb: blue;
 	$gp: red;

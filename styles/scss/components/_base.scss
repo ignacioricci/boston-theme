@@ -1,9 +1,9 @@
 	
 	body {
 
-		font-family:'Alegreya', Georgia, Times, serif;
+		font-family:'Source Sans Pro', Helvetica Neue, Helvetica, Arial, serif;
 		@include base_font_size;
-		color:#333;
+		color:#222;
 		background:#222;
 
 	}
@@ -17,12 +17,12 @@
 	}
 
 	a {
-		color:darken($maincolor, 8);
+		color:#000;
 		text-decoration:none;
+		border-bottom:1px solid tint($maincolor, 20);
 
 		&:hover {
-			text-decoration:underline;
-			background:tint($maincolor, 95);
+			background:tint($maincolor, 85);
 		}
 
 	}
@@ -30,14 +30,14 @@
 	#central {
 
 		background:#FFF;
-		width:78%;
-		padding-left:22%;
+		width:77%;
+		padding-left:23%;
 		@include transition-property(width);
 		@include transition-duration(0.5s);
 
 		&.mixed {
-			width:56%;
-			margin-right:22%;
+			width:55%;
+			margin-right:23%;
 		}
 
 	}
@@ -69,36 +69,6 @@
 
 		.personInfo {
 			width:85%;
-		}
-
-	}
-	
-	.postActions {
-
-		a {
-			color:#999;
-			display:block;
-			padding:5px 10px;
-			text-transform:uppercase;
-			letter-spacing:0.1em;
-			background:rgba(0,0,0,0.04);
-			@include border-radius(3px);
-
-			&:hover {
-				color:#FFF;
-				text-decoration:none;
-				background:#999;
-			}
-
-		}
-
-		.pa-like {
-
-			a:hover, .just-voted  {
-				color:#FFF;
-				background:#e74c3c;
-			}
-
 		}
 
 	}
