@@ -1,10 +1,48 @@
 	
 	@media screen and (max-width:1000px){
 		
-		#sidebar {
-			position:static;
-			width:auto;
-			height:auto;
+		#header {
+			
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			padding:10px 0;
+			background:#FFF;
+			z-index:4;
+			@include single-box-shadow(rgba(0,0,0,0.2), 0, 0, 3px);
+
+			#sidebar {
+
+				position:static;
+				width:auto;
+				height:auto;
+				@extend .clear;
+
+				#blogBrand, #blogPages, #blogPages li  {
+					float:left;
+				}
+
+				#blogBrand {
+		
+					padding:0 0 0 20px;
+
+					p {
+
+						img {
+							height:40px;
+						}
+
+						&:last-child {
+							display:none;
+						}
+
+					}
+
+				}
+
+			}
+
 		}
 
 		#drawer {
@@ -18,24 +56,6 @@
 			width:auto;
 			padding:0;
 			margin:0;
-		}
-
-		#header {
-
-
-			#headerHolder {
-
-				position:absolute;
-				width:auto;
-				border:0;
-				@include border-radius(0 0 5px 0);
-
-				#brand {
-					padding:15px;
-				}
-			
-			}
-
 		}
 
 	}
