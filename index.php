@@ -36,7 +36,7 @@
 		<article class="post">
 			<div class="postTitle">
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p>Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <a href="#">Category Name</a></p>
+				<p>Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <?php the_category(' ,');  ?></p>
 				<?php the_tags('<p><strong>Tagged with:</strong> ', ', ', '</p>'); ?>
 			</div>
 			<?php if(has_post_thumbnail()){ ?>

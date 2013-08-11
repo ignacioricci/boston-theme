@@ -11,7 +11,7 @@
 		<article class="post">
 			<div class="postTitle">
 				<h2><?php the_title(); ?></h2>
-				<p>Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <a href="#">Category Name</a></p>
+				<p>Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <?php the_category(' ,');  ?></p>
 				<?php the_tags('<p><strong>Tagged with:</strong> ', ', ', '</p>'); ?>
 			</div>
 			<div class="postEntry">
