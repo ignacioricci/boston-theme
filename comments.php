@@ -1,4 +1,4 @@
-<?php if (have_comments()){ ?>
+	<?php if (have_comments()){ ?>
 
 	<div id="comments">
 		<div id="commentList">
@@ -8,6 +8,8 @@
 			</ol>
 		</div>
 	</div>
+
+	<?php } ?>
 
 	<?php if (comments_open()){ ?>
 
@@ -64,5 +66,3 @@
 		</div>
 
 	<?php } ?>
-
-<?php } ?>

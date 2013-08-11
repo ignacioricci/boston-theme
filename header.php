@@ -25,6 +25,7 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Source+Sans+Pro:400,400italic,600,600italic">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/baseline.css">
 	<link rel="shortcut icon" href="favicon.ico">
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
