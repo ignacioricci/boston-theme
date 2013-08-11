@@ -6,4 +6,5 @@ javascripts_dir = "js"
 output_style = :compressed
 environment = :development
 relative_assets = true
-output_style = :nested # by Compass.app 
+
+output_style = :compressed # by Compass.app 
