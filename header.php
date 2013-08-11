@@ -2,7 +2,25 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Ignacio Ricci ~ Web/UI Designer</title>
+	<title>
+		<?php if (function_exists('is_tag') && is_tag()) {
+			single_tag_title('Tag Archive for &quot;'); echo '&quot; &ndash; '; 
+		} elseif (is_archive()) {
+			wp_title(''); echo ' Archive &ndash; '; 
+		} elseif (is_search()) {
+		  	echo 'Search results for &quot;'.wp_specialchars($s).'&quot; &ndash; ';
+		} elseif (!(is_404()) && (is_single()) || (is_page())) {
+			wp_title(''); echo ' &ndash; ';
+		} elseif (is_404()) {
+			echo 'Not Found &ndash; ';
+		} if (is_home()) {
+			bloginfo('name'); echo ' &ndash; '; bloginfo('description');
+		} else {
+			bloginfo('name');
+		} if ($paged > 1) {
+			echo ' &ndash; page '. $paged;
+		} ?>
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Source+Sans+Pro:400,400italic,600,600italic">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/baseline.css">
