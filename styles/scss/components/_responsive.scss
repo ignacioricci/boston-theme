@@ -3,29 +3,40 @@
 		
 		#header {
 			
-			position:fixed;
+			position:static;
 			top:0;
 			left:0;
-			width:100%;
+			width:auto;
 			padding:10px 0;
 			background:#FFF;
-			z-index:4;
-			@include single-box-shadow(rgba(0,0,0,0.2), 0, 0, 3px);
+			border-bottom:1px solid #DDD;
 
 			#sidebar {
 
 				position:static;
 				width:auto;
 				height:auto;
-				@extend .clear;
-
-				#blogBrand, #blogPages, #blogPages li  {
-					float:left;
-				}
 
 				#blogBrand {
 		
 					padding:0 0 0 20px;
+					@extend .clear;
+
+					p, h1 {
+						float:left;
+						padding:0;
+						margin-right:15px;
+					}
+
+					span {
+						display:block;
+						padding-top:10px;
+					}
+					
+					h1 {
+						font-size:1.25em;
+						padding-top:5px;
+					}
 
 					p {
 
@@ -33,12 +44,12 @@
 							height:40px;
 						}
 
-						&:last-child {
-							display:none;
-						}
-
 					}
 
+				}
+
+				#blogPages {
+					display:none;
 				}
 
 			}
@@ -61,11 +72,32 @@
 	}
 
 	@media screen and (max-width:500px){
+
+		#header #sidebar #blogBrand p:last-child {
+			display:none;
+		}
 			
 		.hero {
 			
 			height:12em;
 			overflow:hidden;
+
+		}
+
+		#drawer {
+			width:50%;
+			right:-50%;
+		}
+
+		.post {
+			
+			.postTitle h2 {
+				@include em_size(font-size, 28);
+			}
+
+			.postEntry {
+				@include em_size(font-size, 18);
+			}
 
 		}
 

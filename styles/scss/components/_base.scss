@@ -8,6 +8,11 @@
 
 	}
 
+	button::-moz-focus-inner {
+		padding:0;
+		border:0;
+	}
+
 	em {
 		font-style:italic;
 	}
@@ -27,6 +32,29 @@
 
 	}
 
+	label {
+		display:block;
+	}
+
+	input[type="text"], input[type="password"], textarea {
+		display:block;
+		padding:10px;
+		width:70%;
+		color:#666;
+		background:#FFF;
+		border:1px solid #CCC;
+		@include border-radius(3px);
+		&:focus {
+			color:#000;
+			border-color:$maincolor;
+			outline:0;
+		}
+	}
+
+	textarea {
+		height:120px;
+	}
+
 	#central {
 
 		background:#FFF;
@@ -40,6 +68,10 @@
 			margin-right:23%;
 		}
 
+	}
+
+	.single #content .post, .page #content .post {
+		min-height:620px;
 	}
 
 	.personItem {

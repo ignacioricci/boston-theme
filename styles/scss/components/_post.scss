@@ -36,6 +36,7 @@
 			h2 {
 
 				color:#000;
+				word-break:break-all;
 				@include em_size(padding-top, 20);
 				@include em_size(padding-bottom, 10);
 				@include em_size(font-size, 48);
@@ -57,25 +58,191 @@
 
 			img {
 				display:block;
-				max-width:100%;
-				height:auto;
+				max-width:100% !important;
+				height:auto !important;
 				margin-bottom:30px;
 			}
 
 		}
 
 		.postEntry {
+
+			@include em_size(font-size, 22);
+
+			p, blockquote, table, pre, dl, form {
+				@include em_size(margin-bottom, 30);
+			}
 			
-			p {
-				@include em_size(font-size, 22);
-				@include em_size(padding-bottom, 40);
+			h1, h2, h3, h4, h5, h6 {
+				font-weight:700;
+				@include em_size(margin-bottom, 16);
+			}
+			h1 {
+				font-size:1.75em;
+			}
+			h2 {
+				font-size:1.333em;
+			}
+			h4 {
+				font-size:0.813em;
+				text-transform:uppercase;
+				border-bottom:1px solid #DDD;
+			}
+			h5 {
+				font-size:0.813em;
+			}
+			h6 {
+				color:#666;
+				font-size:0.683em;
+				text-transform:uppercase;
 			}
 
-		}
+			blockquote {
 
-		.postAuthor, .postActions {
-			float:left;
-			width:50%;
+				background:#EEE;
+				font-style:italic;
+				letter-spacing:0.04em;
+				padding:30px;
+				border-left:3px solid $maincolor;
+				
+				p:last-child {
+					margin:0;
+				}
+
+			}
+
+			table {
+				
+				width:100%;
+				font-size:0.875em;
+				
+				th, td {
+					max-width:250px;
+					vertical-align:top;
+					padding:12px 0;
+					border-bottom:1px solid #DDD;
+				}
+
+			}
+
+			ul, ol {
+				margin:23px;
+			}
+
+			ul {
+				list-style:disc;
+				ul {
+					list-style:circle;
+				}
+			}
+
+			ol {
+				list-style:upper-roman;
+				ol {
+					list-style:lower-roman;
+				}
+			}
+
+			abbr {
+				border-bottom:1px dotted;
+				cursor:help;
+			}
+
+			cite {
+				font-style:italic;
+				color:#666;
+			}
+
+			code, pre {
+				font-family:'Monaco', Courier New, Courier, monospace;
+			}
+
+			code {
+				font-size:0.75em;
+				padding:0 5px;
+				background:#EEE;
+				border:1px solid #DDD;
+				@include border-radius(3px);
+			}
+
+			pre {
+				font-size:0.683em;
+				line-height:150%;
+				padding:30px;
+				overflow:auto;
+				border:1px solid #DDD;
+				@include border-radius(3px);
+			}
+
+			dl {
+				dt {
+					font-weight:700;
+				}
+				dd {
+					@include em_size(margin-bottom, 20);
+				}
+			}
+
+			.wp-caption {
+				width:auto !important;
+			}
+
+			.alignleft {
+				float:left;
+				margin:0 30px 30px 0;
+			}
+
+			.alignright {
+				float:right;
+				margin:0 0 30px 30px;
+			}
+
+			.gallery {
+
+				@extend .clear;
+
+				.gallery-item {
+
+					float:left;
+					margin:0 10px 10px 0;
+					position:relative;
+					overflow:hidden;
+
+					a {
+						display:block;
+						border:0;
+					}
+
+					img {
+						margin:0;
+					}
+
+					.wp-caption-text {
+						display:none;
+					}
+
+				}
+
+				br {
+					display:none;
+				}
+
+			}
+
+			form {
+
+				padding:30px 30px 15px;
+				font-size:0.875em;
+				background:#FAFAFA;
+				border:1px solid #DDD;
+				@include border-radius(3px);
+
+				p {
+					margin-bottom:15px;
+				}
+
+			}
+
 		}
 
 		.postAuthor {
@@ -125,24 +292,27 @@
 
 			font-size:0.813em;
 			font-weight:600;
+			padding-top:30px;
 			
 			li {
 				float:left;
+				margin-right:10px;
 			}
 
-			a {
-				color:#999;
+			.sitem {
+				color:#666;
 				display:block;
-				padding:5px 10px;
+				padding:5px 20px;
+				text-align:center;
+				border:0;
 				text-transform:uppercase;
 				letter-spacing:0.1em;
-				background:rgba(0,0,0,0.04);
+				border:1px solid #DDD;
 				@include border-radius(3px);
 
 				&:hover {
-					color:#FFF;
 					text-decoration:none;
-					background:#999;
+					border-color:#666;
 				}
 
 			}

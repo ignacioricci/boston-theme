@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/baseline.css">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 	<header id="header">
 		<aside class="aside" id="sidebar">
@@ -18,7 +18,7 @@
 					<p><a href="<?php bloginfo('home'); ?>/"><img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" /></a></p>
 					<?php } ?>
 					<h1><a href="<?php bloginfo('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-					<p><?php bloginfo('description'); ?></p>
+					<p><span><?php bloginfo('description'); ?></span></p>
 				</div>
 				<div class="asideBox" id="blogPages">
 					<?php wp_nav_menu(array('theme_location' =>  'mainmenu', 'container' => '', 'depth' => '1')); ?>

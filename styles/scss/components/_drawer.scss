@@ -63,7 +63,8 @@
 			}
 
 			.tagcloud {
-				line-height:120%;
+				line-height:140%;
+				padding-bottom:20px;
 			}
 
 			#recentcomments li a:first-child {
@@ -78,6 +79,7 @@
 			table {
 
 				width:100%;
+				margin-bottom:20px;
 
 				th, td {
 					text-align:center;
@@ -92,6 +94,55 @@
 
 					&:hover {
 						background:#333;
+					}
+
+				}
+
+				tfoot {
+					td {
+						background:#2D2D2D;
+					}
+				}
+
+			}
+
+			.searchform {
+
+				margin-bottom:20px;
+				
+				label {
+					position:absolute;
+					top:0;
+					left:-9999px;
+					width:1px;
+					height:1px;
+					overflow:hidden;
+				}
+
+				div {
+
+					position:relative;
+					background:#FFF;
+					padding:0 35px 0 20px;
+					@include border-radius(20px);
+					
+					input {
+						padding:7px 0;
+						width:100%;
+						border:0;
+						&:focus{
+							outline:0;	
+						}
+					}
+
+					#searchsubmit {
+
+						@extend .sprite;
+						padding:0;
+						position:absolute;
+						right:10px;
+						bottom:10px;
+
 					}
 
 				}

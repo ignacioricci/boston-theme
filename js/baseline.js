@@ -28,4 +28,15 @@ jQuery(function(){
 		jQuery('#central').toggleClass('mixed');
 		jQuery('#drawer').toggleClass('open');
 	});
+	$('.gallery').each(function(){
+		var gallery = jQuery(this).find('a[href*="wp-content"]').length;
+		if (gallery){
+			$(this).magnificPopup({
+				delegate:'a',
+				type:'image',
+				gallery:{enabled:true}
+			});
+		}
+	}); 
+
 });

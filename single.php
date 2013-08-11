@@ -18,34 +18,35 @@
 				<?php the_content(); ?>
 			</div>
 			<div class="postAuthor">
-				<?php
-					$users = get_users('orderby=ID&number=1');
-					foreach($users as $user){
-				?>
 				<div class="pa-avatar">
-					<?php echo get_avatar($user->ID, 75); ?>
+					<?php echo get_avatar(get_the_author_meta('ID'), 75); ?>
 				</div>
 				<div class="pa-info">
 					<p>
 						<em>Written by</em>
-						<strong><?php echo $user->display_name; ?></strong>
-						<span>(<?php echo count_user_posts($user->ID); ?> Articles)</span>
+						<strong><?php echo get_the_author_meta('display_name'); ?></strong>
+						<span>(Published articles: <?php echo count_user_posts(get_the_author_meta('ID')); ?>)</span>
 					</p>
 				</div>
-				<?php } ?>
 			</div>
 			<div class="postActions">
 				<ul>
-					<li class="pa-like"><a class="like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#">Likes (<span class="likeCount"><?php like_count($post->ID); ?></span>)</a></li>
-					<li class="pa-share"><a href="#">Share</a></li>
+					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#">Likes (<span class="likeCount"><?php like_count($post->ID); ?></span>)</a></li>
+					<li class="pa-share">
+						<span class="sitem">Share</span>
+						<ul>
+							<li class="share-fb"><a href="#">Facebook</a></li>
+							<li class="share-tw"><a href="#">Twitter</a></li>
+							<li class="share-gp"><a href="#">Google +</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</article>
 	</section>
 
-	<?php if(have_comments()){ ?>
-
-	<section id="comments">		
+	<section id="comments">
+		<?php if(have_comments()){ ?>
 		<div id="commentList">
 			<h3>3 Comments</h3>
 			<ol>
@@ -62,6 +63,7 @@
 				</li>
 			</ol>
 		</div>
+		<?php } if(comments_open()){ ?>
 		<div id="respond">		
 			<h3>Leave a comment</h3>
 			<form action="" method="">
@@ -82,9 +84,8 @@
 				</p>
 			</form>
 		</div>
+		<?php } ?>
 	</section>
-
-	<?php } ?>
 
 	<?php endwhile; endif; ?>
 

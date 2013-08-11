@@ -8,7 +8,8 @@
 		z-index:3;
 		
 		#sidebar {
-
+			
+			background:#FFF;
 			border-right:1px solid rgba(0,0,0,0.07);
 				
 			#blogBrand {
@@ -51,12 +52,15 @@
 
 			#blogPages {
 				
+				padding-bottom:30px;
+
 				a {
 					@include opacity(0.5);
-					&:hover {
-						@include opacity(1);
-						background:none;
-					}
+				}
+
+				.current_page_item a, a:hover {
+					@include opacity(1);
+					background:none;
 				}
 
 			}
@@ -70,7 +74,7 @@
 			line-height:100%;
 			font-size:0.938em;
 			position:absolute;
-			top:20px;
+			top:24px;
 			right:30px;
 			text-transform:uppercase;
 			

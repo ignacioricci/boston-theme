@@ -1,8 +1,38 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
 	<section id="content">
+
+		<?php if (have_posts()) : ?>
+
+		<?php
+			if (is_author()){
+				$curauthor = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+			}
+		?>
+		
+		<?php if(is_archive() || is_search()){ ?>
+		<div id="breadcrumbs">		
+			<?php if (is_category()) { ?>
+			<p>Archive for the <strong>&#8216;<?php single_cat_title(); ?>&#8217;</strong> Category</p>
+			<?php } elseif( is_tag() ) { ?>
+			<p>Posts Tagged with <strong>&#8216;<?php single_tag_title(); ?>&#8217;</strong></p>
+			<?php } elseif (is_day()) { ?>
+			<p>Archive for <strong><?php the_time('F jS, Y'); ?></strong></p>
+			<?php } elseif (is_month()) { ?>
+			<p>Archive for <strong><?php the_time('F, Y'); ?></strong></p>
+			<?php } elseif (is_year()) { ?>
+			<p>Archive for <strong><?php the_time('Y'); ?></strong></p>
+			<?php } elseif (is_author()) { ?>
+			<p>Articles by <strong><?php echo $curauthor->display_name; ?></strong></p>
+			<?php } elseif (is_search()) { ?>
+			<p>Search results for <strong><?php the_search_query(); ?></strong></p>
+			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+			<p>Blog Archives</p>
+			<?php } ?>
+		</div>
+		<?php } ?>
+
+		<?php while (have_posts()) : the_post(); ?>
 		<article class="post">
 			<div class="postTitle">
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -17,10 +47,47 @@
 			<div class="postEntry">
 				<?php the_content(); ?>
 			</div>
+			<div class="postActions">
+				<ul>
+					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#">Likes (<span class="likeCount"><?php like_count($post->ID); ?></span>)</a></li>
+					<li class="pa-share">
+						<span class="sitem">Share</span>
+						<ul>
+							<li class="share-fb"><a href="#">Facebook</a></li>
+							<li class="share-tw"><a href="#">Twitter</a></li>
+							<li class="share-gp"><a href="#">Google +</a></li>
+						</ul>
+					</li>
+					<?php if(comments_open()){ ?>
+					<li class="pa-comments">
+						<?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)', 'sitem'); ?>
+					</li>
+					<?php } ?>
+				</ul>
+			</div>
 		</article>
+		<?php endwhile; ?>
+			<div id="pagination">
+				<?php
+					global $wp_query;
+					$limit = 999999999;
+					echo paginate_links(array(
+						'base' => str_replace($limit, '%#%', esc_url(get_pagenum_link($limit))),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged')),
+						'total' => $wp_query->max_num_pages,
+						'prev_next' => true
+					));
+				?>
+			</div>
+			<?php else : ?>
+			<article class="post">
+				<div class="postEntry">
+					<p>No articles found.</p>
+				</div>
+			</article>
+			<?php endif; ?>
 	</section>
-
-	<?php endwhile; endif; ?>
 
 	<?php get_sidebar(); ?>
 
