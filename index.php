@@ -49,13 +49,13 @@
 			</div>
 			<div class="postActions">
 				<ul>
-					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#">Likes (<span class="likeCount"><?php like_count($post->ID); ?></span>)</a></li>
-					<li class="pa-share">
-						<span class="sitem">Share</span>
+					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#"><span>Likes (<em class="likeCount"><?php like_count($post->ID); ?></em>)</span></a></li>
+					<li class="sitem pa-share">
+						<span>Share</span>
 						<ul>
-							<li class="share-fb"><a href="#">Facebook</a></li>
-							<li class="share-tw"><a href="#">Twitter</a></li>
-							<li class="share-gp"><a href="#">Google +</a></li>
+							<li class="share-tw"><a rel="nofollow" href="http://twitter.com/home?status=<?php the_title(); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>
+							<li class="share-fb"><a rel="nofollow" href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" title="Share this post on Facebook" target="_blank">Facebook</a></li>
+							<li class="share-gp"><a rel="nofollow" href="https://plus.google.com/share?url=<?php the_permalink() ?>" title="Share this post on Google Plus" target="_blank">Google+</a></li>
 						</ul>
 					</li>
 					<?php if(comments_open()){ ?>

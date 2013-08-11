@@ -40,7 +40,7 @@
 	// Enable custom header	 
     add_theme_support('post-thumbnails');
 	$himgoptions = array(
-		'default-image' => get_template_directory_uri() . '/images/logo.gif',
+		'default-image' => get_template_directory_uri() . '/images/main/logo.gif',
 		'random-default' => false,
 		'width' => '',
 		'height' => 50,
@@ -55,4 +55,32 @@
 	);
 	add_theme_support('custom-header', $himgoptions);
 
-?>
+	// Language support
+	add_action('after_setup_theme', 'baseline_setup');
+	function baseline_setup(){
+	    load_theme_textdomain('baseline', get_template_directory() . '/l18n');
+	}
+
+    // Custom comment output 
+	function baseline_comments($comment, $args, $depth) {
+		$GLOBALS['comment'] = $comment; ?>
+		
+		<li <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+			
+			<div class="co-avatar">
+				<?php if ($args['avatar_size'] != 0) echo get_avatar($comment, $args['avatar_size']); ?>
+			</div>
+			<div class="co-info">
+				<div class="co-meta">
+					<strong><?php printf('<span>%s</span>', get_comment_author_link()) ?></strong> <em>&mdash; <?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></em>
+				</div>
+				<div class="co-text">
+					<?php comment_text() ?>
+					<?php if ($comment->comment_approved == '0') : ?>
+					<p class="waiting4Mod"><?php _e('Your comment is awaiting moderation.') ?></p>
+					<?php endif; ?>
+					<p class="reply"><?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => 3))) ?></p>
+					<p class="editComment"><?php edit_comment_link(__('[Edit Comment]'),'','') ?></p>
+				</div>
+			</div>
+<?php } ?>

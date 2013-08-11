@@ -40,6 +40,7 @@
 		display:block;
 		padding:10px;
 		width:70%;
+		font-size:0.875em;
 		color:#666;
 		background:#FFF;
 		border:1px solid #CCC;
@@ -52,7 +53,7 @@
 	}
 
 	textarea {
-		height:120px;
+		@include em_size(height, 120);
 	}
 
 	#central {
@@ -71,7 +72,7 @@
 	}
 
 	.single #content .post, .page #content .post {
-		min-height:620px;
+		@include em_size(min-height, 620);
 	}
 
 	.personItem {

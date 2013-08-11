@@ -7,33 +7,12 @@
 		line-height:#{($base_font_size * $base_em_unit) * 2}em;
 	}
 
-	@mixin em_size($property, $size, $multiple:false){
-		@if ($property == font-size) {
-			font-size:#{$base_em_unit * $size}em;
-		} @elseif ($property == line-height) {
-			line-height:#{$base_em_unit * $size}em;
-		} @elseif ($property == width){
-			width:#{$base_em_unit * $size}em;
-		} @elseif ($property == padding-top){
-			padding-top:#{$base_em_unit * $size}em;
-		} @elseif ($property == padding-right){
-			padding-right:#{$base_em_unit * $size}em;
-		} @elseif ($property == padding-bottom){
-			padding-bottom:#{$base_em_unit * $size}em;
-		} @elseif ($property == padding-left){
-			padding-left:#{$base_em_unit * $size}em;
-		} @elseif ($property == padding and $multiple == true){
-			padding:#{$base_em_unit * nth($size, 1)}em #{$base_em_unit * nth($size, 2)}em #{$base_em_unit * nth($size, 3)}em #{$base_em_unit * nth($size, 4)}em;
-		} @elseif ($property == margin-top){
-			margin-top:#{$base_em_unit * $size}em;
-		} @elseif ($property == margin-right){
-			margin-right:#{$base_em_unit * $size}em;
-		} @elseif ($property == margin-bottom){
-			margin-bottom:#{$base_em_unit * $size}em;
-		} @elseif ($property == margin-left){
-			margin-left:#{$base_em_unit * $size}em;
-		} @elseif ($property == margin and $multiple == true){
-			margin:#{$base_em_unit * nth($size, 1)}em #{$base_em_unit * nth($size, 2)}em #{$base_em_unit * nth($size, 3)}em #{$base_em_unit * nth($size, 4)}em;
+	@mixin em_size($property, $size){
+		$props : width, min-width, max-width, height, min-height, font-size, line-height, padding-top, padding-right, padding-bottom, padding-left, padding, margin-top, margin-right, margin-bottom, margin-left, margin;
+		@each $prop in $props {
+			@if ($property == $prop) {
+				#{$prop}:#{$base_em_unit * $size}em;
+			}
 		}
 	}
 
@@ -55,10 +34,7 @@
 		text-indent:-9999em;
 		width:15px;
 		height:10px;
-		background:image-url('sprite.png', false, false) no-repeat 0 0;
+		background:image-url('main/sprite.png', false, false) no-repeat 0 0;
 	}
 
 	$maincolor:#98CB00;
-	$tw: #56A6E0;
-	$fb: blue;
-	$gp: red;

@@ -54,26 +54,26 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 40, ../scss/components/_mixins.scss */
+/* line 19, ../scss/components/_mixins.scss */
 .serif, .post .postTitle h2, .post .postEntry {
   font-family: 'Alegreya', Georgia, Times, serif; }
 
-/* line 44, ../scss/components/_mixins.scss */
-.sans-serif, .btn, #header #toggleMenu {
+/* line 23, ../scss/components/_mixins.scss */
+.sans-serif, #header #toggleMenu {
   font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, serif; }
 
-/* line 48, ../scss/components/_mixins.scss */
-.clear, #header #toggleMenu, .post, .post .postEntry .gallery, .post .postAuthor, #drawer #closeDrawer {
+/* line 27, ../scss/components/_mixins.scss */
+.clear, #header #toggleMenu, .post, .post .postEntry .gallery, .post .postAuthor, #comments #commentList .comment, #drawer #closeDrawer {
   overflow: hidden; }
 
-/* line 52, ../scss/components/_mixins.scss */
+/* line 31, ../scss/components/_mixins.scss */
 .sprite, #header #toggleMenu span, #drawer #closeDrawer a, #drawer .drawerBox .searchform div #searchsubmit {
   display: block;
   font-size: 0;
   text-indent: -9999em;
   width: 15px;
   height: 10px;
-  background: url('../../images/sprite.png') no-repeat 0 0; }
+  background: url('../../images/main/sprite.png') no-repeat 0 0; }
 
 /* line 2, ../scss/components/_base.scss */
 body {
@@ -114,6 +114,7 @@ input[type="text"], input[type="password"], textarea {
   display: block;
   padding: 10px;
   width: 70%;
+  font-size: 0.875em;
   color: #666;
   background: #FFF;
   border: 1px solid #CCC;
@@ -122,17 +123,17 @@ input[type="text"], input[type="password"], textarea {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px; }
-  /* line 47, ../scss/components/_base.scss */
+  /* line 48, ../scss/components/_base.scss */
   input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     color: #000;
     border-color: #98cb00;
     outline: 0; }
 
-/* line 54, ../scss/components/_base.scss */
+/* line 55, ../scss/components/_base.scss */
 textarea {
-  height: 120px; }
+  height: 7.5em; }
 
-/* line 58, ../scss/components/_base.scss */
+/* line 59, ../scss/components/_base.scss */
 #central {
   background: #FFF;
   width: 77%;
@@ -145,23 +146,23 @@ textarea {
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s; }
-  /* line 66, ../scss/components/_base.scss */
+  /* line 67, ../scss/components/_base.scss */
   #central.mixed {
     width: 55%;
     margin-right: 23%; }
 
-/* line 73, ../scss/components/_base.scss */
+/* line 74, ../scss/components/_base.scss */
 .single #content .post, .page #content .post {
-  min-height: 620px; }
+  min-height: 38.75em; }
 
-/* line 77, ../scss/components/_base.scss */
+/* line 78, ../scss/components/_base.scss */
 .personItem {
   overflow: hidden; }
-  /* line 82, ../scss/components/_base.scss */
+  /* line 83, ../scss/components/_base.scss */
   .personItem .personAvatar,
   .personItem .personInfo {
     float: left; }
-  /* line 86, ../scss/components/_base.scss */
+  /* line 87, ../scss/components/_base.scss */
   .personItem .personAvatar {
     width: 80px;
     height: 80px;
@@ -172,63 +173,14 @@ textarea {
     border-radius: 40px;
     overflow: hidden;
     margin-right: 2em; }
-    /* line 94, ../scss/components/_base.scss */
+    /* line 95, ../scss/components/_base.scss */
     .personItem .personAvatar img {
       display: block;
       width: 100%;
       height: 100%; }
-  /* line 102, ../scss/components/_base.scss */
+  /* line 103, ../scss/components/_base.scss */
   .personItem .personInfo {
     width: 85%; }
-
-/* line 2, ../scss/components/_buttons.scss */
-.btn {
-  cursor: pointer;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  padding: 3px 20px;
-  font-size: 0.875em;
-  font-weight: bold; }
-  /* line 12, ../scss/components/_buttons.scss */
-  .btn:hover {
-    text-decoration: none; }
-
-/* line 20, ../scss/components/_buttons.scss */
-.btn-tw,
-.btn-fb,
-.btn-gp {
-  color: #FFF;
-  padding-left: 35px; }
-
-/* line 27, ../scss/components/_buttons.scss */
-.btn-tw {
-  background: #56a6e0; }
-  /* line 29, ../scss/components/_buttons.scss */
-  .btn-tw:hover {
-    background: #2482c5; }
-
-/* line 27, ../scss/components/_buttons.scss */
-.btn-fb {
-  background: blue; }
-  /* line 29, ../scss/components/_buttons.scss */
-  .btn-fb:hover {
-    background: #0000b3; }
-
-/* line 27, ../scss/components/_buttons.scss */
-.btn-gp {
-  background: red; }
-  /* line 29, ../scss/components/_buttons.scss */
-  .btn-gp:hover {
-    background: #b30000; }
 
 /* line 2, ../scss/components/_header.scss */
 #header {
@@ -243,45 +195,47 @@ textarea {
     border-right: 1px solid rgba(0, 0, 0, 0.07); }
     /* line 15, ../scss/components/_header.scss */
     #header #sidebar #blogBrand {
-      padding: 20px 10%;
+      padding: 0 10%;
+      padding-top: 1.25em;
+      padding-bottom: 1.25em;
       overflow: hidden; }
-      /* line 20, ../scss/components/_header.scss */
+      /* line 22, ../scss/components/_header.scss */
       #header #sidebar #blogBrand h1 {
         font-size: 1.5em;
         font-weight: 600;
-        padding-top: 20px; }
-      /* line 26, ../scss/components/_header.scss */
+        padding-top: 1.25em; }
+      /* line 28, ../scss/components/_header.scss */
       #header #sidebar #blogBrand a {
         border: 0; }
-        /* line 28, ../scss/components/_header.scss */
+        /* line 30, ../scss/components/_header.scss */
         #header #sidebar #blogBrand a:hover {
           background: none; }
-      /* line 33, ../scss/components/_header.scss */
+      /* line 35, ../scss/components/_header.scss */
       #header #sidebar #blogBrand p {
         line-height: 140%;
         padding-top: 5px;
         color: #666; }
-        /* line 39, ../scss/components/_header.scss */
+        /* line 41, ../scss/components/_header.scss */
         #header #sidebar #blogBrand p a {
           display: block; }
-        /* line 43, ../scss/components/_header.scss */
+        /* line 45, ../scss/components/_header.scss */
         #header #sidebar #blogBrand p img {
           display: block;
           width: auto;
           height: 80px; }
-    /* line 53, ../scss/components/_header.scss */
+    /* line 55, ../scss/components/_header.scss */
     #header #sidebar #blogPages {
       padding-bottom: 30px; }
-      /* line 57, ../scss/components/_header.scss */
+      /* line 59, ../scss/components/_header.scss */
       #header #sidebar #blogPages a {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
         opacity: 0.5; }
-      /* line 61, ../scss/components/_header.scss */
+      /* line 63, ../scss/components/_header.scss */
       #header #sidebar #blogPages .current_page_item a, #header #sidebar #blogPages a:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1;
         background: none; }
-  /* line 70, ../scss/components/_header.scss */
+  /* line 72, ../scss/components/_header.scss */
   #header #toggleMenu {
     line-height: 100%;
     font-size: 0.938em;
@@ -289,23 +243,35 @@ textarea {
     top: 24px;
     right: 30px;
     text-transform: uppercase; }
-    /* line 81, ../scss/components/_header.scss */
+    /* line 83, ../scss/components/_header.scss */
+    #header #toggleMenu a {
+      display: block;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+      opacity: 0.6;
+      border: 0; }
+      /* line 87, ../scss/components/_header.scss */
+      #header #toggleMenu a:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1; }
+    /* line 92, ../scss/components/_header.scss */
     #header #toggleMenu strong, #header #toggleMenu span {
       float: left; }
-    /* line 85, ../scss/components/_header.scss */
+    /* line 96, ../scss/components/_header.scss */
     #header #toggleMenu strong {
-      color: #888;
       padding-right: 10px; }
-    /* line 90, ../scss/components/_header.scss */
+    /* line 100, ../scss/components/_header.scss */
     #header #toggleMenu span {
       margin-top: 3px; }
-    /* line 95, ../scss/components/_header.scss */
-    #header #toggleMenu a:hover strong {
-      color: #333; }
+    /* line 106, ../scss/components/_header.scss */
+    #header #toggleMenu.alt a {
+      color: #FFF; }
+      /* line 108, ../scss/components/_header.scss */
+      #header #toggleMenu.alt a span {
+        background-position: 0 -10px; }
 
 /* line 2, ../scss/components/_post.scss */
 .hero {
-  height: 26em;
+  height: 25em;
   overflow: hidden; }
   /* line 7, ../scss/components/_post.scss */
   .hero img {
@@ -318,7 +284,7 @@ textarea {
 .post {
   padding-bottom: 7.5em;
   padding: 0 14% 4% 12%;
-  max-width: 900px;
+  max-width: 56.25em;
   border-bottom: 1px solid #DDD; }
   /* line 24, ../scss/components/_post.scss */
   .post h2, .post strong {
@@ -329,75 +295,75 @@ textarea {
     /* line 36, ../scss/components/_post.scss */
     .post .postTitle h2 {
       color: #000;
-      word-break: break-all;
       padding-top: 1.25em;
       padding-bottom: 0.625em;
       font-size: 3em;
       line-height: 1.25em; }
-      /* line 45, ../scss/components/_post.scss */
+      /* line 44, ../scss/components/_post.scss */
       .post .postTitle h2 a {
         border: 0; }
-    /* line 51, ../scss/components/_post.scss */
+    /* line 50, ../scss/components/_post.scss */
     .post .postTitle p {
-      font-size: 0.938em; }
-  /* line 59, ../scss/components/_post.scss */
+      font-size: 0.9375em; }
+  /* line 58, ../scss/components/_post.scss */
   .post .postImage img, .post .postEntry img {
     display: block;
     max-width: 100% !important;
     height: auto !important;
-    margin-bottom: 30px; }
-  /* line 68, ../scss/components/_post.scss */
+    margin-bottom: 1.875em; }
+  /* line 67, ../scss/components/_post.scss */
   .post .postEntry {
     font-size: 1.375em; }
-    /* line 72, ../scss/components/_post.scss */
+    /* line 71, ../scss/components/_post.scss */
     .post .postEntry p, .post .postEntry blockquote, .post .postEntry table, .post .postEntry pre, .post .postEntry dl, .post .postEntry form {
       margin-bottom: 1.875em; }
-    /* line 76, ../scss/components/_post.scss */
+    /* line 75, ../scss/components/_post.scss */
     .post .postEntry h1, .post .postEntry h2, .post .postEntry h3, .post .postEntry h4, .post .postEntry h5, .post .postEntry h6 {
       font-weight: 700;
       margin-bottom: 1em; }
-    /* line 80, ../scss/components/_post.scss */
+    /* line 79, ../scss/components/_post.scss */
     .post .postEntry h1 {
-      font-size: 1.75em; }
-    /* line 83, ../scss/components/_post.scss */
+      font-size: 1.25em; }
+    /* line 82, ../scss/components/_post.scss */
     .post .postEntry h2 {
-      font-size: 1.333em; }
-    /* line 86, ../scss/components/_post.scss */
+      font-size: 0.9375em; }
+    /* line 85, ../scss/components/_post.scss */
     .post .postEntry h4 {
-      font-size: 0.813em;
+      font-size: 0.8125em;
       text-transform: uppercase;
       border-bottom: 1px solid #DDD; }
-    /* line 91, ../scss/components/_post.scss */
+    /* line 90, ../scss/components/_post.scss */
     .post .postEntry h5 {
-      font-size: 0.813em; }
-    /* line 94, ../scss/components/_post.scss */
+      font-size: 0.75em; }
+    /* line 93, ../scss/components/_post.scss */
     .post .postEntry h6 {
       color: #666;
-      font-size: 0.683em;
+      font-size: 0.6875em;
       text-transform: uppercase; }
-    /* line 100, ../scss/components/_post.scss */
+    /* line 99, ../scss/components/_post.scss */
     .post .postEntry blockquote {
       background: #EEE;
       font-style: italic;
       letter-spacing: 0.04em;
-      padding: 30px;
+      padding: 1.875em;
       border-left: 3px solid #98cb00; }
-      /* line 108, ../scss/components/_post.scss */
+      /* line 107, ../scss/components/_post.scss */
       .post .postEntry blockquote p:last-child {
         margin: 0; }
-    /* line 114, ../scss/components/_post.scss */
+    /* line 113, ../scss/components/_post.scss */
     .post .postEntry table {
       width: 100%;
       font-size: 0.875em; }
-      /* line 119, ../scss/components/_post.scss */
+      /* line 118, ../scss/components/_post.scss */
       .post .postEntry table th, .post .postEntry table td {
-        max-width: 250px;
+        max-width: 15.625em;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
         vertical-align: top;
-        padding: 12px 0;
         border-bottom: 1px solid #DDD; }
     /* line 128, ../scss/components/_post.scss */
     .post .postEntry ul, .post .postEntry ol {
-      margin: 23px; }
+      margin: 1.4375em; }
     /* line 132, ../scss/components/_post.scss */
     .post .postEntry ul {
       list-style: disc; }
@@ -424,7 +390,8 @@ textarea {
     /* line 160, ../scss/components/_post.scss */
     .post .postEntry code {
       font-size: 0.75em;
-      padding: 0 5px;
+      padding-top: 0.3125em;
+      padding-bottom: 0.3125em;
       background: #EEE;
       border: 1px solid #DDD;
       -webkit-border-radius: 3px;
@@ -432,11 +399,11 @@ textarea {
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px; }
-    /* line 168, ../scss/components/_post.scss */
+    /* line 169, ../scss/components/_post.scss */
     .post .postEntry pre {
-      font-size: 0.683em;
+      font-size: 0.625em;
       line-height: 150%;
-      padding: 30px;
+      padding: 1.875em;
       overflow: auto;
       border: 1px solid #DDD;
       -webkit-border-radius: 3px;
@@ -444,45 +411,52 @@ textarea {
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px; }
-    /* line 178, ../scss/components/_post.scss */
+    /* line 179, ../scss/components/_post.scss */
     .post .postEntry dl dt {
       font-weight: 700; }
-    /* line 181, ../scss/components/_post.scss */
+    /* line 182, ../scss/components/_post.scss */
     .post .postEntry dl dd {
       margin-bottom: 1.25em; }
-    /* line 186, ../scss/components/_post.scss */
+    /* line 187, ../scss/components/_post.scss */
     .post .postEntry .wp-caption {
       width: auto !important; }
-    /* line 190, ../scss/components/_post.scss */
+    /* line 191, ../scss/components/_post.scss */
+    .post .postEntry .alignleft, .post .postEntry .alignright {
+      margin-bottom: 1.875em; }
+    /* line 195, ../scss/components/_post.scss */
     .post .postEntry .alignleft {
       float: left;
-      margin: 0 30px 30px 0; }
-    /* line 195, ../scss/components/_post.scss */
+      margin-right: 1.875em; }
+    /* line 200, ../scss/components/_post.scss */
     .post .postEntry .alignright {
       float: right;
-      margin: 0 0 30px 30px; }
-    /* line 204, ../scss/components/_post.scss */
+      margin-left: 1.875em; }
+    /* line 209, ../scss/components/_post.scss */
     .post .postEntry .gallery .gallery-item {
       float: left;
-      margin: 0 10px 10px 0;
+      margin-right: 0.625em;
+      margin-bottom: 0.625em;
       position: relative;
       overflow: hidden; }
-      /* line 211, ../scss/components/_post.scss */
+      /* line 217, ../scss/components/_post.scss */
       .post .postEntry .gallery .gallery-item a {
         display: block;
         border: 0; }
-      /* line 216, ../scss/components/_post.scss */
+      /* line 222, ../scss/components/_post.scss */
       .post .postEntry .gallery .gallery-item img {
         margin: 0; }
-      /* line 220, ../scss/components/_post.scss */
+      /* line 226, ../scss/components/_post.scss */
       .post .postEntry .gallery .gallery-item .wp-caption-text {
         display: none; }
-    /* line 226, ../scss/components/_post.scss */
+    /* line 232, ../scss/components/_post.scss */
     .post .postEntry .gallery br {
       display: none; }
-    /* line 232, ../scss/components/_post.scss */
+    /* line 238, ../scss/components/_post.scss */
     .post .postEntry form {
-      padding: 30px 30px 15px;
+      padding-top: 1.875em;
+      padding-right: 1.875em;
+      padding-bottom: 0.9375em;
+      padding-left: 1.875em;
       font-size: 0.875em;
       background: #FAFAFA;
       border: 1px solid #DDD;
@@ -491,18 +465,19 @@ textarea {
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px; }
-      /* line 240, ../scss/components/_post.scss */
+      /* line 249, ../scss/components/_post.scss */
       .post .postEntry form p {
-        margin-bottom: 15px; }
-  /* line 248, ../scss/components/_post.scss */
+        margin-bottom: 0.9375em; }
+  /* line 257, ../scss/components/_post.scss */
   .post .postAuthor {
-    font-size: 0.813em;
+    font-size: 0.875em;
+    padding-top: 1.25em;
     border-top: 1px solid #EEE; }
-    /* line 255, ../scss/components/_post.scss */
+    /* line 265, ../scss/components/_post.scss */
     .post .postAuthor .pa-avatar,
     .post .postAuthor .pa-info {
       float: left; }
-    /* line 259, ../scss/components/_post.scss */
+    /* line 269, ../scss/components/_post.scss */
     .post .postAuthor .pa-avatar {
       width: 75px;
       height: 75px;
@@ -512,35 +487,39 @@ textarea {
       -o-border-radius: 75px;
       border-radius: 75px;
       overflow: hidden; }
-      /* line 266, ../scss/components/_post.scss */
+      /* line 276, ../scss/components/_post.scss */
       .post .postAuthor .pa-avatar img {
         display: block; }
-    /* line 272, ../scss/components/_post.scss */
+    /* line 282, ../scss/components/_post.scss */
     .post .postAuthor .pa-info {
       width: 50%;
       line-height: 100%;
-      padding: 2px 0 0 20px; }
-      /* line 278, ../scss/components/_post.scss */
+      padding-top: 0.125em;
+      padding-left: 1.25em; }
+      /* line 289, ../scss/components/_post.scss */
       .post .postAuthor .pa-info * {
         display: block;
-        padding-top: 5px; }
-      /* line 283, ../scss/components/_post.scss */
+        padding-top: 0.3125em; }
+      /* line 294, ../scss/components/_post.scss */
       .post .postAuthor .pa-info span {
         color: #888; }
-  /* line 291, ../scss/components/_post.scss */
+  /* line 302, ../scss/components/_post.scss */
   .post .postActions {
-    font-size: 0.813em;
+    font-size: 0.8125em;
     font-weight: 600;
-    padding-top: 30px; }
-    /* line 297, ../scss/components/_post.scss */
+    padding-top: 1.875em; }
+    /* line 308, ../scss/components/_post.scss */
     .post .postActions li {
       float: left;
-      margin-right: 10px; }
-    /* line 302, ../scss/components/_post.scss */
+      margin-right: 0.625em; }
+    /* line 313, ../scss/components/_post.scss */
     .post .postActions .sitem {
       color: #666;
       display: block;
-      padding: 5px 20px;
+      padding-top: 0.3125em;
+      padding-right: 1.5625em;
+      padding-bottom: 0.3125em;
+      padding-left: 1.5625em;
       text-align: center;
       border: 0;
       text-transform: uppercase;
@@ -551,37 +530,113 @@ textarea {
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px; }
-      /* line 313, ../scss/components/_post.scss */
+      /* line 327, ../scss/components/_post.scss */
       .post .postActions .sitem:hover {
+        color: #333;
         text-decoration: none;
-        border-color: #666; }
-    /* line 322, ../scss/components/_post.scss */
-    .post .postActions .pa-like a:hover, .post .postActions .pa-like .just-voted {
+        border-color: #AAA;
+        background: none; }
+    /* line 340, ../scss/components/_post.scss */
+    .post .postActions .pa-share:hover span {
+      display: none; }
+    /* line 344, ../scss/components/_post.scss */
+    .post .postActions .pa-share:hover ul {
+      display: block; }
+    /* line 350, ../scss/components/_post.scss */
+    .post .postActions .pa-share a {
+      border: 0; }
+      /* line 352, ../scss/components/_post.scss */
+      .post .postActions .pa-share a:hover {
+        background: none;
+        text-decoration: underline; }
+    /* line 358, ../scss/components/_post.scss */
+    .post .postActions .pa-share ul {
+      display: none; }
+    /* line 364, ../scss/components/_post.scss */
+    .post .postActions .pa-share .share-tw a {
+      color: #0ba3df; }
+      /* line 366, ../scss/components/_post.scss */
+      .post .postActions .pa-share .share-tw a:hover {
+        color: #097fae; }
+    /* line 364, ../scss/components/_post.scss */
+    .post .postActions .pa-share .share-fb a {
+      color: #3b5998; }
+      /* line 366, ../scss/components/_post.scss */
+      .post .postActions .pa-share .share-fb a:hover {
+        color: #2d4373; }
+    /* line 364, ../scss/components/_post.scss */
+    .post .postActions .pa-share .share-gp a {
+      color: #dd4c39; }
+      /* line 366, ../scss/components/_post.scss */
+      .post .postActions .pa-share .share-gp a:hover {
+        color: #c23421; }
+    /* line 377, ../scss/components/_post.scss */
+    .post .postActions .pa-like em {
+      font-style: normal; }
+    /* line 381, ../scss/components/_post.scss */
+    .post .postActions .pa-like a:hover, .post .postActions .pa-like .voting, .post .postActions .pa-like .just-voted {
       color: #FFF;
-      background: #e74c3c; }
+      background: #E74C3C;
+      border-color: #E74C3C; }
+    /* line 387, ../scss/components/_post.scss */
+    .post .postActions .pa-like .voting {
+      background: #e74c3c url('../../images/main/like.gif') no-repeat center center; }
+      /* line 388, ../scss/components/_post.scss */
+      .post .postActions .pa-like .voting span {
+        visibility: hidden; }
 
-/* line 4, ../scss/components/_comments.scss */
-#comments h3 {
-  font-size: 2em;
-  color: #000;
-  letter-spacing: -0.05em;
-  font-weight: 600;
-  border-bottom: 1px solid #DDD;
-  padding-bottom: 0.5em;
-  margin-bottom: 1em; }
-/* line 14, ../scss/components/_comments.scss */
-#comments #commentList, #comments #respond {
+/* line 2, ../scss/components/_comments.scss */
+#comments, #respond {
   padding: 6% 12%;
   border-bottom: 1px solid #DDD; }
+  /* line 7, ../scss/components/_comments.scss */
+  #comments .subtitle, #respond .subtitle {
+    font-size: 2em;
+    margin-bottom: 0.625em;
+    color: #000;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 0.5em; }
+
 /* line 23, ../scss/components/_comments.scss */
-#comments #commentList .comment .commentText {
-  clear: both; }
-/* line 31, ../scss/components/_comments.scss */
-#comments #respond {
-  color: #666; }
-  /* line 35, ../scss/components/_comments.scss */
-  #comments #respond p {
-    padding-bottom: 1.25em; }
+#comments #commentList .comment {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid #EEE; }
+  /* line 30, ../scss/components/_comments.scss */
+  #comments #commentList .comment .co-avatar, #comments #commentList .comment .co-info {
+    float: left; }
+  /* line 34, ../scss/components/_comments.scss */
+  #comments #commentList .comment .co-avatar {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    -ms-border-radius: 75px;
+    -o-border-radius: 75px;
+    border-radius: 75px; }
+  /* line 41, ../scss/components/_comments.scss */
+  #comments #commentList .comment .co-info {
+    padding-left: 1.875em;
+    width: 70%; }
+    /* line 46, ../scss/components/_comments.scss */
+    #comments #commentList .comment .co-info p {
+      padding-bottom: 1.25em; }
+  /* line 52, ../scss/components/_comments.scss */
+  #comments #commentList .comment:last-child {
+    border: 0; }
+
+/* line 64, ../scss/components/_comments.scss */
+#respond p {
+  padding-bottom: 0.9375em; }
+/* line 68, ../scss/components/_comments.scss */
+#respond label {
+  font-size: 0.9375em; }
+/* line 72, ../scss/components/_comments.scss */
+#respond span {
+  color: #C00; }
 
 /* line 2, ../scss/components/_aside.scss */
 .aside {
@@ -645,20 +700,20 @@ textarea {
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: #CCC;
-      margin-bottom: 15px;
+      margin-bottom: 0.9375em;
       border-bottom: 1px solid #333; }
     /* line 53, ../scss/components/_drawer.scss */
     #drawer .drawerBox ul {
-      margin-bottom: 10px; }
+      margin-bottom: 0.625em; }
       /* line 57, ../scss/components/_drawer.scss */
       #drawer .drawerBox ul li {
         list-style: inside circle;
         line-height: 120%;
-        padding-bottom: 5px; }
+        padding-bottom: 0.3125em; }
     /* line 65, ../scss/components/_drawer.scss */
     #drawer .drawerBox .tagcloud {
       line-height: 140%;
-      padding-bottom: 20px; }
+      padding-bottom: 1.25em; }
     /* line 70, ../scss/components/_drawer.scss */
     #drawer .drawerBox #recentcomments li a:first-child {
       font-weight: 600; }
@@ -669,7 +724,7 @@ textarea {
     /* line 79, ../scss/components/_drawer.scss */
     #drawer .drawerBox table {
       width: 100%;
-      margin-bottom: 20px; }
+      margin-bottom: 1.25em; }
       /* line 84, ../scss/components/_drawer.scss */
       #drawer .drawerBox table th, #drawer .drawerBox table td {
         text-align: center; }
@@ -687,7 +742,7 @@ textarea {
         background: #2D2D2D; }
     /* line 109, ../scss/components/_drawer.scss */
     #drawer .drawerBox .searchform {
-      margin-bottom: 20px; }
+      margin-bottom: 1.25em; }
       /* line 113, ../scss/components/_drawer.scss */
       #drawer .drawerBox .searchform label {
         position: absolute;
@@ -700,41 +755,48 @@ textarea {
       #drawer .drawerBox .searchform div {
         position: relative;
         background: #FFF;
-        padding: 0 35px 0 20px;
+        padding-right: 2.1875em;
+        padding-left: 1.25em;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         -ms-border-radius: 20px;
         -o-border-radius: 20px;
         border-radius: 20px; }
-        /* line 129, ../scss/components/_drawer.scss */
+        /* line 130, ../scss/components/_drawer.scss */
         #drawer .drawerBox .searchform div input {
-          padding: 7px 0;
+          padding-top: 0.4375em;
+          padding-bottom: 0.4375em;
           width: 100%;
           border: 0; }
-          /* line 133, ../scss/components/_drawer.scss */
+          /* line 135, ../scss/components/_drawer.scss */
           #drawer .drawerBox .searchform div input:focus {
             outline: 0; }
-        /* line 138, ../scss/components/_drawer.scss */
+        /* line 140, ../scss/components/_drawer.scss */
         #drawer .drawerBox .searchform div #searchsubmit {
           padding: 0;
           position: absolute;
           right: 10px;
           bottom: 10px; }
-  /* line 154, ../scss/components/_drawer.scss */
+  /* line 156, ../scss/components/_drawer.scss */
   #drawer.open {
     right: 0; }
 
 /* line 2, ../scss/components/_breadcrumbs.scss */
 #breadcrumbs {
-  padding: 18px 12%;
+  padding: 0 12%;
+  padding-top: 1.125em;
+  padding-bottom: 1.125em;
   color: #666;
   border-bottom: 1px solid #EEE; }
 
 /* line 2, ../scss/components/_pagination.scss */
 #pagination {
   padding: 0 12%;
-  border-bottom: 1px solid #EEE; }
-  /* line 7, ../scss/components/_pagination.scss */
+  font-size: 0.875em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid #DDD; }
+  /* line 10, ../scss/components/_pagination.scss */
   #pagination a, #pagination span {
     display: -moz-inline-stack;
     display: inline-block;
@@ -743,21 +805,21 @@ textarea {
     zoom: 1;
     *display: inline;
     text-align: center;
-    padding: 0 10px;
-    margin: 20px 5px 20px 0;
+    line-height: 100%;
+    padding: 6px 10px;
     border: 0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px; }
-  /* line 16, ../scss/components/_pagination.scss */
+  /* line 19, ../scss/components/_pagination.scss */
   #pagination a {
     color: #666; }
-    /* line 18, ../scss/components/_pagination.scss */
+    /* line 21, ../scss/components/_pagination.scss */
     #pagination a:hover {
       color: #333; }
-  /* line 23, ../scss/components/_pagination.scss */
+  /* line 26, ../scss/components/_pagination.scss */
   #pagination span {
     color: #FFF;
     background: #999; }
@@ -767,14 +829,16 @@ textarea {
   line-height: 160%;
   font-size: 0.75em;
   color: #666;
-  padding: 20px 12%; }
-/* line 11, ../scss/components/_footer.scss */
+  padding: 0 12%;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em; }
+/* line 13, ../scss/components/_footer.scss */
 #footer a {
   color: #666; }
-/* line 15, ../scss/components/_footer.scss */
+/* line 17, ../scss/components/_footer.scss */
 #footer span {
   color: #888; }
-  /* line 17, ../scss/components/_footer.scss */
+  /* line 19, ../scss/components/_footer.scss */
   #footer span a {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
@@ -1255,43 +1319,45 @@ img.mfp-img {
     top: 0;
     left: 0;
     width: auto;
-    padding: 10px 0;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
     background: #FFF;
     border-bottom: 1px solid #DDD; }
-    /* line 14, ../scss/components/_responsive.scss */
+    /* line 15, ../scss/components/_responsive.scss */
     #header #sidebar {
       position: static;
       width: auto;
       height: auto; }
-      /* line 20, ../scss/components/_responsive.scss */
+      /* line 21, ../scss/components/_responsive.scss */
       #header #sidebar #blogBrand {
-        padding: 0 0 0 20px; }
-        /* line 25, ../scss/components/_responsive.scss */
+        padding: 0;
+        padding-left: 1.25em; }
+        /* line 27, ../scss/components/_responsive.scss */
         #header #sidebar #blogBrand p, #header #sidebar #blogBrand h1 {
           float: left;
           padding: 0;
-          margin-right: 15px; }
-        /* line 31, ../scss/components/_responsive.scss */
+          margin-right: 0.9375em; }
+        /* line 33, ../scss/components/_responsive.scss */
         #header #sidebar #blogBrand span {
           display: block;
-          padding-top: 10px; }
-        /* line 36, ../scss/components/_responsive.scss */
+          padding-top: 0.625em; }
+        /* line 38, ../scss/components/_responsive.scss */
         #header #sidebar #blogBrand h1 {
           font-size: 1.25em;
-          padding-top: 5px; }
-        /* line 43, ../scss/components/_responsive.scss */
+          padding-top: 0.3125em; }
+        /* line 45, ../scss/components/_responsive.scss */
         #header #sidebar #blogBrand p img {
           height: 40px; }
-      /* line 51, ../scss/components/_responsive.scss */
+      /* line 53, ../scss/components/_responsive.scss */
       #header #sidebar #blogPages {
         display: none; }
 
-  /* line 59, ../scss/components/_responsive.scss */
+  /* line 61, ../scss/components/_responsive.scss */
   #drawer {
     right: -30%;
     width: 30%; }
 
-  /* line 64, ../scss/components/_responsive.scss */
+  /* line 66, ../scss/components/_responsive.scss */
   #central, #central.mixed {
     -webkit-transition-property: none;
     -moz-transition-property: none;
@@ -1305,23 +1371,33 @@ img.mfp-img {
     padding: 0;
     margin: 0; } }
 @media screen and (max-width: 500px) {
-  /* line 76, ../scss/components/_responsive.scss */
+  /* line 78, ../scss/components/_responsive.scss */
   #header #sidebar #blogBrand p:last-child {
     display: none; }
 
-  /* line 80, ../scss/components/_responsive.scss */
+  /* line 82, ../scss/components/_responsive.scss */
   .hero {
-    height: 12em;
+    height: 7.5em;
     overflow: hidden; }
 
-  /* line 87, ../scss/components/_responsive.scss */
+  /* line 89, ../scss/components/_responsive.scss */
   #drawer {
     width: 50%;
     right: -50%; }
 
-  /* line 94, ../scss/components/_responsive.scss */
+  /* line 96, ../scss/components/_responsive.scss */
   .post .postTitle h2 {
     font-size: 1.75em; }
-  /* line 98, ../scss/components/_responsive.scss */
+  /* line 100, ../scss/components/_responsive.scss */
   .post .postEntry {
-    font-size: 1.125em; } }
+    font-size: 1.125em; }
+  /* line 104, ../scss/components/_responsive.scss */
+  .post .postActions li {
+    float: none;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0.625em; }
+    /* line 110, ../scss/components/_responsive.scss */
+    .post .postActions li li {
+      display: inline;
+      margin: 0 10px; } }

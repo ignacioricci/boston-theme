@@ -1,7 +1,7 @@
 	
 	.hero {
 		
-		height:26em;
+		@include em_size(height, 400);
 		overflow:hidden;
 
 		img {
@@ -17,7 +17,7 @@
 
 		@include em_size(padding-bottom, 120);
 		padding:0 14% 4% 12%;
-		max-width:900px;
+		@include em_size(max-width, 900);
 		border-bottom:1px solid #DDD;
 		@extend .clear;
 
@@ -36,7 +36,6 @@
 			h2 {
 
 				color:#000;
-				word-break:break-all;
 				@include em_size(padding-top, 20);
 				@include em_size(padding-bottom, 10);
 				@include em_size(font-size, 48);
@@ -49,7 +48,7 @@
 			}
 
 			p {
-				font-size:0.938em;
+				@include em_size(font-size, 15);
 			}
 
 		}
@@ -60,7 +59,7 @@
 				display:block;
 				max-width:100% !important;
 				height:auto !important;
-				margin-bottom:30px;
+				@include em_size(margin-bottom, 30);
 			}
 
 		}
@@ -78,22 +77,22 @@
 				@include em_size(margin-bottom, 16);
 			}
 			h1 {
-				font-size:1.75em;
+				@include em_size(font-size, 20);
 			}
 			h2 {
-				font-size:1.333em;
+				@include em_size(font-size, 15);
 			}
 			h4 {
-				font-size:0.813em;
+				@include em_size(font-size, 13);
 				text-transform:uppercase;
 				border-bottom:1px solid #DDD;
 			}
 			h5 {
-				font-size:0.813em;
+				@include em_size(font-size, 12);
 			}
 			h6 {
 				color:#666;
-				font-size:0.683em;
+				@include em_size(font-size, 11);
 				text-transform:uppercase;
 			}
 
@@ -102,7 +101,7 @@
 				background:#EEE;
 				font-style:italic;
 				letter-spacing:0.04em;
-				padding:30px;
+				@include em_size(padding, 30);
 				border-left:3px solid $maincolor;
 				
 				p:last-child {
@@ -117,16 +116,17 @@
 				font-size:0.875em;
 				
 				th, td {
-					max-width:250px;
+					@include em_size(max-width, 250);
+					@include em_size(padding-top, 12);
+					@include em_size(padding-bottom, 12);
 					vertical-align:top;
-					padding:12px 0;
 					border-bottom:1px solid #DDD;
 				}
 
 			}
 
 			ul, ol {
-				margin:23px;
+				@include em_size(margin, 23);
 			}
 
 			ul {
@@ -158,17 +158,18 @@
 			}
 
 			code {
-				font-size:0.75em;
-				padding:0 5px;
+				@include em_size(font-size, 12);
+				@include em_size(padding-top, 5);
+				@include em_size(padding-bottom, 5);
 				background:#EEE;
 				border:1px solid #DDD;
 				@include border-radius(3px);
 			}
 
 			pre {
-				font-size:0.683em;
+				@include em_size(font-size, 10);
 				line-height:150%;
-				padding:30px;
+				@include em_size(padding, 30);
 				overflow:auto;
 				border:1px solid #DDD;
 				@include border-radius(3px);
@@ -187,14 +188,18 @@
 				width:auto !important;
 			}
 
+			.alignleft, .alignright {
+				@include em_size(margin-bottom, 30);
+			}
+
 			.alignleft {
 				float:left;
-				margin:0 30px 30px 0;
+				@include em_size(margin-right, 30);
 			}
 
 			.alignright {
 				float:right;
-				margin:0 0 30px 30px;
+				@include em_size(margin-left, 30);
 			}
 
 			.gallery {
@@ -204,7 +209,8 @@
 				.gallery-item {
 
 					float:left;
-					margin:0 10px 10px 0;
+					@include em_size(margin-right, 10);
+					@include em_size(margin-bottom, 10);
 					position:relative;
 					overflow:hidden;
 
@@ -231,14 +237,17 @@
 
 			form {
 
-				padding:30px 30px 15px;
+				@include em_size(padding-top, 30);
+				@include em_size(padding-right, 30);
+				@include em_size(padding-bottom, 15);
+				@include em_size(padding-left, 30);
 				font-size:0.875em;
 				background:#FAFAFA;
 				border:1px solid #DDD;
 				@include border-radius(3px);
 
 				p {
-					margin-bottom:15px;
+					@include em_size(margin-bottom, 15);
 				}
 
 			}
@@ -247,8 +256,9 @@
 
 		.postAuthor {
 
-			font-size:0.813em;
+			@include em_size(font-size, 14);
 			@extend .clear;
+			@include em_size(padding-top, 20);
 			border-top:1px solid #EEE;
 
 			.pa-avatar,
@@ -273,11 +283,12 @@
 
 				width:50%;
 				line-height:100%;
-				padding:2px 0 0 20px;
+				@include em_size(padding-top, 2);
+				@include em_size(padding-left, 20);
 				
 				* {
 					display:block;
-					padding-top:5px;
+					@include em_size(padding-top, 5);
 				}
 
 				span {
@@ -290,19 +301,22 @@
 
 		.postActions {
 
-			font-size:0.813em;
+			@include em_size(font-size, 13);
 			font-weight:600;
-			padding-top:30px;
+			@include em_size(padding-top, 30);
 			
 			li {
 				float:left;
-				margin-right:10px;
+				@include em_size(margin-right, 10);
 			}
 
 			.sitem {
 				color:#666;
 				display:block;
-				padding:5px 20px;
+				@include em_size(padding-top, 5);
+				@include em_size(padding-right, 25);
+				@include em_size(padding-bottom, 5);
+				@include em_size(padding-left, 25);
 				text-align:center;
 				border:0;
 				text-transform:uppercase;
@@ -311,17 +325,70 @@
 				@include border-radius(3px);
 
 				&:hover {
+					color:#333;
 					text-decoration:none;
-					border-color:#666;
+					border-color:#AAA;
+					background:none;
 				}
+
+			}
+
+			.pa-share {
+
+				&:hover {
+					
+					span {
+						display:none;
+					}
+
+					ul {
+						display:block;
+					}
+
+				}
+
+				a {
+					border:0;
+					&:hover {
+						background:none;
+						text-decoration:underline;
+					}
+				}
+
+				ul {
+					display:none;
+				}
+
+				$social: (tw #0BA3DF), (fb #3B5998), (gp #DD4C39);
+				@each $s in $social {
+					.share-#{nth($s, 1)} a {
+						color:#{nth($s, 2)};
+						&:hover {
+							color:darken(nth($s, 2), 10);
+						}
+					}
+				}
+
 
 			}
 
 			.pa-like {
 
-				a:hover, .just-voted  {
+				em {
+					font-style:normal;
+				}
+
+				a:hover, .voting, .just-voted  {
 					color:#FFF;
-					background:#e74c3c;
+					background:#E74C3C;
+					border-color:#E74C3C;
+				}
+
+				.voting {
+					span {
+						visibility:hidden;
+					}
+					background:#E74C3C image-url('main/like.gif', false, false) no-repeat center center;
 				}
 
 			}

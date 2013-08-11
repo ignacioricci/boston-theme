@@ -3,9 +3,11 @@
 
 		p {
 			line-height:160%;
-			font-size:0.75em;
+			@include em_size(font-size, 12);
 			color:#666;
-			padding:20px 12%;
+			padding:0 12%;
+			@include em_size(padding-top, 20);
+			@include em_size(padding-bottom, 20);
 		}
 
 		a {

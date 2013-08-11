@@ -3,7 +3,7 @@ jQuery(function(){
 		e.preventDefault();
 		var heart = jQuery(this);
 		var post_id = heart.data('postid');
-		var votes = parseInt(jQuery(heart).children('.likeCount').text());
+		var votes = parseInt(jQuery(heart).find('.likeCount').text());
 		if(jQuery(heart).hasClass('not-voted')){
 			jQuery(heart).addClass('voting');
 			setTimeout(function(){
@@ -15,7 +15,7 @@ jQuery(function(){
 						if(count !== 'denied'){
 							jQuery(heart).removeClass('not-voted');
 							jQuery(heart).addClass('just-voted');
-							jQuery(heart).children('.likeCount').text(votes + 1);
+							jQuery(heart).find('.likeCount').text(votes + 1);
 						}
 						jQuery(heart).removeClass('voting');
 					}

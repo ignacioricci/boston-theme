@@ -14,13 +14,15 @@
 				
 			#blogBrand {
 				
-				padding:20px 10%;
+				padding:0 10%;
+				@include em_size(padding-top, 20);
+				@include em_size(padding-bottom, 20);
 				overflow:hidden;
 
 				h1 {
 					font-size:1.5em;
 					font-weight:600;
-					padding-top:20px;
+					@include em_size(padding-top, 20);
 				}
 
 				a {
@@ -77,13 +79,21 @@
 			top:24px;
 			right:30px;
 			text-transform:uppercase;
+
+			a {
+				display:block;
+				@include opacity(0.6);
+				border:0;
+				&:hover {
+					@include opacity(1);
+				}
+			}
 			
 			strong, span {
 				float:left;
 			}
 
 			strong {
-				color:#888;
 				padding-right:10px;
 			}
 			
@@ -92,8 +102,13 @@
 				@extend .sprite;
 			}
 
-			a:hover strong {
-				color:#333;
+			&.alt {
+				a {
+					color:#FFF;
+					span {
+						background-position:0 -10px;
+					}
+				}
 			}
 
 		}

@@ -2,13 +2,16 @@
 	#pagination {
 		
 		padding:0 12%;
-		border-bottom:1px solid #EEE;
+		@include em_size(font-size, 14);
+		@include em_size(padding-top, 20);
+		@include em_size(padding-bottom, 20);
+		border-bottom:1px solid #DDD;
 		
 		a, span {
 			@include inline-block;
 			text-align:center;
-			padding:0 10px;
-			margin:20px 5px 20px 0;
+			line-height:100%;
+			padding:6px 10px;
 			border:0;
 			@include border-radius(3px);
 		}

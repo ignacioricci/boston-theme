@@ -39,32 +39,32 @@
 
 		.drawerBox {
 			
-			font-size:0.875em;
+			@include em_size(font-size, 14);
 			color:#666;
 
 			h3 {
 				text-transform:uppercase;
 				letter-spacing:0.1em;
 				color:#CCC;
-				margin-bottom:15px;
+				@include em_size(margin-bottom, 15);
 				border-bottom:1px solid #333;
 			}
 
 			ul {
 
-				margin-bottom:10px;
+				@include em_size(margin-bottom, 10);
 				
 				li {
 					list-style:inside circle; 
 					line-height:120%;
-					padding-bottom:5px;
+					@include em_size(padding-bottom, 5);
 				}
 
 			}
 
 			.tagcloud {
 				line-height:140%;
-				padding-bottom:20px;
+				@include em_size(padding-bottom, 20);
 			}
 
 			#recentcomments li a:first-child {
@@ -79,7 +79,7 @@
 			table {
 
 				width:100%;
-				margin-bottom:20px;
+				@include em_size(margin-bottom, 20);
 
 				th, td {
 					text-align:center;
@@ -108,7 +108,7 @@
 
 			.searchform {
 
-				margin-bottom:20px;
+				@include em_size(margin-bottom, 20);
 				
 				label {
 					position:absolute;
@@ -123,11 +123,13 @@
 
 					position:relative;
 					background:#FFF;
-					padding:0 35px 0 20px;
+					@include em_size(padding-right, 35);
+					@include em_size(padding-left, 20);
 					@include border-radius(20px);
 					
 					input {
-						padding:7px 0;
+						@include em_size(padding-top, 7);
+						@include em_size(padding-bottom, 7);
 						width:100%;
 						border:0;
 						&:focus{

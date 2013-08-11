@@ -31,61 +31,26 @@
 			</div>
 			<div class="postActions">
 				<ul>
-					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#">Likes (<span class="likeCount"><?php like_count($post->ID); ?></span>)</a></li>
-					<li class="pa-share">
-						<span class="sitem">Share</span>
+					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#"><span>Likes (<em class="likeCount"><?php like_count($post->ID); ?></em>)</span></a></li>
+					<li class="pa-share sitem">
+						<span>Share</span>
 						<ul>
-							<li class="share-fb"><a href="#">Facebook</a></li>
-							<li class="share-tw"><a href="#">Twitter</a></li>
-							<li class="share-gp"><a href="#">Google +</a></li>
+							<li class="share-tw"><a rel="nofollow" href="http://twitter.com/home?status=<?php the_title(); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>
+							<li class="share-fb"><a rel="nofollow" href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" title="Share this post on Facebook" target="_blank">Facebook</a></li>
+							<li class="share-gp"><a rel="nofollow" href="https://plus.google.com/share?url=<?php the_permalink() ?>" title="Share this post on Google Plus" target="_blank">Google+</a></li>
 						</ul>
 					</li>
+					<?php if(comments_open()){ ?>
+					<li class="pa-comments">
+						<?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)', 'sitem'); ?>
+					</li>
+					<?php } ?>
 				</ul>
 			</div>
 		</article>
 	</section>
 
-	<section id="comments">
-		<?php if(have_comments()){ ?>
-		<div id="commentList">
-			<h3>3 Comments</h3>
-			<ol>
-				<li class="comment personItem">
-					<div class="personAvatar">
-						<img src="images/avatar2.jpg">
-					</div>
-					<div class="personInfo">
-						<p><strong>Ignacio Ricci</strong></p>
-					</div>
-					<div class="commentText">
-						<p>Morbi in ipsum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum congue nunc at semper. Phasellus dignissim faucibus ligula, a porta elit egestas non. Curabitur erat mi, luctus ac pellentesque a, lacinia nec dolor. Duis suscipit leo justo, sed malesuada neque. Phasellus vitae nulla lobortis enim pretium tempor eget quis odio.</p>
-					</div>
-				</li>
-			</ol>
-		</div>
-		<?php } if(comments_open()){ ?>
-		<div id="respond">		
-			<h3>Leave a comment</h3>
-			<form action="" method="">
-				<p>
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name">
-				</p>
-				<p>
-					<label for="email">E-mail</label>
-					<input type="text" name="email" id="email">
-				</p>
-				<p>
-					<label for="comments">Comment</label>
-					<textarea name="comments" id="comments"></textarea>
-				</p>
-				<p>
-					<button class="btn" type="submit">Send</button>
-				</p>
-			</form>
-		</div>
-		<?php } ?>
-	</section>
+	<?php comments_template(); ?>
 
 	<?php endwhile; endif; ?>
 

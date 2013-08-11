@@ -7,7 +7,8 @@
 			top:0;
 			left:0;
 			width:auto;
-			padding:10px 0;
+			@include em_size(padding-top, 10);
+			@include em_size(padding-bottom, 10);
 			background:#FFF;
 			border-bottom:1px solid #DDD;
 
@@ -19,23 +20,24 @@
 
 				#blogBrand {
 		
-					padding:0 0 0 20px;
+					padding:0;
+					@include em_size(padding-left, 20);
 					@extend .clear;
 
 					p, h1 {
 						float:left;
 						padding:0;
-						margin-right:15px;
+						@include em_size(margin-right, 15);
 					}
 
 					span {
 						display:block;
-						padding-top:10px;
+						@include em_size(padding-top, 10);
 					}
 					
 					h1 {
 						font-size:1.25em;
-						padding-top:5px;
+						@include em_size(padding-top, 5);
 					}
 
 					p {
@@ -78,8 +80,8 @@
 		}
 			
 		.hero {
-			
-			height:12em;
+	
+			@include em_size(height, 120);
 			overflow:hidden;
 
 		}
@@ -97,6 +99,18 @@
 
 			.postEntry {
 				@include em_size(font-size, 18);
+			}
+
+			.postActions li {
+				float:none;
+				margin:0;
+				text-align:center;
+				@include em_size(margin-bottom, 10);
+				@extend .clear;
+				li {
+					display:inline;
+					margin:0 10px;
+				}
 			}
 
 		}

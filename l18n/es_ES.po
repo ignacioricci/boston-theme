@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Press\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-22 23:21-0300\n"
+"PO-Revision-Date: 2013-01-22 23:23-0300\n"
+"Last-Translator: Ignacio Ricci <nacho@ignacioricci.com>\n"
+"Language-Team: Ignacio Ricci <nacho@ignacioricci.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:6
+msgid "No comments"
+msgstr "Sin Comentarios"
+
+#: ../comments.php:6
+msgid "One Comment"
+msgstr "Un comentario"
+
+#: ../comments.php:6
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: ../comments.php:6
+msgid "in"
+msgstr "en"
+
+#: ../comments.php:17
+msgid "Leave a response"
+msgstr "Dejá una respuesta"
+
+#: ../comments.php:21
+msgid "You must be"
+msgstr "Debes estar"
+
+#: ../comments.php:21
+msgid "logged in"
+msgstr "logueado"
+
+#: ../comments.php:21
+msgid "to post a comment"
+msgstr "para publicar un comentario"
+
+#: ../comments.php:29
+msgid "Logged in as"
+msgstr "Has ingresado como"
+
+#: ../comments.php:29
+msgid "Log out"
+msgstr "Salir"
+
+#: ../comments.php:36
+msgid "Name"
+msgstr "Nombre"
+
+#: ../comments.php:44
+msgid "Website"
+msgstr "Sitio web"
+
+#: ../comments.php:51
+msgid "Message"
+msgstr "Mensaje"
+
+#: ../comments.php:56
+msgid "Post Comment"
+msgstr "Publicar comentario"
+
+#: ../footer.php:4
+msgid "all rights reserved"
+msgstr "todos los derechos reservados"
+
+#: ../footer.php:5
+msgid "Go to top"
+msgstr "Volver arriba"
+
+#: ../functions.php:22
+msgid "Top Bar"
+msgstr "Top Bar"
+
+#: ../functions.php:46
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s a las %2$s"
+
+#: ../functions.php:51
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario aguarda ser moderado."
+
+#: ../functions.php:54
+msgid "[Edit Comment]"
+msgstr "[Editar Comentario]"
+
+#: ../header.php:7
+msgid "Tag Archive for &quot;"
+msgstr "Archive de etiqueta &quot;"
+
+#: ../header.php:9
+msgid "Archive &ndash;"
+msgstr "Archivo &ndash;"
+
+#: ../header.php:11
+msgid "Search results for &quot;"
+msgstr "Resultados de búsqueda para &quot;"
+
+#: ../header.php:15
+msgid "Not Found &ndash; "
+msgstr "No encontrado &ndash; "
+
+#: ../header.php:21
+msgid " &ndash; page "
+msgstr " &ndash; página"
+
+#: ../header.php:47
+msgid "Subscribe"
+msgstr "Subscribirse"
+

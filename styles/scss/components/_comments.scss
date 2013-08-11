@@ -1,43 +1,76 @@
 	
-	#comments {
+	#comments, #respond {
 
-		h3 {
-			font-size:2em;
+		padding:6% 12%;
+		border-bottom:1px solid #DDD;
+
+		.subtitle {
+			@include em_size(font-size, 32);
+			@include em_size(margin-bottom, 10);
 			color:#000;
 			letter-spacing:-0.05em;
 			font-weight:600;
 			border-bottom:1px solid #DDD;
 			padding-bottom:0.5em;
-			margin-bottom:1em;
 		}
 
-		#commentList, #respond {
-			padding:6% 12%;
-			border-bottom:1px solid #DDD;
-		}
+	}
+
+	#comments {
 
 		#commentList {
 			
 			.comment {
 
-				.commentText {
-					clear:both;
+				@extend .clear;
+				@include em_size(padding-top, 20);
+				@include em_size(padding-bottom, 20);
+				border-bottom:1px solid #EEE;
+
+				.co-avatar, .co-info {
+					float:left;
+				}
+
+				.co-avatar {
+					width:75px;
+					height:75px;
+					overflow:hidden;
+					@include border-radius(75px);
+				}
+
+				.co-info {
+
+					@include em_size(padding-left, 30);
+					width:70%;
+
+					p {
+						@include em_size(padding-bottom, 20);
+					}
+
+				}
+
+				&:last-child {
+					border:0;
 				}
 
 			}
 
 		}
 
-		#respond {
+	}
 
-			color:#666;
+	#respond {
 
-			p {
+		p {
+			@include em_size(padding-bottom, 15);
+		}
 
-				padding-bottom:1.25em;
-				
-			}
+		label {
+			@include em_size(font-size, 15);
+		}
 
+		span {
+			color:#C00;
 		}
 
 	}
