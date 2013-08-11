@@ -69,7 +69,7 @@
 			@include em_size(font-size, 22);
 
 			p, blockquote, table, pre, dl, form {
-				@include em_size(margin-bottom, 30);
+				@include em_size(margin-bottom, 20);
 			}
 			
 			h1, h2, h3, h4, h5, h6 {
