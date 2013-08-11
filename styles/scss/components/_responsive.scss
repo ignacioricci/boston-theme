@@ -116,3 +116,14 @@
 		}
 
 	}
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+	    .sprite {
+	    	background-image:image-url('retina/sprite.png', false, false);
+	    	background-size:15px 35px;
+	    }
+	    .post .postActions .pa-like .voting {
+	    	background-image:image-url('retina/like.gif', false, false);
+			background-size:20px 18px;
+	    }
+	}

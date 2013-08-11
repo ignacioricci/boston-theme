@@ -140,10 +140,18 @@
 					#searchsubmit {
 
 						@extend .sprite;
+						cursor:pointer;
 						padding:0;
+						height:15px;
 						position:absolute;
 						right:10px;
-						bottom:10px;
+						bottom:5px;
+						background-position:0 -35px;
+						@include opacity(0.5);
+
+						&:hover {
+							@include opacity(1);
+						}
 
 					}
 

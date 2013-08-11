@@ -43,7 +43,7 @@
 		'default-image' => get_template_directory_uri() . '/images/main/logo.gif',
 		'random-default' => false,
 		'width' => '',
-		'height' => 50,
+		'height' => 160,
 		'flex-height' => false,
 		'flex-width' => false,
 		'default-text-color' => '',

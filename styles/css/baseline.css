@@ -773,11 +773,20 @@ textarea {
             outline: 0; }
         /* line 140, ../scss/components/_drawer.scss */
         #drawer .drawerBox .searchform div #searchsubmit {
+          cursor: pointer;
           padding: 0;
+          height: 15px;
           position: absolute;
           right: 10px;
-          bottom: 10px; }
-  /* line 156, ../scss/components/_drawer.scss */
+          bottom: 5px;
+          background-position: 0 -35px;
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+          opacity: 0.5; }
+          /* line 152, ../scss/components/_drawer.scss */
+          #drawer .drawerBox .searchform div #searchsubmit:hover {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+            opacity: 1; }
+  /* line 164, ../scss/components/_drawer.scss */
   #drawer.open {
     right: 0; }
 
@@ -1401,3 +1410,13 @@ img.mfp-img {
     .post .postActions li li {
       display: inline;
       margin: 0 10px; } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 121, ../scss/components/_responsive.scss */
+  .sprite, #header #toggleMenu span, #drawer #closeDrawer a, #drawer .drawerBox .searchform div #searchsubmit {
+    background-image: url('../../images/retina/sprite.png');
+    background-size: 15px 35px; }
+
+  /* line 125, ../scss/components/_responsive.scss */
+  .post .postActions .pa-like .voting {
+    background-image: url('../../images/retina/like.gif');
+    background-size: 20px 18px; } }
