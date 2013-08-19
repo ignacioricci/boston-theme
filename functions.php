@@ -16,6 +16,9 @@
 	// Post Like
 	include_once(TEMPLATEPATH . '/ssi/post-like.php');
 
+	// Theme Options
+	include_once(TEMPLATEPATH . '/ssi/theme-options.php');
+
 	// Custom Menu
     register_nav_menus(array('mainmenu'=>__('Main Menu'),));
 

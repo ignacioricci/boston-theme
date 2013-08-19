@@ -1,0 +1,59 @@
+
+	#customThemeOptions table {
+		margin-top:10px;
+	}
+
+	#customThemeOptions th {
+		padding:7px 12px;
+	}
+
+	#customThemeOptions td {
+		background:#FFF;
+		padding:12px;
+	}
+
+	#customThemeOptions .mulOption {
+		display:inline;
+		margin-right:20px;
+	}
+
+	#customThemeOptions .mulOption input {
+		margin-right:5px;
+	}
+
+	.manage-menus {
+		clear:both;
+	}
+
+	.farbtastic {
+		position:relative;
+	}
+	.farbtastic * {
+		position:absolute;
+		cursor:crosshair;
+	}
+	.farbtastic, .farbtastic .wheel {
+		width:195px;
+		height:195px;
+	}
+	.farbtastic .color, .farbtastic .overlay {
+		top:47px;
+		left:47px;
+		width:101px;
+		height:101px;
+	}
+	.farbtastic .wheel {
+		background: url(../images/wheel.png) no-repeat;
+		width:195px;
+		height:195px;
+	}
+	.farbtastic .overlay {
+		background:url(../images/mask.png) no-repeat;
+	}
+	.farbtastic .marker {
+		width:17px;
+		height:17px;
+		margin:-8px 0 0 -8px;
+		overflow:hidden; 
+		background:url(../images/marker.png) no-repeat;
+	}
