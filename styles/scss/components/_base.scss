@@ -17,7 +17,7 @@
 		font-style:italic;
 	}
 
-	strong {
+	b, strong {
 		font-weight:600;
 	}
 
@@ -71,7 +71,7 @@
 
 	}
 
-	.single #content .post, .page #content .post {
+	#content {
 		@include em_size(min-height, 620);
 	}
 
