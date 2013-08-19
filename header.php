@@ -25,7 +25,15 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Source+Sans+Pro:400,400italic,600,600italic">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/baseline.css">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
-	<?php wp_head(); ?>
+	<?php if(is_single()){ if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<meta property="og:title" content="<?php the_title(); ?> (via <?php bloginfo('name'); ?>)" />
+	<?php if(has_post_thumbnail()){ ?>
+	<meta property="og:image" content="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail')[0]; ?>" />
+	<?php } endwhile; endif; } else { ?>
+	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+	<?php if(get_header_image()){ ?>
+	<meta property="og:image" content="<?php header_image(); ?>" />
+	<?php } } wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 

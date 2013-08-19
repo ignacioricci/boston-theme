@@ -2,6 +2,13 @@
 
 	// Remove WP Version
 	remove_action('wp_head', 'wp_generator');
+
+	// Remove recent comment styling
+	add_action('widgets_init', 'remove_recent_comments_style');
+	function remove_recent_comments_style(){
+		global $wp_widget_factory;
+		remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+	}
 	
 	// Remove Gallery CSS
 	add_filter('gallery_style', create_function('$a', 'return "<div class=\'gallery\'>";'));
@@ -16,6 +23,7 @@
     add_theme_support('post-thumbnails');
 	add_image_size('hero', 1200, 800, true);
 	add_image_size('post', 800, 9999);
+	add_image_size('thumbnail', 300, 9999);
 
 	// Drawer widgets
  	if (function_exists('register_sidebar')){
