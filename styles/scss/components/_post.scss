@@ -102,7 +102,7 @@
 				font-style:italic;
 				letter-spacing:0.04em;
 				@include em_size(padding, 30);
-				border-left:3px solid jQuerymaincolor;
+				border-left:3px solid $maincolor;
 				
 				p:last-child {
 					margin:0;
@@ -359,12 +359,12 @@
 					display:none;
 				}
 
-				jQuerysocial: (tw #0BA3DF), (fb #3B5998), (gp #DD4C39);
-				@each jQuerys in jQuerysocial {
-					.share-#{nth(jQuerys, 1)} a {
-						color:#{nth(jQuerys, 2)};
+				$social: (tw #0BA3DF), (fb #3B5998), (gp #DD4C39);
+				@each $s in $social {
+					.share-#{nth($s, 1)} a {
+						color:#{nth($s, 2)};
 						&:hover {
-							color:darken(nth(jQuerys, 2), 10);
+							color:darken(nth($s, 2), 10);
 						}
 					}
 				}
