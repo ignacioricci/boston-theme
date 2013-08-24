@@ -56,13 +56,25 @@
 				
 				padding-bottom:30px;
 
-				a {
-					@include opacity(0.5);
+				li {
+					font-size:0.938em;
+					border-bottom:1px solid #EEE;
 				}
 
-				.current_page_item a, a:hover {
-					@include opacity(1);
-					background:none;
+				a {
+
+					display:block;
+					border:0;
+					padding:0 2px;
+					@include em_size(padding-top, 4);
+					@include em_size(padding-bottom, 4);
+					@include transition-property(padding-left);
+					@include transition-duration(0.5s);
+
+					&:hover {
+						padding-left:20px;
+					}
+
 				}
 
 			}

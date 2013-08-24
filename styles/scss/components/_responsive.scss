@@ -71,6 +71,18 @@
 			margin:0;
 		}
 
+		#singleNav {
+
+			text-align:center;
+			
+			p {
+				float:none;
+				display:inline;
+				margin:0 10px;	
+			}
+			
+		}
+
 	}
 
 	@media screen and (max-width:500px){
