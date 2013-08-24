@@ -38,5 +38,6 @@ jQuery(function(){
 			});
 		}
 	}); 
+	jQuery('.menu-item-type-custom a').attr('target', '_blank');
 
 });

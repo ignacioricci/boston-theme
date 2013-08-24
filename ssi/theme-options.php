@@ -133,9 +133,9 @@
 				<tr valign="top">
 					<td class="labelItem"><strong>DISQUS Shortname</strong> </br> <a href="http://disqus.com/admin/universalcode/" target="_blank">http://disqus.com/admin/universalcode/</a></td>
 					<td>
-						<?php $tdiscuss = get_option('t-discuss'); ?>
+						<?php $tdisqus = get_option('t-disqus'); ?>
 						<p>
-							<input class="in" type="text" name="t-discuss" id="t-discuss" value="<?php echo get_option('t-discuss');?>" />
+							<input class="in" type="text" name="t-disqus" id="t-disqus" value="<?php echo get_option('t-disqus');?>" />
 						</p>
 					</td>
 				</tr>

@@ -91,8 +91,13 @@
 		</ul>
 	</section>
 	<?php } ?>
-
-	<?php comments_template(); ?>
+	
+	<?php
+		$disqus = get_option('t-disqus');
+		if($disqus != ''){
+	?>
+	<div id="comments"><div id="disqus_thread"></div></div>
+	<?php } else { comments_template(); } ?>
 
 	<?php endwhile; endif; ?>
 
