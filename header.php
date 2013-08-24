@@ -62,7 +62,7 @@
 			a:hover {
 				background:rgba(<?php echo hex2rgb($accent); ?>,0.05);
 			}
-			.postTitle h2 a:hover {
+			.post .postTitle h2 a:hover {
 				color:<?php echo $accent; ?>;	
 			}
 			#pagination a:hover,
