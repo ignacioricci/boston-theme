@@ -20,36 +20,54 @@
 	include_once(TEMPLATEPATH . '/ssi/theme-options.php');
 
 	// Custom Menu
-    register_nav_menus(array('mainmenu'=>__('Main Menu'),));
+	register_nav_menus(array('mainmenu'=>__('Main Menu'),));
 
 	// Enable post thumbnails
-    add_theme_support('post-thumbnails');
+	add_theme_support('post-thumbnails');
 	add_image_size('hero', 1200, 800, true);
 	add_image_size('post', 800, 9999);
 	add_image_size('thumb', 35, 35);
 
+	// Hexadecimal to RGB
+	function hex2rgb($colour){
+		if ($colour[0] == '#'){
+			$colour = substr($colour, 1);
+		}
+		if (strlen($colour) == 6){
+			list($r, $g, $b) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+		} elseif ( strlen( $colour ) == 3 ) {
+			list($r, $g, $b) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
+		} else {
+			return false;
+		}
+		$r = hexdec($r);
+		$g = hexdec($g);
+		$b = hexdec($b);
+		return ($r . ',' . $g . ',' . $b);
+	}
+
 	// Drawer widgets
- 	if (function_exists('register_sidebar')){
+	if (function_exists('register_sidebar')){
 		register_sidebar(array(
 			'name' => 'Drawer Menu',
-    		'before_widget' => '<div class="asideBox drawerBox">',
-    		'after_widget' => '</div>',
-    		'before_title' => '<h3>',
-   			'after_title' => '</h3>'
+			'before_widget' => '<div class="asideBox drawerBox">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
 		));
 	}
 
 	// Add Social information to user
 	function add_social_netw($socialnetw){
-        $socialnetw['twitter'] = 'Twitter';
-        $socialnetw['facebook'] = 'Facebook';
-        $socialnetw['linkedin'] = 'LinkedIn';
-        return $socialnetw;
+		$socialnetw['twitter'] = 'Twitter';
+		$socialnetw['facebook'] = 'Facebook';
+		$socialnetw['linkedin'] = 'LinkedIn';
+		return $socialnetw;
 	}
 	add_filter('user_contactmethods','add_social_netw', 10 , 1);
 
 	// Enable custom header	 
-    add_theme_support('post-thumbnails');
+	add_theme_support('post-thumbnails');
 	$himgoptions = array(
 		'default-image' => get_template_directory_uri() . '/images/main/logo.gif',
 		'random-default' => false,
@@ -69,10 +87,10 @@
 	// Language support
 	add_action('after_setup_theme', 'boston_setup');
 	function boston_setup(){
-	    load_theme_textdomain('boston', get_template_directory() . '/l18n');
+		load_theme_textdomain('boston', get_template_directory() . '/l18n');
 	}
 
-    // Custom comment output 
+	// Custom comment output 
 	function boston_comments($comment, $args, $depth) {
 		$GLOBALS['comment'] = $comment; ?>
 		

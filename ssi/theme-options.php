@@ -69,11 +69,11 @@
 			</thead>
 			<tbody>
 				<tr valign="top">
-					<td class="labelItem"><strong>Link Color</strong><br /><em>(Default is: #990000)</em></td>
+					<td class="labelItem"><strong>Link Color</strong><br /><em>(Default is: #508720)</em></td>
 					<td>
 						<?php $taccent = get_option('t-accent'); ?>
 						<p>
-							<input class="in" type="text" name="t-accent" id="t-accent" value="<?php if($taccent){ echo $taccent; } else { echo '#990000'; } ?>" />
+							<input class="in" type="text" name="t-accent" id="t-accent" value="<?php if($taccent){ echo $taccent; } else { echo '#508720'; } ?>" />
 						</p>
 						<div id="colorPickerHolder"><div id="picker"></div></div>
 					</td>

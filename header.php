@@ -23,6 +23,7 @@
 		<?php
 			$fontType = get_option('t-typo-type');
 			$fontSize = get_option('t-size');
+			$accent = get_option('t-accent');
 		?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -50,6 +51,22 @@
 		<?php } if($fontSize == 'small'){ ?>
 			.post .postEntry {
 				font-size:1em;
+			}
+		<?php } if($accent){ ?>
+			a {
+				color:<?php echo $accent; ?>;
+				border-color:rgba(<?php echo hex2rgb($accent); ?>,0.15);
+			}
+			a:hover {
+				background:rgba(<?php echo hex2rgb($accent); ?>,0.05);
+			}
+			#pagination a:hover,
+			.respond button {
+				background:<?php echo $accent; ?>;	
+			}
+			.post .postEntry blockquote,
+			input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+				border-color:<?php echo $accent; ?>;
 			}
 		<?php } ?>
 	</style>

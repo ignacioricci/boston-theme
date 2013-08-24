@@ -11,6 +11,7 @@
 			line-height:100%;
 			padding:6px 10px;
 			margin:0 2px;
+			border:0;
 			@include em_size(margin-top, 20);
 			@include em_size(margin-bottom, 20);
 			@include border-radius(3px);

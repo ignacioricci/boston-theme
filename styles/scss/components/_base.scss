@@ -48,6 +48,7 @@
 			color:#000;
 			border-color:$maincolor;
 			outline:0;
+			@include single-box-shadow(rgba(0,0,0,0.1), 0, 0);
 		}
 	}
 
