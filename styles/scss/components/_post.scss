@@ -24,10 +24,6 @@
 			font-weight:700;
 		}
 
-		.postTitle h2, .postEntry {
-			@extend .serif;
-		}
-
 		.postTitle {
 
 			@include em_size(padding-bottom, 25);
@@ -36,14 +32,25 @@
 
 				color:#000;
 				@include em_size(padding-top, 20);
-				@include em_size(padding-bottom, 10);
+				@include em_size(padding-bottom, 5);
 				@include em_size(font-size, 48);
 				@include em_size(line-height, 20);
 
 				a {
+
+					color:#000;
 					border:0;
+
+					&:hover {
+						color:$maincolor;
+					}
+
 				}
 
+			}
+
+			.articleCat {
+				@include em_size(padding-top, 5);
 			}
 
 			p {
@@ -65,7 +72,7 @@
 
 		.postEntry {
 
-			@include em_size(font-size, 22);
+			@include em_size(font-size, 20);
 
 			p, blockquote, table, pre, dl, form {
 				@include em_size(margin-bottom, 20);
@@ -284,14 +291,15 @@
 				line-height:100%;
 				@include em_size(padding-top, 2);
 				@include em_size(padding-left, 20);
-				
-				* {
-					display:block;
-					@include em_size(padding-top, 5);
+
+				p {
+					padding-top:18px;
 				}
 
 				span {
 					color:#888;
+					display:block;
+					@include em_size(padding-top, 5);
 				}
 
 			}

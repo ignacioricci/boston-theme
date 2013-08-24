@@ -1,19 +1,19 @@
 	<?php if (have_comments()){ ?>
 
-	<div id="comments">
+	<section id="comments">
 		<div id="commentList">
 			<h3 class="subtitle"><?php comments_number(__('Comments (0)', 'baseline'), __('Comments (1)', 'baseline'), __('Comments (%)', 'baseline')); ?></h3>
 			<ol>
-				<?php wp_list_comments('callback=baseline_comments&type=comment&avatar_size=75'); ?>
+				<?php wp_list_comments('callback=boston_comments&type=comment&avatar_size=75'); ?>
 			</ol>
 		</div>
-	</div>
+	</section>
 
 	<?php } ?>
 
 	<?php if (comments_open()){ ?>
 
-		<div id="respond">
+		<section class="respond">
 
 			<h3 class="subtitle"><?php _e('Leave a response', 'press'); ?></h3>
 
@@ -54,7 +54,7 @@
 				</p>
 				
 				<p>
-					<input name="submit" type="submit" value="<?php _e('Post Comment', 'baseline'); ?>" />
+					<button name="submit" type="submit"><?php _e('Post Comment', 'baseline'); ?></button>
 				</p>
 				
 				<?php
@@ -63,6 +63,12 @@
 				?>
 
 			</form>
-		</div>
+		</section>
+
+	<?php } else { ?>
+
+	<section class="respond" id="commentsClosed">
+		<p>Comments are closed for this article.</p>
+	</section>
 
 	<?php } ?>

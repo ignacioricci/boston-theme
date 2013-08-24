@@ -6,25 +6,22 @@
 		
 		a, span {
 			@include inline-block;
+			color:#666;
 			text-align:center;
 			line-height:100%;
 			padding:6px 10px;
+			margin:0 2px;
 			@include em_size(margin-top, 20);
 			@include em_size(margin-bottom, 20);
-			border:0;
 			@include border-radius(3px);
 		}
 
 		a {
-			color:#666;
+			background:#EEE;
 			&:hover {
-				color:#333;
+				color:#FFF;
+				background:$maincolor;
 			}
-		}
-
-		span {
-			color:#FFF;
-			background:#999;
 		}
 	
 	}

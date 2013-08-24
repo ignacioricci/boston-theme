@@ -26,7 +26,7 @@
     add_theme_support('post-thumbnails');
 	add_image_size('hero', 1200, 800, true);
 	add_image_size('post', 800, 9999);
-	add_image_size('thumbnail', 300, 9999);
+	add_image_size('thumb', 35, 35);
 
 	// Drawer widgets
  	if (function_exists('register_sidebar')){
@@ -67,13 +67,13 @@
 	add_theme_support('custom-header', $himgoptions);
 
 	// Language support
-	add_action('after_setup_theme', 'baseline_setup');
-	function baseline_setup(){
-	    load_theme_textdomain('baseline', get_template_directory() . '/l18n');
+	add_action('after_setup_theme', 'boston_setup');
+	function boston_setup(){
+	    load_theme_textdomain('boston', get_template_directory() . '/l18n');
 	}
 
     // Custom comment output 
-	function baseline_comments($comment, $args, $depth) {
+	function boston_comments($comment, $args, $depth) {
 		$GLOBALS['comment'] = $comment; ?>
 		
 		<li <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">

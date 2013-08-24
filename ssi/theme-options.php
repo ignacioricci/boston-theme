@@ -18,7 +18,7 @@
 				die;
 			}
 		}
-		add_theme_page($ThemeName . ' Theme Options', $ThemeName . ' Baseline Options', 'edit_themes', basename(__FILE__), 'customThemePage');
+		add_theme_page($ThemeName . ' Theme Options', $ThemeName . ' Boston Options', 'edit_themes', basename(__FILE__), 'customThemePage');
 	}
  
 	function customThemePage(){
@@ -26,8 +26,8 @@
 ?>
 	<div class="wrap" id="customThemeOptions">
 		<div class="icon-32" id="icon-themes"></div>
-		<h2>Baseline Options</h2>
-		<?php if ($_REQUEST['saved']) echo '<div id="message" class="updated"><strong>Baseline options saved.</strong></div>'; ?>
+		<h2>Boston Options</h2>
+		<?php if ($_REQUEST['saved']) echo '<div id="message" class="updated"><strong>Boston options saved.</strong></div>'; ?>
 		<div class="manage-menus">Use this page to customize different aspects of your blog.</div>
 		<form method="post" action="">
 		<table class="wp-list-table widefat">
@@ -86,7 +86,7 @@
 			</thead>
 			<tbody>
 				<tr valign="top">
-					<td class="labelItem"><strong>Show date &amp; category</strong> <em>(Default is: Yes)</em></td>
+					<td class="labelItem"><strong>Show Date, Category &amp; Tags</strong> <em>(Default is: Yes)</em></td>
 					<td>
 					<?php $tdatecatArray = array('no' => 'No', 'yes' => 'Yes');?>
 					<?php $tdatecat = get_option('t-datecat'); ?>
@@ -107,6 +107,19 @@
 						<p class="mulOption">
 							<input type="radio" name="t-popular" value="<?php echo $key; ?>" id="t-popular-<?php echo $key; ?>"<?php if($tpopular==$key || $tpopular == '') echo ' checked'; ?> />
 							<label for="t-popular-<?php echo $key; ?>"><?php echo $value; ?></label>
+						</p>
+					<?php endforeach; ?>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td><strong>Show author in single page</strong> <em>(Default is: Yes)</em></td>
+					<td>
+					<?php $tauthorArray = array('no' => 'No', 'yes' => 'Yes');?>
+					<?php $tauthor = get_option('t-author'); ?>
+					<?php foreach($tauthorArray as $key => $value): ?>
+						<p class="mulOption">
+							<input type="radio" name="t-author" value="<?php echo $key; ?>" id="t-author-<?php echo $key; ?>"<?php if($tauthor==$key || $tauthor == '') echo ' checked'; ?> />
+							<label for="t-author-<?php echo $key; ?>"><?php echo $value; ?></label>
 						</p>
 					<?php endforeach; ?>
 					</td>

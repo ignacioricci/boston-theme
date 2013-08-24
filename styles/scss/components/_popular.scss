@@ -1,0 +1,50 @@
+	
+	#popularArticles {
+
+		padding:3% 12%;
+		border-top:1px solid #DDD;
+		
+		h3 {
+			text-transform:uppercase;
+			font-size:0.813em;
+			letter-spacing:0.05em;
+			color:#666;
+			@include em_size(padding-bottom, 5);
+		}
+
+	}
+
+	.popular {
+		@extend .clear;
+		@include em_size(padding-top, 5);
+		@include em_size(padding-bottom, 5);
+	}
+
+	.popThumb,
+	.popInfo {
+		float:left;
+	}
+
+	.popThumb {
+
+		width:35px;
+		height:35px;
+		overflow:hidden;
+		margin-right:15px;
+		@include border-radius(100px);
+		
+		img {
+			display:block;
+			width:100%;
+			height:100%;
+		}
+
+	}
+
+	.popInfo {
+
+		span {
+			color:#666;
+		}
+
+	}

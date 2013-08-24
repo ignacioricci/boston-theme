@@ -36,8 +36,13 @@
 		<article class="post">
 			<div class="postTitle">
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p>Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <?php the_category(' ,');  ?></p>
+				<?php
+					$showMeta = get_option('t-datecat');
+					if($showMeta != 'no'){
+				?>
+				<p class="articleCat">Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <?php the_category(' ,');  ?></p>
 				<?php the_tags('<p><strong>Tagged with:</strong> ', ', ', '</p>'); ?>
+				<?php } ?>
 			</div>
 			<?php if(has_post_thumbnail()){ ?>
 			<div class="postImage">
@@ -53,7 +58,7 @@
 					<li class="sitem pa-share">
 						<span>Share</span>
 						<ul>
-							<li class="share-tw"><a rel="nofollow" href="http://twitter.com/home?status=<?php the_title(); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>
+							<li class="share-tw"><a rel="nofollow" href="http://twitter.com/home?status=<?php echo urlencode(get_the_title()); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>
 							<li class="share-fb"><a rel="nofollow" href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" title="Share this post on Facebook" target="_blank">Facebook</a></li>
 							<li class="share-gp"><a rel="nofollow" href="https://plus.google.com/share?url=<?php the_permalink() ?>" title="Share this post on Google Plus" target="_blank">Google+</a></li>
 						</ul>

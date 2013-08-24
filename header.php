@@ -20,9 +20,17 @@
 		} if ($paged > 1) {
 			echo ' &ndash; page '. $paged;
 		} ?>
+		<?php
+			$fontType = get_option('t-typo-type');
+			$fontSize = get_option('t-size');
+		?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<?php if($fontType == 'serif'){ ?>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Source+Sans+Pro:400,400italic,600,600italic">
+	<?php } else { ?>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic">
+	<?php } ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/baseline.css">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
 	<?php if(is_single()){ if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -34,6 +42,17 @@
 	<?php if(get_header_image()){ ?>
 	<meta property="og:image" content="<?php header_image(); ?>" />
 	<?php } } wp_head(); ?>
+	<style type="text/css">
+		<?php if($fontType == 'serif'){ ?>
+			.postTitle h2, .postEntry {
+				font-family:'Alegreya', Georgia, Times, serif;
+			}
+		<?php } if($fontSize == 'small'){ ?>
+			.post .postEntry {
+				font-size:1em;
+			}
+		<?php } ?>
+	</style>
 </head>
 <body <?php body_class(); ?>>
 
@@ -52,7 +71,7 @@
 				</div>
 			</div>
 		</aside>
-		<div id="toggleMenu"<?php if(is_single() && has_post_thumbnail()){ echo ' class="alt"'; } ?>><a href="#"><strong>Menu</strong> <span></span></a></div>
+		<div id="toggleMenu"><a href="#"><strong>Menu</strong></a></div>
 	</header>
 
 	<section id="central">

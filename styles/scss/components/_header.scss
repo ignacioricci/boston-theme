@@ -71,44 +71,23 @@
 
 		#toggleMenu {
 
-			@extend .sans-serif;
 			@extend .clear;
-			line-height:100%;
-			font-size:0.938em;
-			position:absolute;
-			top:24px;
-			right:30px;
-			text-transform:uppercase;
-
+			position:fixed;
+			top:12px;
+			right:12px;
+			
 			a {
 				display:block;
-				@include opacity(0.6);
+				background:rgba(0,0,0,0.9);
+				padding:12px;
 				border:0;
-				&:hover {
-					@include opacity(1);
-				}
-			}
-			
-			strong, span {
-				float:left;
+				@include border-radius(3px);
 			}
 
 			strong {
-				padding-right:10px;
-			}
-			
-			span {
-				margin-top:3px;
 				@extend .sprite;
-			}
-
-			&.alt {
-				a {
-					color:#FFF;
-					span {
-						background-position:0 -10px;
-					}
-				}
+				width:15px;
+				height:10px;
 			}
 
 		}

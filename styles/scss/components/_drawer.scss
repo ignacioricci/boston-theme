@@ -27,7 +27,7 @@
 				@extend .sprite;
 				float:right;
 				height:15px;
-				background-position:0 -20px;
+				background-position:0 -10px;
 				@include opacity(0.5);
 
 				&:hover {
@@ -56,7 +56,7 @@
 				
 				li {
 					list-style:inside circle; 
-					line-height:120%;
+					line-height:130%;
 					@include em_size(padding-bottom, 5);
 				}
 
@@ -146,7 +146,7 @@
 						position:absolute;
 						right:10px;
 						bottom:5px;
-						background-position:0 -35px;
+						background-position:0 -25px;
 						@include opacity(0.5);
 
 						&:hover {
@@ -158,7 +158,15 @@
 				}
 
 			}
+			
+			&:last-of-type {
+				@include em_size(padding-bottom, 30);
+			}
 
+		}
+
+		#sectionsBox {
+			display:none;
 		}
 
 		&.open {

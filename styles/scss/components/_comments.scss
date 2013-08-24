@@ -1,5 +1,5 @@
 	
-	#comments, #respond {
+	#comments, .respond {
 
 		padding:6% 12%;
 		border-top:1px solid #DDD;
@@ -11,7 +11,7 @@
 			letter-spacing:-0.05em;
 			font-weight:600;
 			border-bottom:1px solid #DDD;
-			padding-bottom:0.5em;
+			@include em_size(padding-bottom, 10);
 		}
 
 	}
@@ -72,7 +72,7 @@
 
 	}
 
-	#respond {
+	.respond {
 
 		p {
 			@include em_size(padding-bottom, 15);
@@ -84,6 +84,41 @@
 
 		span {
 			color:#C00;
+		}
+
+		button {
+			cursor:pointer;
+			@include inline-block;
+			@include em_size(padding-top, 20);
+			@include em_size(padding-bottom, 20);
+			@include em_size(padding-left, 30);
+			@include em_size(padding-right, 30);
+			text-align:center;
+			font-weight:bold;
+			color:#FFF;
+			background:$maincolor;
+			border:0;
+			text-transform:uppercase;
+			letter-spacing:0.1em;
+			@include border-radius(3px);
+
+			&:hover {
+				text-decoration:none;
+				background:#222;
+			}
+
+		}
+
+	}
+
+	#commentsClosed {
+
+		padding:2% 12%;
+		color:#999;
+		background:#FAFAFA;
+
+		p {
+			padding:0;
 		}
 
 	}

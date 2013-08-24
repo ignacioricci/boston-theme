@@ -80,15 +80,17 @@
 		}
 			
 		.hero {
-	
 			@include em_size(height, 120);
 			overflow:hidden;
-
 		}
 
 		#drawer {
 			width:50%;
 			right:-50%;
+		}
+
+		#sectionsBox {
+			display:block;
 		}
 
 		.post {
@@ -120,7 +122,7 @@
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 	    .sprite {
 	    	background-image:image-url('retina/sprite.png', false, false);
-	    	background-size:15px 35px;
+	    	background-size:15px 40px;
 	    }
 	    .post .postActions .pa-like .voting {
 	    	background-image:image-url('retina/like.gif', false, false);
