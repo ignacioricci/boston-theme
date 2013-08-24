@@ -78,15 +78,26 @@
 		<h3><?php _e('Other popular articles', 'boston'); ?></h3>
 		<ul>
 			<?php
-				$fav_q = new WP_Query('post_type=post&posts_per_page=5&meta_key_votes_count&order=DESC&ignore_sticky_posts=true');
+				$fav_q = new WP_Query('post_type=post&posts_per_page=5&meta_key=_votes_count&order=DESC&ignore_sticky_posts=true');
 				while($fav_q->have_posts()) : $fav_q->the_post();
 			?>
 			<li class="popular">
-				<?php if(has_post_thumbnail()){ ?>
+				<?php
+					$firstImg = get_children('post_parent='.get_the_ID().'&post_type=attachment&post_mime_type=image&numberposts=1');
+					$firstImgId = (reset($firstImg)->ID);
+					if(has_post_thumbnail()){
+				?>
 				<div class="popThumb">
 					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumb'); ?></a>
 				</div>
+				<?php
+					} elseif($firstImg){
+				?>
+				<div class="popThumb">
+					<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($firstImgId, 'thumb'); ?></a>
+				</div>
 				<?php } ?>
+				</div>
 				<div class="popInfo">
 					<h4>
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
