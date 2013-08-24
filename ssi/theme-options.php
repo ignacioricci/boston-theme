@@ -148,9 +148,9 @@
 				<tr valign="top">
 					<td class="labelItem"><strong>Tracking ID</strong> <em>(Ex: UA-XXXXX-Y)</em> </br> <a href="https://support.google.com/analytics/answer/1008080?hl=en">Tracking code information</a></td>
 					<td>
-						<?php $tanalytics = get_option('t-tanalytics'); ?>
+						<?php $tanalytics = get_option('t-analytics'); ?>
 						<p>
-							<input class="in" type="text" name="t-tanalytics" id="t-tanalytics" value="<?php echo get_option('t-tanalytics');?>" />
+							<input class="in" type="text" name="t-analytics" id="t-analytics" value="<?php echo get_option('t-analytics');?>" />
 						</p>
 					</td>
 				</tr>

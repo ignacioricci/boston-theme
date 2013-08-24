@@ -24,6 +24,7 @@
 			$fontType = get_option('t-typo-type');
 			$fontSize = get_option('t-size');
 			$accent = get_option('t-accent');
+			$analytics = get_option('t-analytics');
 		?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -70,6 +71,18 @@
 			}
 		<?php } ?>
 	</style>
+	<?php if($analytics != ''){ ?>
+	<script type="text/javascript">	
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', '<?php echo $analytics; ?>']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<?php } ?>
 </head>
 <body <?php body_class(); ?>>
 
