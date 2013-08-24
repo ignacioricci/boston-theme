@@ -167,6 +167,7 @@
 
 		#sectionsBox {
 			display:none;
+			@include em_size(padding-bottom, 5);
 		}
 
 		&.open {

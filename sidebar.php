@@ -2,7 +2,7 @@
 	<div class="asideHolder">
 		<div id="closeDrawer"><a href="#"><?php _e('Close', 'boston'); ?></a></div>
 		<div class="asideBox drawerBox" id="sectionsBox">
-			<h6><?php _e('Sections', 'boston'); ?></h6>
+			<h3><?php _e('Sections', 'boston'); ?></h3>
 			<?php wp_nav_menu(array('theme_location' =>  'mainmenu', 'container' => '', 'depth' => '1')); ?>
 		</div>
 		<?php if (function_exists('register_sidebar'))
