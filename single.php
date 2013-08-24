@@ -15,7 +15,7 @@
 					$showMeta = get_option('t-datecat');
 					if($showMeta != 'no'){
 				?>
-				<p class="articleCat">Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <?php the_category(' ,');  ?></p>
+				<p class="articleCat"><?php _e('Written on', 'boston'); ?> <strong><?php the_time('j F Y, h:ia '); ?></strong> <?php _e('under', 'boston'); ?> <?php the_category(' ,');  ?></p>
 				<?php the_tags('<p><strong>Tagged with:</strong> ', ', ', '</p>'); ?>
 				<?php } ?>
 			</div>
@@ -32,18 +32,18 @@
 				</div>
 				<div class="pa-info">
 					<p>
-						<em>Written by</em>
+						<em><?php _e('Written by', 'boston'); ?></em>
 						<strong><?php echo get_the_author_meta('display_name'); ?></strong>
-						<span>(Published articles: <?php echo count_user_posts(get_the_author_meta('ID')); ?>)</span>
+						<span>(<?php _e('Published articles', 'boston'); ?>: <?php echo count_user_posts(get_the_author_meta('ID')); ?>)</span>
 					</p>
 				</div>
 			</div>
 			<?php } ?>
 			<div class="postActions">
 				<ul>
-					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#"><span>Likes (<em class="likeCount"><?php like_count($post->ID); ?></em>)</span></a></li>
+					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#"><span><?php _e('Likes', 'boston'); ?> (<em class="likeCount"><?php like_count($post->ID); ?></em>)</span></a></li>
 					<li class="pa-share sitem">
-						<span>Share</span>
+						<span><?php _e('Share', 'boston'); ?></span>
 						<ul>
 							<li class="share-tw"><a rel="nofollow" href="http://twitter.com/home?status=<?php echo urlencode(get_the_title()); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>
 							<li class="share-fb"><a rel="nofollow" href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" title="Share this post on Facebook" target="_blank">Facebook</a></li>
@@ -52,7 +52,7 @@
 					</li>
 					<?php if(comments_open()){ ?>
 					<li class="pa-comments">
-						<?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)', 'sitem'); ?>
+						<?php comments_popup_link(__('Comments (0)', 'boston'), __('Comments (1)', 'boston'), __('Comments (%)', 'boston'), 'sitem'); ?>
 					</li>
 					<?php } ?>
 				</ul>
@@ -65,7 +65,7 @@
 		if($showPopular != 'no'){
 	?>
 	<section id="popularArticles">
-		<h3>Other popular articles</h3>
+		<h3><?php _e('Other popular articles', 'boston'); ?></h3>
 		<ul>
 			<?php
 				$fav_q = new WP_Query('post_type=post&posts_per_page=5&meta_key_votes_count&order=DESC&ignore_sticky_posts=true');

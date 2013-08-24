@@ -15,7 +15,7 @@
 			<div class="postEntry">
 				<p><?php echo wp_get_attachment_image($post->ID, 'full'); ?></p>
 				<?php the_content(); ?>
-				<p><a href="<?php echo get_permalink($post->post_parent); ?>">&laquo; Return to post</a></p>
+				<p><a href="<?php echo get_permalink($post->post_parent); ?>">&laquo; <?php _e('Return to article', 'boston'); ?></a></p>
 			</div>
 		</article>
 	</section>

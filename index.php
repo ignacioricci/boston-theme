@@ -13,21 +13,21 @@
 		<?php if(is_archive() || is_search()){ ?>
 		<div id="breadcrumbs">		
 			<?php if (is_category()) { ?>
-			<p>Archive for the <strong>&#8216;<?php single_cat_title(); ?>&#8217;</strong> Category</p>
+			<p><?php _e('Archive for the', 'boston'); ?> <strong>&#8216;<?php single_cat_title(); ?>&#8217;</strong> <?php _e('Category', 'boston'); ?></p>
 			<?php } elseif( is_tag() ) { ?>
-			<p>Posts Tagged with <strong>&#8216;<?php single_tag_title(); ?>&#8217;</strong></p>
+			<p><?php _e('Posts Tagged with', 'boston'); ?> <strong>&#8216;<?php single_tag_title(); ?>&#8217;</strong></p>
 			<?php } elseif (is_day()) { ?>
-			<p>Archive for <strong><?php the_time('F jS, Y'); ?></strong></p>
+			<p><?php _e('Archive for', 'boston'); ?> <strong><?php the_time('F jS, Y'); ?></strong></p>
 			<?php } elseif (is_month()) { ?>
-			<p>Archive for <strong><?php the_time('F, Y'); ?></strong></p>
+			<p><?php _e('Archive for', 'boston'); ?> <strong><?php the_time('F, Y'); ?></strong></p>
 			<?php } elseif (is_year()) { ?>
-			<p>Archive for <strong><?php the_time('Y'); ?></strong></p>
+			<p><?php _e('Archive for', 'boston'); ?> <strong><?php the_time('Y'); ?></strong></p>
 			<?php } elseif (is_author()) { ?>
-			<p>Articles by <strong><?php echo $curauthor->display_name; ?></strong></p>
+			<p><?php _e('Archive by', 'boston'); ?> <strong><?php echo $curauthor->display_name; ?></strong></p>
 			<?php } elseif (is_search()) { ?>
-			<p>Search results for <strong><?php the_search_query(); ?></strong></p>
+			<p><?php _e('Search results for', 'boston'); ?> <strong><?php the_search_query(); ?></strong></p>
 			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<p>Blog Archives</p>
+			<p><?php _e('Blog Archives', 'boston'); ?></p>
 			<?php } ?>
 		</div>
 		<?php } ?>
@@ -40,7 +40,7 @@
 					$showMeta = get_option('t-datecat');
 					if($showMeta != 'no'){
 				?>
-				<p class="articleCat">Written on <strong><?php the_time('j F Y, h:ia '); ?></strong> under <?php the_category(' ,');  ?></p>
+				<p class="articleCat"><?php _e('Written on', 'boston'); ?> <strong><?php the_time('j F Y, h:ia '); ?></strong> <?php _e('under', 'boston'); ?> <?php the_category(' ,');  ?></p>
 				<?php the_tags('<p><strong>Tagged with:</strong> ', ', ', '</p>'); ?>
 				<?php } ?>
 			</div>
@@ -54,9 +54,9 @@
 			</div>
 			<div class="postActions">
 				<ul>
-					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#"><span>Likes (<em class="likeCount"><?php like_count($post->ID); ?></em>)</span></a></li>
+					<li class="pa-like"><a class="sitem like <?php like_status($post->ID); ?>" data-postid="<?php the_ID(); ?>" href="#"><span><?php _e('Likes', 'boston'); ?> (<em class="likeCount"><?php like_count($post->ID); ?></em>)</span></a></li>
 					<li class="sitem pa-share">
-						<span>Share</span>
+						<span><?php _e('Share', 'boston'); ?></span>
 						<ul>
 							<li class="share-tw"><a rel="nofollow" href="http://twitter.com/home?status=<?php echo urlencode(get_the_title()); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>
 							<li class="share-fb"><a rel="nofollow" href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" title="Share this post on Facebook" target="_blank">Facebook</a></li>
@@ -65,7 +65,7 @@
 					</li>
 					<?php if(comments_open()){ ?>
 					<li class="pa-comments">
-						<?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)', 'sitem'); ?>
+						<?php comments_popup_link(__('Comments (0)', 'boston'), __('Comments (1)', 'boston'), __('Comments (%)', 'boston'), 'sitem'); ?>
 					</li>
 					<?php } ?>
 				</ul>
@@ -89,7 +89,7 @@
 			<?php else : ?>
 			<article class="post">
 				<div class="postEntry">
-					<p>No articles found.</p>
+					<p><?php _e('No articles found.', 'boston'); ?></p>
 				</div>
 			</article>
 			<?php endif; ?>

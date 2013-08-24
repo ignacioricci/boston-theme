@@ -39,5 +39,8 @@ jQuery(function(){
 		}
 	}); 
 	jQuery('.menu-item-type-custom a').attr('target', '_blank');
+	jQuery('.pa-share span').click(function(){
+		$(this).toggleClass('open');
+	});
 
 });

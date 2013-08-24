@@ -376,6 +376,15 @@
 					}
 				}
 
+				&.open {
+					span {
+						display:none;
+					}
+					ul {
+						display:block;
+					}
+				}
+
 
 			}
 

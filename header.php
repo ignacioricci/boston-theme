@@ -33,8 +33,9 @@
 	<?php } else { ?>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic">
 	<?php } ?>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/baseline.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/boston.css">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/iphone.png" />
 	<?php if(is_single()){ if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<meta property="og:title" content="<?php the_title(); ?> (via <?php bloginfo('name'); ?>)" />
 	<?php if(has_post_thumbnail()){ ?>

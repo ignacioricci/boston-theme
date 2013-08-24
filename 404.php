@@ -3,11 +3,11 @@
 	<section id="content">
 		<article class="post">
 			<div class="postTitle">
-				<h2>Error 404: Not found</h2>
+				<h2>500 Internal Server Error</h2>
 			</div>
 			<div class="postEntry">
-				<p>The article or page you were looking for has been moved or deleted.</p>
-				<p><a href="<?php bloginfo('home'); ?>/">&laquo; Return to homepage</a></p>
+				<p><?php _e('Oops. It seems our server is experiencing problems. We are sorry.', 'boston'); ?></p>
+				<p><?php _e('Please try reloading the page.', 'boston'); ?></p>
 			</div>
 		</article>
 	</section>

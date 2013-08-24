@@ -1,123 +1,203 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Press\n"
+"Project-Id-Version: Boston\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-22 23:21-0300\n"
-"PO-Revision-Date: 2013-01-22 23:23-0300\n"
+"POT-Creation-Date: 2013-08-24 15:27-0300\n"
+"PO-Revision-Date: 2013-08-24 15:29-0300\n"
 "Last-Translator: Ignacio Ricci <nacho@ignacioricci.com>\n"
 "Language-Team: Ignacio Ricci <nacho@ignacioricci.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-Language: English\n"
 "X-Poedit-Country: UNITED STATES\n"
-"X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../comments.php:6
-msgid "No comments"
-msgstr "Sin Comentarios"
+#: ../404.php:9
+msgid "Oops. It seems our server is experiencing problems. We are sorry."
+msgstr "Uh! Lo sentimos. Parece que nuestro servidor está experimentando problemas."
 
-#: ../comments.php:6
-msgid "One Comment"
-msgstr "Un comentario"
+#: ../404.php:10
+msgid "Please try reloading the page."
+msgstr "Por favor intenta recargar la página."
 
-#: ../comments.php:6
-msgid "% Comments"
-msgstr "% Comentarios"
+#: ../500.php:6
+msgid "Error 404: Not found."
+msgstr "Error 404: No encontrado."
 
-#: ../comments.php:6
-msgid "in"
-msgstr "en"
+#: ../500.php:9
+msgid "The article or page you were looking for has been moved or deleted."
+msgstr "El artículo o la página que estabas buscando ha sido movido o borrado."
 
-#: ../comments.php:17
+#: ../500.php:10
+msgid "Return to homepage"
+msgstr "Volver al inicio"
+
+#: ../attachment.php:18
+msgid "Return to article"
+msgstr "Volver al artículo"
+
+#: ../comments.php:5
+#: ../index.php:68
+#: ../single.php:55
+msgid "Comments (0)"
+msgstr "Comentarios (0)"
+
+#: ../comments.php:5
+#: ../index.php:68
+#: ../single.php:55
+msgid "Comments (1)"
+msgstr "Comments (1)"
+
+#: ../comments.php:5
+#: ../index.php:68
+#: ../single.php:55
+msgid "Comments (%)"
+msgstr "Comentarios (%)"
+
+#: ../comments.php:18
 msgid "Leave a response"
 msgstr "Dejá una respuesta"
 
-#: ../comments.php:21
+#: ../comments.php:22
 msgid "You must be"
-msgstr "Debes estar"
+msgstr "Debes haber"
 
-#: ../comments.php:21
+#: ../comments.php:22
 msgid "logged in"
-msgstr "logueado"
+msgstr "ingresado"
 
-#: ../comments.php:21
+#: ../comments.php:22
 msgid "to post a comment"
-msgstr "para publicar un comentario"
+msgstr "para dejar un comentario"
 
-#: ../comments.php:29
+#: ../comments.php:30
 msgid "Logged in as"
-msgstr "Has ingresado como"
+msgstr "Haz ingresado como"
 
-#: ../comments.php:29
+#: ../comments.php:30
 msgid "Log out"
 msgstr "Salir"
 
-#: ../comments.php:36
+#: ../comments.php:37
 msgid "Name"
 msgstr "Nombre"
 
-#: ../comments.php:44
+#: ../comments.php:45
 msgid "Website"
-msgstr "Sitio web"
+msgstr "Sitio Web"
 
-#: ../comments.php:51
+#: ../comments.php:52
 msgid "Message"
 msgstr "Mensaje"
 
-#: ../comments.php:56
+#: ../comments.php:57
 msgid "Post Comment"
-msgstr "Publicar comentario"
+msgstr "Publicar Comentario"
 
-#: ../footer.php:4
-msgid "all rights reserved"
-msgstr "todos los derechos reservados"
+#: ../comments.php:71
+msgid "Comments are closed for this article."
+msgstr "Los comentarios están cerrados para este artículo."
 
-#: ../footer.php:5
-msgid "Go to top"
-msgstr "Volver arriba"
+#: ../footer.php:3
+msgid "Proudly powered by"
+msgstr "Funcionando gracias a"
 
-#: ../functions.php:22
-msgid "Top Bar"
-msgstr "Top Bar"
+#: ../footer.php:3
+msgid "by"
+msgstr "por"
 
-#: ../functions.php:46
+#: ../functions.php:23
+msgid "Main Menu"
+msgstr "Menu Principal"
+
+#: ../functions.php:104
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s a las %2$s"
 
-#: ../functions.php:51
+#: ../functions.php:109
 msgid "Your comment is awaiting moderation."
-msgstr "Tu comentario aguarda ser moderado."
+msgstr "Tu comentario espera a ser moderado."
 
-#: ../functions.php:54
+#: ../functions.php:112
 msgid "[Edit Comment]"
 msgstr "[Editar Comentario]"
 
-#: ../header.php:7
-msgid "Tag Archive for &quot;"
-msgstr "Archive de etiqueta &quot;"
+#: ../index.php:16
+msgid "Archive for the"
+msgstr "Archivo para la categoría"
 
-#: ../header.php:9
-msgid "Archive &ndash;"
-msgstr "Archivo &ndash;"
+#: ../index.php:16
+msgid "Category"
+msgstr ""
 
-#: ../header.php:11
-msgid "Search results for &quot;"
-msgstr "Resultados de búsqueda para &quot;"
+#: ../index.php:18
+msgid "Posts Tagged with"
+msgstr "Artículos etiquetados con"
 
-#: ../header.php:15
-msgid "Not Found &ndash; "
-msgstr "No encontrado &ndash; "
+#: ../index.php:20
+#: ../index.php:22
+#: ../index.php:24
+msgid "Archive for"
+msgstr "Archivo para"
 
-#: ../header.php:21
-msgid " &ndash; page "
-msgstr " &ndash; página"
+#: ../index.php:26
+msgid "Archive by"
+msgstr "Archivo de"
 
-#: ../header.php:47
-msgid "Subscribe"
-msgstr "Subscribirse"
+#: ../index.php:28
+msgid "Search results for"
+msgstr "Resultados de búsqueda para"
+
+#: ../index.php:30
+msgid "Blog Archives"
+msgstr "Archivos del Blog"
+
+#: ../index.php:43
+#: ../single.php:18
+msgid "Written on"
+msgstr "Escrito el"
+
+#: ../index.php:43
+#: ../single.php:18
+msgid "under"
+msgstr "en"
+
+#: ../index.php:57
+#: ../single.php:44
+msgid "Likes"
+msgstr "Me gusta"
+
+#: ../index.php:59
+#: ../single.php:46
+msgid "Share"
+msgstr "Compartir"
+
+#: ../index.php:92
+msgid "No articles found."
+msgstr "No se encontraron artículos."
+
+#: ../sidebar.php:3
+msgid "Close"
+msgstr "Cerrar"
+
+#: ../sidebar.php:5
+msgid "Sections"
+msgstr "Secciones"
+
+#: ../single.php:35
+msgid "Written by"
+msgstr "Escrito por"
+
+#: ../single.php:37
+msgid "Published articles"
+msgstr "Artículos publicados"
+
+#: ../single.php:68
+#, fuzzy
+msgid "Other popular articles"
+msgstr "Volver al artículo"
 
