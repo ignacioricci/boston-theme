@@ -124,6 +124,19 @@
 					<?php endforeach; ?>
 					</td>
 				</tr>
+				<tr valign="top">
+					<td><strong>Show post navigation</strong> <em>(Default is: Yes)</em></td>
+					<td>
+					<?php $tpostnavArray = array('no' => 'No', 'yes' => 'Yes');?>
+					<?php $tpostnav = get_option('t-postnav'); ?>
+					<?php foreach($tpostnavArray as $key => $value): ?>
+						<p class="mulOption">
+							<input type="radio" name="t-postnav" value="<?php echo $key; ?>" id="t-postnav-<?php echo $key; ?>"<?php if($tpostnav==$key || $tpostnav == '') echo ' checked'; ?> />
+							<label for="t-postnav-<?php echo $key; ?>"><?php echo $value; ?></label>
+						</p>
+					<?php endforeach; ?>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 		<table class="wp-list-table widefat">

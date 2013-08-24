@@ -61,6 +61,16 @@
 	</section>
 	
 	<?php
+		$showPostNav = get_option('t-postnav');
+		if($showPostNav != 'no'){
+	?>
+	<section id="singleNav">
+		<p id="prevArticle"><?php previous_post_link('&larr; %link'); ?></p>
+		<p id="nextArticle"> <?php next_post_link('%link &rarr;'); ?></p>
+	</section>
+	<?php } ?>
+	
+	<?php
 		$showPopular = get_option('t-popular');
 		if($showPopular != 'no'){
 	?>
