@@ -1,6 +1,8 @@
 	
 	#footer {
 
+		border-top:1px solid #DDD;
+
 		p {
 			line-height:160%;
 			@include em_size(font-size, 12);

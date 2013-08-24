@@ -14,7 +14,6 @@
 						delete_option($key); 
 					endif;
 				endforeach;
-				if($_POST['t-social-items']===null): delete_option('t-social-items'); endif;
 				header("Location: themes.php?page=theme-options.php&saved=true");
 				die;
 			}
@@ -25,10 +24,10 @@
 	function customThemePage(){
 
 ?>
-	<?php if ($_REQUEST['saved']) echo '<div class="themeMessage"><strong>Baseline options saved.</strong></div>'; ?>
 	<div class="wrap" id="customThemeOptions">
-		<div class="icon-32" id="icon-themes" style="float:left; width:46px; height:50px; margin:10px 0 0; background-repeat:no-repeat"></div>
-		<h2 style="float:left; margin-top:3px;">Baseline Options</h2>
+		<div class="icon-32" id="icon-themes"></div>
+		<h2>Baseline Options</h2>
+		<?php if ($_REQUEST['saved']) echo '<div id="message" class="updated"><strong>Baseline options saved.</strong></div>'; ?>
 		<div class="manage-menus">Use this page to customize different aspects of your blog.</div>
 		<form method="post" action="">
 		<table class="wp-list-table widefat">
@@ -37,27 +36,27 @@
 			</thead>
 			<tbody>
 				<tr valign="top">
-					<td><strong>Type</strong> <em style="color:#666">(Default is: Sans-serif)</em></td>
+					<td class="labelItem"><strong>Type</strong> <em>(Default is: Sans-serif)</em></td>
 					<td>
-					<?php $tcstyleArray = array('sans_serif' => 'Sans-serif', 'serif' => 'Serif');?>
-					<?php $tcstyle = get_option( 't-c-style' ); ?>
-					<?php foreach($tcstyleArray as $key => $value): ?>
+					<?php $ttypeArray = array('serif' => 'Serif', 'sans_serif' => 'Sans Serif');?>
+					<?php $ttype = get_option('t-typo-type'); ?>
+					<?php foreach($ttypeArray as $key => $value): ?>
 						<p class="mulOption">
-							<input type="radio" name="t-c-style" value="<?php echo $key; ?>" id="t-c-style-<?php echo $key; ?>"<?php if($tcstyle==$key) echo ' checked'; ?> />
-							<label for="t-c-style-<?php echo $key; ?>"><?php echo $value; ?></label>
+							<input type="radio" name="t-typo-type" value="<?php echo $key; ?>" id="t-typo-type-<?php echo $key; ?>"<?php if($ttype==$key || $ttype == '') echo ' checked'; ?> />
+							<label for="t-typo-type-<?php echo $key; ?>"><?php echo $value; ?></label>
 						</p>
 					<?php endforeach; ?>
 					</td>
 				</tr>
 				<tr valign="top">
-					<td><strong>Size</strong> <em style="color:#666">(Default is: Big)</em></td>
+					<td class="labelItem"><strong>Size</strong> <em>(Default is: Big)</em></td>
 					<td>
-						<?php $tsideposArray = array('big' => 'Big', 'small' => 'Small');?>
-						<?php $tcpos = get_option( 't-side-position' ); ?>
-						<?php foreach($tsideposArray as $key => $value): ?>
+						<?php $tsizeArray = array('small' => 'Small', 'big' => 'Big');?>
+						<?php $tsize = get_option('t-size'); ?>
+						<?php foreach($tsizeArray as $key => $value): ?>
 							<p class="mulOption">
-								<input type="radio" name="t-side-position" value="<?php echo $key ;?>" id="t-side-position-<?php echo $key; ?>"<?php if($tcpos==$key) echo ' checked'; ?> />
-								<label for="t-side-position-<?php echo $key; ?>"><?php echo $value; ?></label>
+								<input type="radio" name="t-size" value="<?php echo $key ;?>" id="t-size-<?php echo $key; ?>"<?php if($tsize==$key || $tsize == '') echo ' checked'; ?> />
+								<label for="t-size-<?php echo $key; ?>"><?php echo $value; ?></label>
 							</p>
 						<?php endforeach; ?>
 					</td>
@@ -70,43 +69,44 @@
 			</thead>
 			<tbody>
 				<tr valign="top">
-					<td><strong>Link Color</strong><br /><em style="color:#666">(Default is: #990000)</em></td>
+					<td class="labelItem"><strong>Link Color</strong><br /><em>(Default is: #990000)</em></td>
 					<td>
+						<?php $taccent = get_option('t-accent'); ?>
 						<p>
-							<input type="text" name="t-accent-color" id="t-accent-color" value="<?php echo get_option( 't-accent-color' ); ?>" style="padding:5px; color:#333;" />
+							<input class="in" type="text" name="t-accent" id="t-accent" value="<?php if($taccent){ echo $taccent; } else { echo '#990000'; } ?>" />
 						</p>
+						<div id="colorPickerHolder"><div id="picker"></div></div>
 					</td>
 				</tr>
-				<tr><td colspan="2"><div id="picker"></div></td></tr>
 			</tbody>
 		</table>
 		<table class="wp-list-table widefat">
 			<thead>
-				<tr><th colspan="2"><span>Single Article</span></th></tr>
+				<tr><th colspan="2"><span>Articles</span></th></tr>
 			</thead>
 			<tbody>
 				<tr valign="top">
-					<td><strong>Show date &amp; category</strong> <em style="color:#666">(Default is: Yes)</em></td>
+					<td class="labelItem"><strong>Show date &amp; category</strong> <em>(Default is: Yes)</em></td>
 					<td>
-					<?php $tcstyleArray = array('sans_serif' => 'Sans-serif', 'serif' => 'Serif');?>
-					<?php $tcstyle = get_option( 't-c-style' ); ?>
-					<?php foreach($tcstyleArray as $key => $value): ?>
+					<?php $tdatecatArray = array('no' => 'No', 'yes' => 'Yes');?>
+					<?php $tdatecat = get_option('t-datecat'); ?>
+					<?php foreach($tdatecatArray as $key => $value): ?>
 						<p class="mulOption">
-							<input type="radio" name="t-c-style" value="<?php echo $key; ?>" id="t-c-style-<?php echo $key; ?>"<?php if($tcstyle==$key) echo ' checked'; ?> />
-							<label for="t-c-style-<?php echo $key; ?>"><?php echo $value; ?></label>
+							<input type="radio" name="t-datecat" value="<?php echo $key; ?>" id="t-datecat-<?php echo $key; ?>"<?php if($tdatecat==$key || $tdatecat == '') echo ' checked'; ?> />
+							<label for="t-datecat-<?php echo $key; ?>"><?php echo $value; ?></label>
 						</p>
 					<?php endforeach; ?>
 					</td>
 				</tr>
 				<tr valign="top">
-					<td><strong>Show other popular posts</strong> <em style="color:#666">(Default is: Yes)</em></td>
+					<td><strong>Show other popular posts in single page</strong> <em>(Default is: Yes)</em></td>
 					<td>
-					<?php $tcstyleArray = array('sans_serif' => 'Sans-serif', 'serif' => 'Serif');?>
-					<?php $tcstyle = get_option( 't-c-style' ); ?>
-					<?php foreach($tcstyleArray as $key => $value): ?>
+					<?php $tpopularArray = array('no' => 'No', 'yes' => 'Yes');?>
+					<?php $tpopular = get_option('t-popular'); ?>
+					<?php foreach($tpopularArray as $key => $value): ?>
 						<p class="mulOption">
-							<input type="radio" name="t-c-style" value="<?php echo $key; ?>" id="t-c-style-<?php echo $key; ?>"<?php if($tcstyle==$key) echo ' checked'; ?> />
-							<label for="t-c-style-<?php echo $key; ?>"><?php echo $value; ?></label>
+							<input type="radio" name="t-popular" value="<?php echo $key; ?>" id="t-popular-<?php echo $key; ?>"<?php if($tpopular==$key || $tpopular == '') echo ' checked'; ?> />
+							<label for="t-popular-<?php echo $key; ?>"><?php echo $value; ?></label>
 						</p>
 					<?php endforeach; ?>
 					</td>
@@ -115,13 +115,14 @@
 		</table>
 		<table class="wp-list-table widefat">
 			<thead>
-				<tr><th colspan="2"><span>Comments</span></th></tr>
+				<tr><th colspan="2"><span>Custom Comments</span></th></tr>
 			</thead>
 				<tr valign="top">
-					<td><strong>Use DISQUS</strong> <em style="color:#666">(Default is: no)</em></td>
+					<td class="labelItem"><strong>DISQUS Shortname</strong> </br> <a href="http://disqus.com/admin/universalcode/" target="_blank">http://disqus.com/admin/universalcode/</a></td>
 					<td>
+						<?php $tdiscuss = get_option('t-discuss'); ?>
 						<p>
-							<input type="text" name="t-articles" id="t-articles" style="padding:5px; color:#333;" value="<?php echo get_option( 't-articles' );?>" />
+							<input class="in" type="text" name="t-discuss" id="t-discuss" value="<?php echo get_option('t-discuss');?>" />
 						</p>
 					</td>
 				</tr>
@@ -132,24 +133,31 @@
 				<tr><th colspan="2"><span>Google Analytics</span></th></tr>
 			</thead>
 				<tr valign="top">
-					<td><strong>Paste code</strong> <em style="color:#666">(Default is: no)</em></td>
+					<td class="labelItem"><strong>Tracking ID</strong> <em>(Ex: UA-XXXXX-Y)</em> </br> <a href="https://support.google.com/analytics/answer/1008080?hl=en">Tracking code information</a></td>
 					<td>
+						<?php $tanalytics = get_option('t-tanalytics'); ?>
 						<p>
-							<input type="text" name="t-articles" id="t-articles" style="padding:5px; color:#333;" value="<?php echo get_option( 't-articles' );?>" />
+							<input class="in" type="text" name="t-tanalytics" id="t-tanalytics" value="<?php echo get_option('t-tanalytics');?>" />
 						</p>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 
-		<input style="margin-top:20px;" class="button-primary" name="save" type="submit" value="Save changes" name="save" /><input type="hidden" name="action" value="save" />
+		<input id="saveCustomThemeChanges" class="button button-primary button-hero" name="save" type="submit" value="Save changes" name="save" /><input type="hidden" name="action" value="save" />
 		
 		</form>
 	</div>
 
 	<script type="text/javascript">
-		jQuery(document).ready(function() {
-		    jQuery('#picker').farbtastic('#t-accent-color');
+		jQuery(document).ready(function(){
+			jQuery('#picker').farbtastic('#t-accent');
+			jQuery('#t-accent').focus(function(){
+				jQuery('#picker').show();
+			});
+			jQuery('#t-accent').blur(function(){
+				jQuery('#picker').hide();
+			});
 		  });
 	</script>
 

@@ -4,7 +4,6 @@
 		font-family:'Source Sans Pro', Helvetica Neue, Helvetica, Arial, serif;
 		@include base_font_size;
 		color:#222;
-		background:#222;
 
 	}
 
@@ -69,10 +68,6 @@
 			margin-right:23%;
 		}
 
-	}
-
-	#content {
-		@include em_size(min-height, 620);
 	}
 
 	.personItem {

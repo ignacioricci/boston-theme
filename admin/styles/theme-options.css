@@ -1,6 +1,23 @@
 
+	#customThemeOptions #icon-themes {
+		float:left;
+		width:36px;
+		height:32px;
+		margin:7px 12px 0 0;
+		overflow:hidden;
+	}
+
+	#customThemeOptions #message {
+		padding:10px 10px 8px;
+		margin:10px 0 5px;
+	}
+
 	#customThemeOptions table {
 		margin-top:10px;
+	}
+
+	#customThemeOptions table .labelItem {
+		width:32%;
 	}
 
 	#customThemeOptions th {
@@ -10,19 +27,51 @@
 	#customThemeOptions td {
 		background:#FFF;
 		padding:12px;
+		overflow:visible;
 	}
 
 	#customThemeOptions .mulOption {
-		display:inline;
-		margin-right:20px;
+		display:inline-block;
+		width:80px;
+		margin:0 20px 0 0;
 	}
 
 	#customThemeOptions .mulOption input {
 		margin-right:5px;
 	}
 
+	#customThemeOptions .in {
+		width:200px;
+		padding:5px;
+		border-color:#CCC;
+	}
+
+	#customThemeOptions .in:focus {
+		border-color:#999;
+	}
+
 	.manage-menus {
 		clear:both;
+		margin-top:10px;
+	}
+
+	#colorPickerHolder {
+		position:relative;
+	}
+
+	#picker {
+		display:none;
+		padding:10px;
+		position:absolute;
+		background:#FFF;
+		border:1px solid #AAA;
+		top:-5px;
+		left:1px;
+		z-index:1;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		-o-border-radius:3px;
+		border-radius:3px;
 	}
 
 	.farbtastic {
@@ -56,4 +105,8 @@
 		margin:-8px 0 0 -8px;
 		overflow:hidden; 
 		background:url(../images/marker.png) no-repeat;
+	}
+
+	#saveCustomThemeChanges {
+		margin-top:20px;
 	}
