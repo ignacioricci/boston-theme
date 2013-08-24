@@ -32,7 +32,27 @@
 		<form method="post" action="">
 		<table class="wp-list-table widefat">
 			<thead>
-				<tr><th colspan="2"><span>Typography</span></th></tr>
+				<tr><th colspan="2"><span>Branding</span></th></tr>
+			</thead>
+			<tbody>
+				<tr valign="top">
+					<td class="labelItem"><strong>Show logo</strong> <em>(Default is: Yes)</em> </br> Visit 'Header' menu option to change it</td>
+					<td>
+					<?php $tbrandArray = array('no' => 'No', 'yes' => 'Yes');?>
+					<?php $tbrand = get_option('t-brand'); ?>
+					<?php foreach($tbrandArray as $key => $value): ?>
+						<p class="mulOption">
+							<input type="radio" name="t-brand" value="<?php echo $key; ?>" id="t-brand-<?php echo $key; ?>"<?php if($tbrand==$key || $tbrand == '') echo ' checked'; ?> />
+							<label for="t-brand-<?php echo $key; ?>"><?php echo $value; ?></label>
+						</p>
+					<?php endforeach; ?>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="wp-list-table widefat">
+			<thead>
+				<tr><th colspan="2"><span>Typograhpy</span></th></tr>
 			</thead>
 			<tbody>
 				<tr valign="top">

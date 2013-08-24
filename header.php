@@ -94,7 +94,10 @@
 		<aside class="aside" id="sidebar">
 			<div class="asideHolder">
 				<div class="asideBox" id="blogBrand">
-					<?php if(get_header_image()){ ?>
+					<?php
+						$brand = get_option('t-brand');
+						if($brand != 'no' && get_header_image()){
+					?>
 					<p><a href="<?php bloginfo('home'); ?>/"><img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" /></a></p>
 					<?php } ?>
 					<h1><a href="<?php bloginfo('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
