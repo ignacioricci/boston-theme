@@ -22,6 +22,12 @@
 	// Custom Menu
 	register_nav_menus(array('mainmenu'=>__('Main Menu'),));
 
+	// Wrap videos for responsiveness
+	add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
+	function my_embed_oembed_html($html, $url, $attr, $post_id) {
+		return '<div class="video">' . $html . '</div>';
+	}
+
 	// Enable post thumbnails
 	add_theme_support('post-thumbnails');
 	add_image_size('hero', 1200, 800, true);
