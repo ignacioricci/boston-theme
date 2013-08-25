@@ -42,5 +42,6 @@ jQuery(function(){
 	jQuery('.pa-share span').click(function(){
 		$(this).toggleClass('open');
 	});
+	jQuery('#central, #drawer').addClass('ready');
 
 });

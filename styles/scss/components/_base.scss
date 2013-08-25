@@ -62,8 +62,11 @@
 		background:#FFF;
 		width:77%;
 		padding-left:23%;
-		@include transition-property(width);
-		@include transition-duration(0.5s);
+		
+		&.ready {
+			@include transition-property(width);
+			@include transition-duration(0.5s);
+		}
 
 		&.mixed {
 			width:55%;

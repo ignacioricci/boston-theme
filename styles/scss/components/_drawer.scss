@@ -5,8 +5,6 @@
 		right:-23%;
 		background:#222;
 		z-index:4;
-		@include transition-property(right);
-		@include transition-duration(0.5s);
 
 		a {
 			color:#666;
@@ -181,6 +179,11 @@
 
 		&.open {
 			right:0;
+		}
+
+		&.ready {
+			@include transition-property(right);
+			@include transition-duration(0.5s);
 		}
 
 	}
