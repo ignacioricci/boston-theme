@@ -42,8 +42,8 @@
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
 	<?php if(is_single()){ if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<meta property="og:title" content="<?php the_title(); ?> (via <?php bloginfo('name'); ?>)" />
-	<?php if(has_post_thumbnail()){ ?>
-	<meta property="og:image" content="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail')[0]; ?>" />
+	<?php if(has_post_thumbnail()){ $fbthumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post'); $fbthumburl = $fbthumb['0']; ?>
+	<meta property="og:image" content="<?php echo $fbthumburl; ?>" />
 	<?php } endwhile; endif; } else { ?>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 	<?php if(get_header_image()){ ?>
