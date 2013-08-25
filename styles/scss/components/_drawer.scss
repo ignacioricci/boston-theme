@@ -60,6 +60,11 @@
 					@include em_size(padding-bottom, 5);
 				}
 
+				.current_page_item a {
+					color:#FFF;
+					text-decoration:underline;
+				}
+
 			}
 
 			.rssFeed {
