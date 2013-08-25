@@ -78,7 +78,7 @@
 		<h3><?php _e('Other popular articles', 'boston'); ?></h3>
 		<ul>
 			<?php
-				$fav_q = new WP_Query('post_type=post&posts_per_page=5&meta_key=_votes_count&order=DESC&ignore_sticky_posts=true');
+				$fav_q = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5, 'meta_key' => '_votes_count', 'order' => 'DESC', 'ignore_sticky_posts' => true, 'post__not_in' => array($post->ID)));
 				while($fav_q->have_posts()) : $fav_q->the_post();
 			?>
 			<li class="popular">
@@ -97,7 +97,6 @@
 					<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($firstImgId, 'thumb'); ?></a>
 				</div>
 				<?php } ?>
-				</div>
 				<div class="popInfo">
 					<h4>
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

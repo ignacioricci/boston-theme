@@ -74,7 +74,7 @@
 
 			@include em_size(font-size, 20);
 
-			p, blockquote, table, pre, dl, form {
+			p, blockquote, table, dl, form {
 				@include em_size(margin-bottom, 20);
 			}
 			
@@ -83,22 +83,22 @@
 				@include em_size(margin-bottom, 16);
 			}
 			h1 {
-				@include em_size(font-size, 20);
+				@include em_size(font-size, 24);
 			}
 			h2 {
-				@include em_size(font-size, 15);
+				@include em_size(font-size, 20);
 			}
 			h4 {
-				@include em_size(font-size, 13);
+				@include em_size(font-size, 16);
 				text-transform:uppercase;
 				border-bottom:1px solid #DDD;
 			}
 			h5 {
-				@include em_size(font-size, 12);
+				@include em_size(font-size, 14);
 			}
 			h6 {
 				color:#666;
-				@include em_size(font-size, 11);
+				@include em_size(font-size, 12);
 				text-transform:uppercase;
 			}
 
@@ -192,9 +192,10 @@
 			}
 
 			pre {
-				@include em_size(font-size, 10);
+				@include em_size(font-size, 11);
 				line-height:150%;
 				@include em_size(padding, 30);
+				@include em_size(margin-bottom, 30);
 				overflow:auto;
 				border:1px solid #DDD;
 				@include border-radius(3px);
@@ -230,6 +231,7 @@
 			.gallery {
 
 				@extend .clear;
+				@include em_size(margin-bottom, 30);
 
 				.gallery-item {
 
@@ -240,8 +242,14 @@
 					overflow:hidden;
 
 					a {
+
 						display:block;
 						border:0;
+
+						&:hover {
+							@include opacity(0.9);
+						}
+
 					}
 
 					img {

@@ -13,7 +13,7 @@
 
 	<?php if (comments_open()){ ?>
 
-		<section class="respond">
+		<section class="respond" id="respond">
 
 			<h3 class="subtitle"><?php _e('Leave a response', 'boston'); ?></h3>
 

@@ -1,6 +1,6 @@
 		
 		<footer id="footer">
-			<p><?php _e('Proudly powered by', 'boston'); ?> <a href="http://wordpress.org/" target="_blank">WordPress</a>. <span><a href="http://boston-theme.com" target="_blank">Boston theme</a> <?php _e('by', 'boston'); ?> <a href="http://ignacioricci.com" target="_blank">Ignacio Ricci</p></a></div>
+			<p><?php _e('Proudly powered by', 'boston'); ?> <a href="http://wordpress.org/" target="_blank">WordPress</a>. <span><a href="http://boston-theme.com" target="_blank">Boston theme</a> <?php _e('by', 'boston'); ?> <a href="http://ignacioricci.com" target="_blank">Ignacio Ricci</a></span></p>
 		</footer>
 
 	</section>
