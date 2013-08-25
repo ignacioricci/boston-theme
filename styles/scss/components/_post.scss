@@ -262,6 +262,41 @@
 					@include em_size(margin-bottom, 15);
 				}
 
+				.wpcf7-not-valid {
+					border-color:#C00;
+				}
+
+				.wpcf7-not-valid-tip {
+					position:static;
+					color:#C00;
+					background:none;
+					border:0;
+					@include em_size(padding-top, 10);
+				}
+
+				.wpcf7-response-output {
+					padding:12px;
+					@include em_size(font-size, 14);
+					line-height:100%;
+					text-align:center;
+					border:1px solid #DDD;
+					margin:0;
+					@include em_size(margin-top, -20);
+					@include em_size(margin-bottom, 10);
+				}
+
+				.wpcf7-validation-errors {
+					background:#FFFFE0;
+				}
+				
+				.wpcf7-mail-sent-ok {
+					background:#E5EFE5;
+				}
+
+				.wpcf7-mail-sent-error {
+					background:#FFE5E5;
+				}
+
 			}
 
 		}
