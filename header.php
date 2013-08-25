@@ -36,6 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/boston.css">
 	<!--[if lte IE 9]>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/ie.css">
 	<![endif]-->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/iphone.png" />
