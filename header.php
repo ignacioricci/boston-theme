@@ -31,7 +31,7 @@
 	<?php if($fontType == 'serif'){ ?>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Source+Sans+Pro:400,400italic,600,600italic">
 	<?php } else { ?>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700">
 	<?php } ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/boston.css">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
@@ -50,6 +50,10 @@
 		<?php if($fontType == 'serif'){ ?>
 			.postTitle h2, .postEntry {
 				font-family:'Alegreya', Georgia, Times, serif;
+			}
+		<?php } if($fontType == 'sans_serif'){ ?>
+			.postTitle h2 {
+				font-weight:700;
 			}
 		<?php } if($fontSize == 'small'){ ?>
 			.post .postEntry {
