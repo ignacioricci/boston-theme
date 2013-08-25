@@ -30,16 +30,21 @@ Use the "Menu" options inside the Appeareance tab to control the links you want 
 You can insert any WordPress widgets into the right drawer of the theme.
 This option gives you control of all the information you want to show while leaving the content easy to read.
 
+### Internationalization ###
+
+Boston theme supports English and Spanish internationalization.
+I will continue to work into espanding the languages it supports.
+
 ### Information for developers ###
 
 Boston was built using Compass and SASS.
 The syntax is SCSS and it has a built in function to create all units in relation to ems.
 This allows the responsiveness of the theme to be graceful in relation to the content.
 
-### Support and Bug Reports ###
+### Support / Bug Reports / Feedback ###
 
 I'm very commited for you to have the best experience with Boston.
-If you encounter any problems or bug please don't hesitate to contact me at nacho@ignacioricci.com.
+If you encounter any problems, bugs or just have feedback please don't hesitate to contact me at nacho@ignacioricci.com.
 I'll try to resolve the bug ASAP and release a free update to all customers.
 
 ### License  ###
