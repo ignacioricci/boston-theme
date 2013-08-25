@@ -1,7 +1,7 @@
 	
 	#pagination {
 		
-		padding:0 12%;
+		@extend .container;
 		@include em_size(font-size, 14);
 		
 		a, span {

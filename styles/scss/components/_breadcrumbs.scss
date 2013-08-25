@@ -1,7 +1,7 @@
 	
 	#breadcrumbs {
 
-		padding:0 12%;
+		@extend .container;
 		@include em_size(padding-top, 18);
 		@include em_size(padding-bottom, 18);
 		color:#666;

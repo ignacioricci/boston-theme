@@ -1,7 +1,9 @@
 	
 	#popularArticles {
 
-		padding:3% 12%;
+		@extend .container;
+		@include em_size(padding-top, 30);
+		@include em_size(padding-bottom, 30);
 		border-top:1px solid #DDD;
 		
 		h3 {

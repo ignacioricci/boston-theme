@@ -1,7 +1,9 @@
 	
 	#comments, .respond {
-
-		padding:6% 12%;
+		
+		@extend .container;
+		@include em_size(padding-top, 50);
+		@include em_size(padding-bottom, 50);
 		border-top:1px solid #DDD;
 
 		.subtitle {
@@ -112,8 +114,10 @@
 	}
 
 	#commentsClosed {
-
-		padding:2% 12%;
+		
+		@extend .container;
+		@include em_size(padding-top, 15);
+		@include em_size(padding-bottom, 15);
 		color:#999;
 		background:#FAFAFA;
 

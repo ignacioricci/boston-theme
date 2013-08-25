@@ -62,12 +62,9 @@
 			a:hover {
 				background:rgba(<?php echo hex2rgb($accent); ?>,0.05);
 			}
-			.post .postTitle h2 a:hover {
-				color:<?php echo $accent; ?>;	
-			}
 			#pagination a:hover,
 			.respond button {
-				background:<?php echo $accent; ?>;	
+				background:<?php echo $accent; ?>;
 			}
 			.post .postEntry blockquote,
 			input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
