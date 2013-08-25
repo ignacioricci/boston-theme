@@ -62,6 +62,10 @@
 
 			}
 
+			.rssFeed {
+				@include em_size(margin-top, -10);
+			}
+
 			.tagcloud {
 				line-height:140%;
 				@include em_size(padding-bottom, 20);

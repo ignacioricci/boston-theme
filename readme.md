@@ -14,11 +14,12 @@ Boston has a built-in options page under the Appearance tab as well.
 Current options include:
 
 1. Logo (Changed via 'Header' options in the Appeareance tab)
-2. Typography (size and style)
-3. Accent color (for links, borders, buttons, etc.)
-4. Article options (such as showing the author of the post, tags, popular posts and more)
-5. Support for DISQUS in case you prefer DISQUS comments in your blog
-6. Google analytics.
+2. Show RSS Feed link
+3. Typography (size and style)
+4. Accent color (for links, borders, buttons, etc.)
+5. Article options (such as showing the author of the post, tags, popular posts and more)
+6. Support for DISQUS in case you prefer DISQUS comments in your blog
+7. Google analytics.
 
 ### Custom Menu ###
 

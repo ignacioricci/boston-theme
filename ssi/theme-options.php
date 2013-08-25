@@ -52,6 +52,26 @@
 		</table>
 		<table class="wp-list-table widefat">
 			<thead>
+				<tr><th colspan="2"><span>Feed</span></th></tr>
+			</thead>
+			<tbody>
+				<tr valign="top">
+					<td class="labelItem"><strong>Show RSS Feed Link</strong> <em>(Default is: Yes)</em></td>
+					<td>
+					<?php $trssArray = array('no' => 'No', 'yes' => 'Yes');?>
+					<?php $trss = get_option('t-rss'); ?>
+					<?php foreach($trssArray as $key => $value): ?>
+						<p class="mulOption">
+							<input type="radio" name="t-rss" value="<?php echo $key; ?>" id="t-rss-<?php echo $key; ?>"<?php if($trss==$key || $trss == '') echo ' checked'; ?> />
+							<label for="t-rss-<?php echo $key; ?>"><?php echo $value; ?></label>
+						</p>
+					<?php endforeach; ?>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="wp-list-table widefat">
+			<thead>
 				<tr><th colspan="2"><span>Typograhpy</span></th></tr>
 			</thead>
 			<tbody>

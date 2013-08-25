@@ -36,6 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/css/boston.css">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/iphone.png" />
+	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
 	<?php if(is_single()){ if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<meta property="og:title" content="<?php the_title(); ?> (via <?php bloginfo('name'); ?>)" />
 	<?php if(has_post_thumbnail()){ ?>
@@ -102,6 +103,14 @@
 				</div>
 				<div class="asideBox" id="blogPages">
 					<?php wp_nav_menu(array('theme_location' =>  'mainmenu', 'container' => '', 'depth' => '1')); ?>
+					<?php
+						$rssfeed = get_option('t-rss');
+						if($rssfeed != 'no'){
+					?>
+					<ul class="rssFeed">
+						<li><a href="<?php bloginfo('rss2_url'); ?>">RSS Feed</a></li>
+					</ul>
+					<?php } ?>
 				</div>
 			</div>
 		</aside>
