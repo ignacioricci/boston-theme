@@ -88,8 +88,8 @@
 			</div>
 			<?php else : ?>
 			<article class="post">
-				<div class="postEntry">
-					<p><?php _e('No articles found.', 'boston'); ?></p>
+				<div class="postTitle">
+					<h2><?php _e('No articles found.', 'boston'); ?></h2>
 				</div>
 			</article>
 			<?php endif; ?>
