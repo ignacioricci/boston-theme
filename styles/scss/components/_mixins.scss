@@ -8,7 +8,7 @@
 	}
 
 	@mixin em_size($property, $size){
-		$props : width, min-width, max-width, height, min-height, font-size, line-height, padding-top, padding-right, padding-bottom, padding-left, padding, margin-top, margin-right, margin-bottom, margin-left, margin;
+		$props : width, min-width, max-width, height, min-height, max-height, font-size, line-height, padding-top, padding-right, padding-bottom, padding-left, padding, margin-top, margin-right, margin-bottom, margin-left, margin;
 		@each $prop in $props {
 			@if ($property == $prop) {
 				#{$prop}:#{$base_em_unit * $size}em;

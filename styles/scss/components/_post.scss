@@ -1,7 +1,7 @@
 	
 	.hero {
 		
-		@include em_size(height, 400);
+		@include em_size(max-height, 400);
 		overflow:hidden;
 
 		img {
