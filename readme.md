@@ -30,6 +30,14 @@ Use the "Menu" options inside the Appeareance tab to control the links you want 
 You can insert any WordPress widgets into the right drawer of the theme.
 This option gives you control of all the information you want to show while leaving the content easy to read.
 
+### Responsivness and Mobile ###
+
+Boston is completely responsive, and provides a wonderful reading experience in desktop, tablets and mobile-phones.
+
+### Browser support ###
+
+Firefox, Opera, Chrome, Safari and Internet Explorer 8 (and up)
+
 ### Post Likes ###
 
 Boston has built-in post likes to get visitor feedback.
