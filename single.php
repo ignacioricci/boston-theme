@@ -78,7 +78,7 @@
 		<h3><?php _e('Other popular articles', 'boston'); ?></h3>
 		<ul>
 			<?php
-				$fav_q = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5, 'meta_key' => '_votes_count', 'order' => 'DESC', 'ignore_sticky_posts' => true, 'post__not_in' => array($post->ID)));
+				$fav_q = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5, 'meta_key' => '_votes_count', 'order' => 'DESC', 'orderby' => 'meta_value_num', 'ignore_sticky_posts' => true, 'post__not_in' => array($post->ID)));
 				while($fav_q->have_posts()) : $fav_q->the_post();
 			?>
 			<li class="popular">
