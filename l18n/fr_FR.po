@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Boston\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-24 15:27-0300\n"
-"PO-Revision-Date: 2013-08-24 15:29-0300\n"
+"PO-Revision-Date: 2013-09-09 12:06-0300\n"
 "Last-Translator: Ignacio Ricci <nacho@ignacioricci.com>\n"
 "Language-Team: Ignacio Ricci <nacho@ignacioricci.com>\n"
 "MIME-Version: 1.0\n"
@@ -11,192 +11,182 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-Country: UNITED STATES\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:9
 msgid "Oops. It seems our server is experiencing problems. We are sorry."
-msgstr "Uh! Lo sentimos. Parece que nuestro servidor está experimentando problemas."
+msgstr ""
+"Oups. Il semblerait que notre serveur rencontre quelques problèmes. Nous "
+"sommes désolés."
 
 #: ../404.php:10
 msgid "Please try reloading the page."
-msgstr "Por favor intenta recargar la página."
+msgstr "Merci d'essayez de recharger cette page."
 
 #: ../500.php:6
 msgid "Error 404: Not found."
-msgstr "Error 404: No encontrado."
+msgstr "Erreur 404 : Page introuvable."
 
 #: ../500.php:9
 msgid "The article or page you were looking for has been moved or deleted."
-msgstr "El artículo o la página que estabas buscando ha sido movido o borrado."
+msgstr "L'article ou la page que vous recherchez a été déplacé ou supprimé."
 
 #: ../500.php:10
 msgid "Return to homepage"
-msgstr "Volver al inicio"
+msgstr "Retour à la page d'accueil"
 
 #: ../attachment.php:18
 msgid "Return to article"
-msgstr "Volver al artículo"
+msgstr "Retourn à l'article"
 
-#: ../comments.php:5
-#: ../index.php:68
-#: ../single.php:55
+#: ../comments.php:5 ../index.php:68 ../single.php:55
 msgid "Comments (0)"
-msgstr "Comentarios (0)"
+msgstr "Commentaires (0)"
 
-#: ../comments.php:5
-#: ../index.php:68
-#: ../single.php:55
+#: ../comments.php:5 ../index.php:68 ../single.php:55
 msgid "Comments (1)"
-msgstr "Comments (1)"
+msgstr "Commentaires (1)"
 
-#: ../comments.php:5
-#: ../index.php:68
-#: ../single.php:55
+#: ../comments.php:5 ../index.php:68 ../single.php:55
 msgid "Comments (%)"
-msgstr "Comentarios (%)"
+msgstr "Commentaires (%)"
 
 #: ../comments.php:18
 msgid "Leave a response"
-msgstr "Dejá una respuesta"
+msgstr "Laissez un message"
 
 #: ../comments.php:22
 msgid "You must be"
-msgstr "Debes haber"
+msgstr "Vous devez être"
 
 #: ../comments.php:22
 msgid "logged in"
-msgstr "ingresado"
+msgstr "connecté(e)"
 
 #: ../comments.php:22
 msgid "to post a comment"
-msgstr "para dejar un comentario"
+msgstr "pour poster un commentaire"
 
 #: ../comments.php:30
 msgid "Logged in as"
-msgstr "Haz ingresado como"
+msgstr "Connecté(e) en tant que"
 
 #: ../comments.php:30
 msgid "Log out"
-msgstr "Salir"
+msgstr "Se déconnecter"
 
 #: ../comments.php:37
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nom"
 
 #: ../comments.php:45
 msgid "Website"
-msgstr "Sitio Web"
+msgstr "Site web"
 
 #: ../comments.php:52
 msgid "Message"
-msgstr "Mensaje"
+msgstr "Message"
 
 #: ../comments.php:57
 msgid "Post Comment"
-msgstr "Publicar Comentario"
+msgstr "Poster le commentaire"
 
 #: ../comments.php:71
 msgid "Comments are closed for this article."
-msgstr "Los comentarios están cerrados para este artículo."
+msgstr "Les commentaires sont fermés pour cet article."
 
 #: ../footer.php:3
 msgid "Proudly powered by"
-msgstr "Funcionando gracias a"
+msgstr "Fièrement proposé par"
 
 #: ../footer.php:3
 msgid "by"
-msgstr "por"
+msgstr "par"
 
 #: ../functions.php:23
 msgid "Main Menu"
-msgstr "Menu Principal"
+msgstr "Menu principal"
 
 #: ../functions.php:104
 #, php-format
 msgid "%1$s at %2$s"
-msgstr "%1$s a las %2$s"
+msgstr "%1$s à %2$s"
 
 #: ../functions.php:109
 msgid "Your comment is awaiting moderation."
-msgstr "Tu comentario espera a ser moderado."
+msgstr "Votre commentaire est en attente de modération."
 
 #: ../functions.php:112
 msgid "[Edit Comment]"
-msgstr "[Editar Comentario]"
+msgstr "[Éditer le commentaire]"
 
 #: ../index.php:16
 msgid "Archive for the"
-msgstr "Archivo para la categoría"
+msgstr "Archive pour"
 
 #: ../index.php:16
 msgid "Category"
-msgstr ""
+msgstr "Catégorie"
 
 #: ../index.php:18
 msgid "Posts Tagged with"
-msgstr "Artículos etiquetados con"
+msgstr "Articles tagués avec"
 
-#: ../index.php:20
-#: ../index.php:22
-#: ../index.php:24
+#: ../index.php:20 ../index.php:22 ../index.php:24
 msgid "Archive for"
-msgstr "Archivo para"
+msgstr "Archive pour"
 
 #: ../index.php:26
 msgid "Archive by"
-msgstr "Archivo de"
+msgstr "Archive par"
 
 #: ../index.php:28
 msgid "Search results for"
-msgstr "Resultados de búsqueda para"
+msgstr "Résultats de la recherche pour"
 
 #: ../index.php:30
 msgid "Blog Archives"
-msgstr "Archivos del Blog"
+msgstr "Archives du blog"
 
-#: ../index.php:43
-#: ../single.php:18
+#: ../index.php:43 ../single.php:18
 msgid "Written on"
-msgstr "Escrito el"
+msgstr "Écrit le"
 
-#: ../index.php:43
-#: ../single.php:18
+#: ../index.php:43 ../single.php:18
 msgid "under"
-msgstr "en"
+msgstr "sous"
 
-#: ../index.php:57
-#: ../single.php:44
+#: ../index.php:57 ../single.php:44
 msgid "Likes"
-msgstr "Me gusta"
+msgstr "J'aime"
 
-#: ../index.php:59
-#: ../single.php:46
+#: ../index.php:59 ../single.php:46
 msgid "Share"
-msgstr "Compartir"
+msgstr "Partager"
 
 #: ../index.php:92
 msgid "No articles found."
-msgstr "No se encontraron artículos."
+msgstr "Aucun article trouvé."
 
 #: ../sidebar.php:3
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Fermer"
 
 #: ../sidebar.php:5
 msgid "Sections"
-msgstr "Secciones"
+msgstr "Sections"
 
 #: ../single.php:35
 msgid "Written by"
-msgstr "Escrito por"
+msgstr "Écrit par"
 
 #: ../single.php:37
 msgid "Published articles"
-msgstr "Artículos publicados"
+msgstr "Articles publiés"
 
 #: ../single.php:68
 #, fuzzy
 msgid "Other popular articles"
-msgstr "Volver al artículo"
+msgstr "Autres articles populaires"
