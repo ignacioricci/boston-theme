@@ -55,7 +55,7 @@ This allows the responsiveness of the theme to be graceful in relation to the co
 ### Support / Bug Reports / Feedback ###
 
 I'm very commited for you to have the best experience with Boston.
-If you encounter any problems, bugs or just have feedback please don't hesitate to contact me at nacho@ignacioricci.com.
+If you encounter any problems, bugs or just have feedback please don't hesitate to contact me at ignacio.ricci[at]gmail.com.
 
 ### Copyright  ###
 
