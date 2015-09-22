@@ -44,7 +44,7 @@ Boston has built-in post likes to get visitor feedback.
 ### Internationalization ###
 
 Boston theme supports English and Spanish internationalization.
-I will continue to work into espanding the languages it supports.
+I will continue to work into expanding the languages it supports.
 
 ### Information for developers ###
 
