@@ -1,7 +1,6 @@
-# Boston Theme information #
+# Example #
 
-http://boston-theme.com
-Author: Ignacio Ricci (nacho@ignacioricci.com)
+https://getmango.com/blog/
 
 ### Instalation ###
 
