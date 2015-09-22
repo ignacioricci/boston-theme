@@ -57,20 +57,7 @@ This allows the responsiveness of the theme to be graceful in relation to the co
 
 I'm very commited for you to have the best experience with Boston.
 If you encounter any problems, bugs or just have feedback please don't hesitate to contact me at nacho@ignacioricci.com.
-I'll try to resolve the bug ASAP and release a free update to all customers.
 
-### License  ###
+### Copyright  ###
 
-About this license:
-
-1. This copy of Boston theme is entitled to one owner only.
-2. The owner can use the theme as many times as he/she wants for personal use.
-3. The owner is allowed to re-style and change the design as he/she prefers.
-
-**If you want to buy the theme for a client** you should purchase another license.
-**If you want to buy many copies of the theme (bulk)** I can make you a nice discount :) Just contact me at nacho@ignacioricci.com
-
-### Formal Copyright  ###
-
-CC - Attribution-NonCommercial 3.0 Unported
-http://creativecommons.org/licenses/by-nc/3.0/
+MIT license. Copyright © 2015 Ignacio Ricci.
